@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: fantasy;
+    background-color: lightgoldenrodyellow;
+}
+
+header {
+    background-color: lightgray;
+    height: 41px;
+    text-align: center;
+    padding: 27px, 33px;
+    
+}
+
+.navBar {
+    overflow: hidden;
+    background-color: black;
+    height: 33px;
+}
+
+.navBar a {
+    float: left;
+    color: red;
+    text-align: center;
+    padding: 21px, 27px;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.navBar a:hover {
+    background-color: green;
+    color: yellow;
+    
+}
+
+.navBar a:active {
+    background-color: red;
+    color: white;
+    
+}
+
+p {
+    text-align: center;
+    font-size: 37px;
+    
+}
+
+p:hover {
+    color: plum;
+    background-color: aquamarine;
+    
+}
