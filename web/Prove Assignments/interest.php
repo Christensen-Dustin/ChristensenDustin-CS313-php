@@ -4,6 +4,8 @@
 <head>
     <title> Interest.php </title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="name of file.js"></script>
 </head>
 <body>
 <header>
