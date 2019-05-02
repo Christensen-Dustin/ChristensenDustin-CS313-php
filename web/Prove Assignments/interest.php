@@ -16,6 +16,13 @@
   <a href="interest.php"> Other Interest</a>
   <a href="assignment.html">Assignments</a>
 </div>
+<br>
+<br>
+    <?php
+    date_default_timezone_set("America/California");
+    echo "<h1>Today's date is" . date("m.d.Y") . "</h1><br>";
+    echo "<h1>The time is " . date("h:i:sa") . "</h1><br>";
+    ?>
     <!--<ul class="topmenu">
         <li <?php if($_SERVER['SCRIPT_NAME']=="/home.php") { ?>  class="active"   <?php   }  ?>><a href="home.php"><b>Bienvenue</b></a></li>
         <li <?php if($_SERVER['SCRIPT_NAME']=="/livres.php") { ?>  class="active"   <?php   }  ?>><a href="livres.php"><b>Livres</b></a></li>
