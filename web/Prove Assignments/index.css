@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: fantasy;
-    background-color: lightgoldenrodyellow;
+    background-color: lightblue;
 }
 
 header {
@@ -49,5 +49,22 @@ p {
 p:hover {
     color: plum;
     background-color: aquamarine;
+    
+}
+
+#info1 {
+    background-color: brown;
+    color: lightyellow;
+    font-size: 21px;
+    font-weight: normal;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    padding: 23px;
+    
+}
+
+#audioTheme {
+    margin-left: 10%;
     
 }
