@@ -6,6 +6,14 @@
     <meta charset="utf-8" />
 </head>
 <body>
+<header>
+    <h1>Welcome to MY OTHER INTERESTS</h1>
+</header>
+<div class="navBar">
+  <a class="active" href="index.html">Home</a>
+  <a href="interest.php"> Other Interest</a>
+  <a href="assignment.html">Assignments</a>
+</div>
     <!--<ul class="topmenu">
         <li <?php if($_SERVER['SCRIPT_NAME']=="/home.php") { ?>  class="active"   <?php   }  ?>><a href="home.php"><b>Bienvenue</b></a></li>
         <li <?php if($_SERVER['SCRIPT_NAME']=="/livres.php") { ?>  class="active"   <?php   }  ?>><a href="livres.php"><b>Livres</b></a></li>
