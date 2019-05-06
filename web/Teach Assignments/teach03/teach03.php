@@ -9,7 +9,8 @@
 Greetings, <?ph echo $_POST["fname"]; ?>
     <br>
     <br>
-User's Name: <?php echo $_POST['fname'] . echo " " . echo $_POST['lname']; ?>
+User's Name: <?php echo $_POST['fname'] . " " . $_POST['lname']; ?>
     <br>
+mailto: <?php echo "<a href=" . $_POST['email'] . ">"; ?>
 </body>
 </html>
