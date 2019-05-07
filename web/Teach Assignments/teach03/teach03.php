@@ -8,7 +8,7 @@
 </head>  
 <body>
 
-Greetings, <?ph echo $_POST["fname"]; ?>
+Greetings, <?php echo $_POST["fname"]; ?>
     <br>
     <br>
 User's Name: <?php echo $_POST["fname"] . " " . $_POST["lname"]; ?>
