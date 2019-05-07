@@ -7,10 +7,9 @@
 	<style></style>
 </head>  
 <body>
-<div id="greetings">
-Greetings, <?php echo $_POST["fname"]; ?>
-</div>
-    <br>
+<?php 
+    echo "<div id='greetings'>Greetings," . $_POST["fname"] . "</div>";
+?>
     <br>
 <div id="info" >
 User's Name: <?php echo $_POST["fname"] . " " . $_POST["lname"]; ?>
