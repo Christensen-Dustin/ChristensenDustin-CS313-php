@@ -30,7 +30,7 @@ The continents you have visited:
 ?>
     <br>
 </div>
-<p style="font-weight:bold;">Your comment:</p><br>
+<p style="font-weight:bold;">Your comment:</p>
     <?php echo "<p style='margin-left:3%';>" . $_POST["comment"] . "</p>"; ?>
 
 </body>
