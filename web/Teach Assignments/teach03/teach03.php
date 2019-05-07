@@ -19,7 +19,7 @@ mailto: <?php echo $_POST["email"]; ?>
     <br>
 Your major <?php echo $_POST["major"]; ?>
     <br>
-Your comment:</div><br>
+Your comment:</div>
     <?php echo $_POST["comment"]; ?>
 
 </body>

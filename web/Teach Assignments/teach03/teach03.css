@@ -12,13 +12,14 @@ form {
      
 }
 
-.id {
+.greetings {
     font-size: 27px;
     font-weight: bold;
 
 }
 
 .info {
-    
+    font-size: 17px;
+    font-style: italic;
     
 }
