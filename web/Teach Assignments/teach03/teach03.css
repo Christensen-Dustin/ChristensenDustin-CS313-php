@@ -4,8 +4,21 @@ form {
     font-size: 27px;
     padding: 50px;
     font-weight: bold;
+    
 }
 
  input {
      font-size: 27px;
+     
+}
+
+.id {
+    font-size: 27px;
+    font-weight: bold;
+
+}
+
+.info {
+    
+    
 }

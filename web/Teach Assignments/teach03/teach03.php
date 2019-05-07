@@ -7,17 +7,19 @@
 	<style></style>
 </head>  
 <body>
-
+<div id="greetings">
 Greetings, <?php echo $_POST["fname"]; ?>
+</div>
     <br>
     <br>
+<div id="info" >
 User's Name: <?php echo $_POST["fname"] . " " . $_POST["lname"]; ?>
     <br>
 mailto: <?php echo $_POST["email"]; ?>
     <br>
 Your major <?php echo $_POST["major"]; ?>
     <br>
-Your comment:<br>
+Your comment:</div><br>
     <?php echo $_POST["comment"]; ?>
 
 </body>
