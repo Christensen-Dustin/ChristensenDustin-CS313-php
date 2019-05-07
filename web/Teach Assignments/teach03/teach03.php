@@ -21,8 +21,11 @@ Your major <?php echo $_POST["major"]; ?>
 The continents you have visited:
     <br>
 <?php
-    echo $_POST["cont"];
+    foreach($_POST['cont'] as $selected) {
+        echo $selected . " ";
+    }
 ?>
+    <br>
 Your comment:</div>
     <?php echo $_POST["comment"]; ?>
 
