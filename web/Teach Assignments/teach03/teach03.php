@@ -16,12 +16,13 @@ User's Name: <?php echo $_POST["fname"] . " " . $_POST["lname"]; ?>
     <br>
 mailto: <?php echo $_POST["email"]; ?>
     <br>
-Your major <?php echo $_POST["major"]; ?>
+Your major: <?php echo $_POST["major"]; ?>
+    <br>
     <br>
 The continents you have visited:
     <br>
 <?php
-    echo "<div style='margin-left:10%;'>";
+    echo "<div style='margin-left:3%;'>";
     foreach($_POST['cont'] as $selected) {
         echo $selected . "<br>";
     }
@@ -29,8 +30,8 @@ The continents you have visited:
 ?>
     <br>
 </div>
-Your comment:
-    <?php echo $_POST["comment"]; ?>
+<p style="font-weight:bold;">Your comment:</p><br>
+    <?php echo "<p style='margin-left:3%';>" . $_POST["comment"]; . "</p>"?>
 
 </body>
 </html>
