@@ -8,7 +8,7 @@
 </head>  
 <body>
 <?php 
-    echo "<div id='greetings'>Greetings," . $_POST["fname"] . "</div>";
+    echo "<div id='greetings'>Greetings, " . $_POST["fname"] . "</div>";
 ?>
     <br>
 <div id="info" >
@@ -18,6 +18,11 @@ mailto: <?php echo $_POST["email"]; ?>
     <br>
 Your major <?php echo $_POST["major"]; ?>
     <br>
+The continents you have visited:
+    <br>
+<?php
+    echo $_POST["cont"];
+?>
 Your comment:</div>
     <?php echo $_POST["comment"]; ?>
 
