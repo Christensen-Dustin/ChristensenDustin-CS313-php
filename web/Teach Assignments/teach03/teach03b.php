@@ -28,13 +28,13 @@
     ?>
         <br>
     Please select all the continents that you have visited:<br>
-    <input type="checkbox" name="cont[]" value="Africa">Africa<br>
-    <input type="checkbox" name="cont[]" value="Antarctica">Antarctica<br>
-    <input type="checkbox" name="cont[]" value="Asia">Asia<br>
-    <input type="checkbox" name="cont[]" value="Australia">Australia<br>
-    <input type="checkbox" name="cont[]" value="Europe">Europe<br>
-    <input type="checkbox" name="cont[]" value="North America">North America<br>
-    <input type="checkbox" name="cont[]" value="South America">South America<br>
+    <input type="checkbox" name="cont[]" value="AF">Africa<br>
+    <input type="checkbox" name="cont[]" value="AN">Antarctica<br>
+    <input type="checkbox" name="cont[]" value="AS">Asia<br>
+    <input type="checkbox" name="cont[]" value="AU">Australia<br>
+    <input type="checkbox" name="cont[]" value="EU">Europe<br>
+    <input type="checkbox" name="cont[]" value="NA">North America<br>
+    <input type="checkbox" name="cont[]" value="SA">South America<br>
     <br>
     Additional Comments:<br>
     <input type="text" name="comment"><br>

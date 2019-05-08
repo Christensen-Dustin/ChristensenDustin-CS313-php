@@ -22,9 +22,12 @@ Your major: <?php echo $_POST["major"]; ?>
 The continents you have visited:
     <br>
 <?php
+    $map = array("AF" => "Africa", "AN" => "Antarctica", "AS" => "Asia", "AU" => "Australia", "EU" => "Europe", "NA" => "North America", "SA" => "South America");
+    
     echo "<div style='margin-left:3%;'>";
     foreach($_POST['cont'] as $selected) {
-        echo $selected . "<br>";
+        
+        echo $map[$selected] . "<br>";
     }
     echo "</div>";
 ?>
