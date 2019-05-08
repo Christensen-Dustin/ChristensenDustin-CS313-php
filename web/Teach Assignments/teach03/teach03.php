@@ -14,7 +14,7 @@
 <div id="info" >
 User's Name: <?php echo $_POST["fname"] . " " . $_POST["lname"]; ?>
     <br>
-mailto: <?php echo $_POST["email"]; ?>
+mailto: <?php echo "<a href='" . $_POST["email"] . "'>" . $_POST["email"] . "</a>"; ?>
     <br>
 Your major: <?php echo $_POST["major"]; ?>
     <br>
