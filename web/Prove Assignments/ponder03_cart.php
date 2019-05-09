@@ -23,7 +23,13 @@
 <?php
 
     
-  echo "This is the item " . $_SESSION["SK"] . "<br>This is the quantity: " . $_SESSION["SK_QTY"] . "<br>";
+    echo "This is the item " . $_SESSION["SK"] . "<br>This is the quantity: " . $_SESSION["SK_QTY"] . "<br>";
+  
+    echo "This is the item " . $_SESSION["FS"] . "<br>This is the quantity: " . $_SESSION["FS_QTY"] . "<br>";
+
+    echo "This is the item " . $_SESSION["HP"] . "<br>This is the quantity: " . $_SESSION["HP_QTY"] . "<br>";
+    
+    echo "This is the item " . $_SESSION["WP"] . "<br>This is the quantity: " . $_SESSION["WP_QTY"] . "<br>";
 ?>
         
 </body>
