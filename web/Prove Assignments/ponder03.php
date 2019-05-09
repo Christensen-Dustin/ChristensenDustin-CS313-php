@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION["SK"] = $_POST["SK"];
+    $_SESSION["SK"] = "Survival Knife";
     $_SESSION["SK_QTY"] += 1;
 ?>
 <!DOCTYPE html> 
@@ -32,7 +32,7 @@
     <tr class="items">
         <td>
             <form method="post">
-                <input type="submit"  value="Add to Cart" name="SK">
+                <input type="submit"  value="SK" name="SK">
             </form>
             <input type="button" value="More Detail">
         </td>
