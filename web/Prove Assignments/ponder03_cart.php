@@ -60,7 +60,7 @@
             
         </td>
     </tr>
-</table>" }
+</table>"; }
     if($_SESSION['isWp'] == true) {
         echo
 "<table class='items'>
