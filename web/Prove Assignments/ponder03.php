@@ -1,7 +1,9 @@
 <?php
     session_start();
-    $_SESSION["sk"] = $sk;
-    $_SESSION["sk_qty"] = $sk_qty;
+        if(isset($_POST['sk'])) {
+            $_SESSION["sk"] = "Survival Knife";
+            $_SESSION["sk_qty"] = 1;
+        }
     $_SESSION["fs"] = "FS";
     $_SESSION["fs_qty"] = 2;
     $_SESSION["hp"] = "HP";
