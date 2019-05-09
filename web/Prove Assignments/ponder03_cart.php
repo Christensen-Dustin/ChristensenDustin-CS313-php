@@ -27,7 +27,9 @@
 "<table class='items'>
     <tr>
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
-        <td></td>
+        <td>" . $_SESSION['sk'] . "</td>
+        <td>Quantity: " . $_SESSION['sk_qty'] . "</td>
+        <td><input type='submit' value='REMOVE'></td>
     </tr>
     <tr>
         <td>
