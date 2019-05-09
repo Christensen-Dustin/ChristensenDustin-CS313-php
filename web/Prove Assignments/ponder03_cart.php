@@ -22,7 +22,8 @@
 <br>
 <br>
 <?php
-    echo 
+    if($_SESSION['isSk'] == true) {
+        echo
 "<table class='items'>
     <tr>
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
@@ -33,8 +34,10 @@
             
         </td>
     </tr>
-</table>
-<table class='items'>
+</table>" }
+    if($_SESSION['isFs'] == true) {
+        echo
+"<table class='items'>
     <tr>
         <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
         <td></td>
@@ -44,8 +47,10 @@
             
         </td>
     </tr>
-</table>
-<table class='items'>
+</table>" }
+    if($_SESSION['isHp'] == true) {
+        echo
+"<table class='items'>
     <tr>
         <th><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td></td>
@@ -55,8 +60,10 @@
             
         </td>
     </tr>
-</table>
-<table class='items'>
+</table>" };
+    if($_SESSION['isWp'] == true) {
+        echo
+"<table class='items'>
     <tr>
         <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
         <td></td>
@@ -66,7 +73,7 @@
             
         </td>
     </tr>
-</table>";
+</table>" };
     
     echo "This is the item " . $_SESSION["sk"] . "<br>This is the quantity: " . $_SESSION["sk_qty"] . "<br>";
   

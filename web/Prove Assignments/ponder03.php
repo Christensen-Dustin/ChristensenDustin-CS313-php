@@ -1,18 +1,22 @@
 <?php
     session_start();
         if(isset($_POST['sk'])) {
+            $_SESSION["isSk"] = true;
             $_SESSION["sk"] = "Survival Knife";
             $_SESSION["sk_qty"] = 1;
         }
         if(isset($_POST['fs'])) {
+            $_SESSION["isFs"] = true;
             $_SESSION["fs"] = "Flint and Steel";
             $_SESSION["fs_qty"] = 1;
         }
         if(isset($_POST['hp'])) {
+            $_SESSION["isHp"] = true;
             $_SESSION["hp"] = "Hydration Pack";
             $_SESSION["hp_qty"] = 1;
         }
         if(isset($_POST['wp'])) {
+            $_SESSION["isWp"] = true;
             $_SESSION["wp"] = "Portable Personal Water Purifier";
             $_SESSION["wp_qty"] = 1;
         }
