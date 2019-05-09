@@ -2,6 +2,12 @@
     session_start();
     $_SESSION["SK"] = "Survival Knife";
     $_SESSION["SK_QTY"] += 1;
+    $_SESSION["FS"] = "Flint and Steel";
+    $_SESSION["FS_QTY"] += 1;
+    $_SESSION["HP"] = "Hydration Pack";
+    $_SESSION["HP_QTY"] += 1;
+    $_SESSION["WP"] = "Personal Portable Water Purifier";
+    $_SESSION["WP_QTY"] += 1;
 ?>
 <!DOCTYPE html> 
 <html lang="en-US">
@@ -32,7 +38,7 @@
     <tr class="items">
         <td>
             <form method="post">
-                <input type="submit"  value="SK" name="SK">
+                <input type="submit"  value="Add to Cart" name="SK">
             </form>
             <input type="button" value="More Detail">
         </td>
