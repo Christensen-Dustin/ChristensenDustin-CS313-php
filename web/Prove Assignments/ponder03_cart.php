@@ -19,9 +19,10 @@
 <br>
 <br>
 <?php
-<table class="items">
+    echo 
+"<table class='items'>
     <tr>
-        <th><img class="thumbPic" src="survival_knife.jpg" alt="Survival Knife"></th>
+        <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
         <td></td>
     </tr>
     <tr>
@@ -30,9 +31,9 @@
         </td>
     </tr>
 </table>
-<table class="items">
-    <tr class="info">
-        <th><img class="thumbPic" src="flint_steel.jpg" alt="Flint and Steel"></th>
+<table class='items'>
+    <tr>
+        <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
         <td></td>
     </tr>
     <tr>
@@ -41,9 +42,9 @@
         </td>
     </tr>
 </table>
-<table class="items">
+<table class='items'>
     <tr>
-        <th><img class="thumbPic" src="water_pack.jpg" alt="Hydration Pack"></th>
+        <th><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td></td>
     </tr>
     <tr>
@@ -52,9 +53,9 @@
         </td>
     </tr>
 </table>
-<table class="items">
+<table class='items'>
     <tr>
-        <th><img class="thumbPic" src="water_purifier.jpg" alt="Portable Water Purifier"></th>
+        <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
         <td></td>
     </tr>
     <tr>
@@ -62,7 +63,7 @@
             
         </td>
     </tr>
-</table>
+</table>";
     
     echo "This is the item " . $_SESSION["sk"] . "<br>This is the quantity: " . $_SESSION["sk_qty"] . "<br>";
   
