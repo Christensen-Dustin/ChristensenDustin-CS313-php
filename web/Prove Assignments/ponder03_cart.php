@@ -24,14 +24,14 @@
 <?php
     if($_SESSION['isSk'] == true) {
         echo
-"<table class='items'>
-    <tr>
+"<table class='cart'>
+    <tr class='info'>
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
         <td>" . $_SESSION['sk'] . "</td>
         <td>Quantity: " . $_SESSION['sk_qty'] . "</td>
         <td><input type='submit' value='REMOVE'></td>
     </tr>
-    <tr>
+    <tr class='info'>
         <td>
             
         </td>
@@ -40,11 +40,11 @@
     if($_SESSION['isFs'] == true) {
         echo
 "<table class='items'>
-    <tr>
+    <tr class='info'>
         <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
         <td></td>
     </tr>
-    <tr>
+    <tr class='info'>
         <td>
             
         </td>
@@ -53,11 +53,11 @@
     if($_SESSION['isHp'] == true) {
         echo
 "<table class='items'>
-    <tr>
+    <tr class='info'>
         <th><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td></td>
     </tr>
-    <tr>
+    <tr class='info'>
         <td>
             
         </td>
@@ -66,11 +66,11 @@
     if($_SESSION['isWp'] == true) {
         echo
 "<table class='items'>
-    <tr>
+    <tr class='info'>
         <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
         <td></td>
     </tr>
-    <tr>
+    <tr class='info'>
         <td>
             
         </td>

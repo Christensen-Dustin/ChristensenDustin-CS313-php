@@ -106,3 +106,16 @@ td {
     width: 55px;
     
 }
+
+.cart {
+    margin-left: 30%   
+    
+}
+
+.cartInfo {
+    text-align: left;
+    font-size: 19px;
+    font-family: sans-serif;
+    font-weight: normal;
+    
+}

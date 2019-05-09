@@ -49,7 +49,7 @@
         <th rowspan="2"><img class="mainPic" src="survival_knife.jpg" alt="Survival Knife"></th>
         <td>This Suvival Knife is not the best on market, but I have found that it will do all that you need it to do, in a pinch.</td>
     </tr>
-    <tr class="items">
+    <tr class="info">
         <td>
             <form method="post" onclick="<?php $sk = 'Survival Knife'; $sk_qty = 1;?>">
                 <input type="submit"  value="Add to Cart" name="sk">
@@ -64,7 +64,7 @@
         <td>I have used this flint and steel on a number of ocasions and it has 
         not let me down.</td>
     </tr>
-    <tr class="items">
+    <tr class="info">
         <td>
             <form method="post">
                 <input type="submit"  value="Add to Cart" name="fs">
@@ -79,7 +79,7 @@
         <td>I have used this Hydration Pack on a number of hikes, excursions, 
         trips to theme parks and it has always kept my liquids cold/cool.</td>
     </tr>
-    <tr class="items">
+    <tr class="info">
         <td>
             <form method="post">
                 <input type="submit"  value="Add to Cart" name="hp">
@@ -93,7 +93,7 @@
         <th rowspan="2"><img class="mainPic" src="water_purifier.jpg" alt="Portable Water Purifier"></th>
         <td>On ocassion, a fresh water source has not been available to us, while hiking. This Portable Personal Water Purifier has come in handy.</td>
     </tr>
-    <tr class="items">
+    <tr class="info">
         <td>
             <form method="post">
                 <input type="submit"  value="Add to Cart" name="wp">
