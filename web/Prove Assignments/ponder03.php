@@ -1,13 +1,13 @@
 <?php
     session_start();
-    $_SESSION["SK"] = "Survival Knife";
-    $_SESSION["SK_QTY"] += 1;
-    $_SESSION["FS"] = "Flint and Steel";
-    $_SESSION["FS_QTY"] += 1;
-    $_SESSION["HP"] = "Hydration Pack";
-    $_SESSION["HP_QTY"] += 1;
-    $_SESSION["WP"] = "Personal Portable Water Purifier";
-    $_SESSION["WP_QTY"] += 1;
+    $_SESSION["sk"] = $sk;
+    $_SESSION["sk_qty"] = $sk_qty;
+    $_SESSION["fs"] = "FS";
+    $_SESSION["fs_qty"] = 2;
+    $_SESSION["hp"] = "HP";
+    $_SESSION["hp_qty"] = 4;
+    $_SESSION["wp"] = "PPWP";
+    $_SESSION["wp_qty"] = 7;
 ?>
 <!DOCTYPE html> 
 <html lang="en-US">
@@ -38,7 +38,7 @@
     <tr class="items">
         <td>
             <form method="post">
-                <input type="submit"  value="Add to Cart" name="SK">
+                <input type="submit"  value="Add to Cart" name="sk" onclick="<?php $_SK = 'Survival Knife'; $SK_QTY = 1;?>">
             </form>
             <input type="button" value="More Detail">
         </td>
@@ -53,7 +53,7 @@
     <tr class="items">
         <td>
             <form method="post">
-                <input type="submit"  value="Add to Cart" name="FS">
+                <input type="submit"  value="Add to Cart" name="fs">
             </form>
             <input type="button" value="More Detail">
         </td>
@@ -68,7 +68,7 @@
     <tr class="items">
         <td>
             <form method="post">
-                <input type="submit"  value="Add to Cart" name="HP">
+                <input type="submit"  value="Add to Cart" name="hp">
             </form>
             <input type="button" value="More Detail">
         </td>
@@ -82,7 +82,7 @@
     <tr class="items">
         <td>
             <form method="post">
-                <input type="submit"  value="Add to Cart" name="WP">
+                <input type="submit"  value="Add to Cart" name="wp">
             </form>
             <input type="button" value="More Detail">
         </td>
