@@ -24,7 +24,7 @@
 
     
   echo "This is the item"  . $_SESSION["SK"] . "<br>This is the quantity: " . $_SESSION["SK_QTY"] . "<br>";
->?
+?>
         
 </body>
 </html>
