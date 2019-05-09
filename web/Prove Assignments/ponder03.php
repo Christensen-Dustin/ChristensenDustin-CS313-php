@@ -38,7 +38,7 @@
     <tr class="items">
         <td>
             <form method="post">
-                <input type="submit"  value="Add to Cart" name="sk" onclick="<?php $_SK = 'Survival Knife'; $SK_QTY = 1;?>">
+                <input type="submit"  value="Add to Cart" name="sk" onclick="<?php $sk = 'Survival Knife'; $sk_qty = 1;?>">
             </form>
             <input type="button" value="More Detail">
         </td>
