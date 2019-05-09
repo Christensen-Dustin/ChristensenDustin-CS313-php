@@ -14,9 +14,10 @@
     <h1>Welcome to YOUR SHOPPING CART</h1>
 </header>
 <div class="navBar">
-  <a class="active" href="index.html">Home</a>
-  <a href="interest.php"> Other Interest</a>
-  <a href="assignment.html">Assignments</a>
+    <a class="active" href="index.html">Home</a>
+    <a href="interest.php"> Other Interest</a>
+    <a href="assignment.html">Assignments</a>
+    <a href="ponder03.php">Browse ITEMS</a>
 </div>
 <br>
 <br>

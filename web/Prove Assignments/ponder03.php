@@ -4,11 +4,11 @@
             $_SESSION["sk"] = "Survival Knife";
             $_SESSION["sk_qty"] = 1;
         }
-        if(isset($_POST['sk'])) {
+        if(isset($_POST['fs'])) {
             $_SESSION["fs"] = "Flint and Steel";
             $_SESSION["fs_qty"] = 1;
         }
-        if(isset($_POST['sk'])) {
+        if(isset($_POST['hp'])) {
             $_SESSION["hp"] = "Hydration Pack";
             $_SESSION["hp_qty"] = 1;
         }
