@@ -42,7 +42,9 @@
 "<table class='cart'>
     <tr class='cartInfo'>
         <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
-        <td></td>
+        <td>" . $_SESSION['fs'] . "</td>
+        <td>Quantity: " . $_SESSION['fs_qty'] . "</td>
+        <td><input type='submit' value='REMOVE'></td>
     </tr>
     <tr class='cartInfo'>
         <td>
@@ -55,7 +57,9 @@
 "<table class='cart'>
     <tr class='cartInfo'>
         <th><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
-        <td></td>
+        <td>" . $_SESSION['hp'] . "</td>
+        <td>Quantity: " . $_SESSION['hp_qty'] . "</td>
+        <td><input type='submit' value='REMOVE'></td>
     </tr>
     <tr class='cartInfo'>
         <td>
@@ -68,7 +72,9 @@
 "<table class='cart'>
     <tr class='cartInfo'>
         <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
-        <td></td>
+        <td>" . $_SESSION['wp'] . "</td>
+        <td>Quantity: " . $_SESSION['wp_qty'] . "</td>
+        <td><input type='submit' value='REMOVE'></td>
     </tr>
     <tr class='cartInfo'>
         <td>

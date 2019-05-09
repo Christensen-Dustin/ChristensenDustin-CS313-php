@@ -108,11 +108,12 @@ td {
 }
 
 .cart {
-    margin-left: 30%   
+    margin-left: 40%   
     
 }
 
 .cartInfo {
+    margin-left: 5%;
     text-align: left;
     font-size: 13px;
     font-family: sans-serif;
