@@ -4,12 +4,20 @@
             $_SESSION["sk"] = "Survival Knife";
             $_SESSION["sk_qty"] = 1;
         }
-    $_SESSION["fs"] = "FS";
-    $_SESSION["fs_qty"] = 2;
-    $_SESSION["hp"] = "HP";
-    $_SESSION["hp_qty"] = 4;
-    $_SESSION["wp"] = "PPWP";
-    $_SESSION["wp_qty"] = 7;
+        if(isset($_POST['sk'])) {
+            $_SESSION["fs"] = "Flint and Steel";
+            $_SESSION["fs_qty"] = 1;
+        }
+        if(isset($_POST['sk'])) {
+            $_SESSION["hp"] = "Hydration Pack";
+            $_SESSION["hp_qty"] = 1;
+        }
+        if(isset($_POST['wp'])) {
+            $_SESSION["wp"] = "Portable Personal Water Purifier";
+            $_SESSION["wp_qty"] = 1;
+        }
+        
+    
 ?>
 <!DOCTYPE html> 
 <html lang="en-US">
