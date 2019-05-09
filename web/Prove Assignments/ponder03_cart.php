@@ -34,7 +34,7 @@
             
         </td>
     </tr>
-</table>" }
+</table>"; }
     if($_SESSION['isFs'] == true) {
         echo
 "<table class='items'>
@@ -47,7 +47,7 @@
             
         </td>
     </tr>
-</table>" }
+</table>"; }
     if($_SESSION['isHp'] == true) {
         echo
 "<table class='items'>
@@ -60,7 +60,7 @@
             
         </td>
     </tr>
-</table>" };
+</table>" }
     if($_SESSION['isWp'] == true) {
         echo
 "<table class='items'>
@@ -73,7 +73,7 @@
             
         </td>
     </tr>
-</table>" };
+</table>"; }
     
     echo "This is the item " . $_SESSION["sk"] . "<br>This is the quantity: " . $_SESSION["sk_qty"] . "<br>";
   
