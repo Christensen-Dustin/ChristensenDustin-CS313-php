@@ -52,6 +52,17 @@ p:hover {
     
 }
 
+b {
+    font-family: serif;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+    width: 35%;
+    padding: 37px, 37px;
+    background-color: chocolate;
+    color: white;
+}
+
 #info1 {
     background-color: brown;
     color: lightyellow;
