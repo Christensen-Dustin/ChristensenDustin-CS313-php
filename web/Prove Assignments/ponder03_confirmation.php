@@ -1,6 +1,6 @@
 <?php
     session_start();
-        $fname = htmlspecialchars($_SESSION['fname']);
+        $fname = htmlspecialchars($_POST['fname']);
         $lname = htmlspecialchars($_SESSION['lname']);
         $stNum = htmlspecialchars($_SESSION['stNUm']);
         $stName = htmlspecialchars($_SESSION['stName']);
@@ -33,14 +33,10 @@
 <h1>Confirmation of your order</h1>
 <?php
 echo
-    "<div>Your name: " . $fname . " " . $lname . "</div>
-    <br>
-    <div>   Street: " . $stNum . " " . $stName . "</div>
-    <br>
-    <div>     City: " . $city . " - State: " . $state . " - Zip: " . $zip . "</div>
-    <br>
-    <div>Special Instructions:<br>" . $special . "</div>
-    <br>
+    "Your name: " . $fname . " " . $lname . "<br>
+    Street: " . $stNum . " " . $stName . "<br>
+    City: " . $city . " - State: " . $state . " - Zip: " . $zip . "<br>
+    Special Instructions:<br>" . $special . "<br>
     <br>";
 
 /*if($_SESSION['isSk'] == true) {
