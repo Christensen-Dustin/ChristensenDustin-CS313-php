@@ -44,9 +44,9 @@
 "<table class='items'>
     <tr class='info'>
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
-        <td>" . $_SESSION['sk'] . "</td>
-        <td>Quantity: " . $_SESSION['sk_qty'] . "</td>
-        <td><form method='post' action='ponder03_cart.php'>
+        <td id='thCart'>" . $_SESSION['sk'] . "</td>
+        <td id='thCart'>Quantity: " . $_SESSION['sk_qty'] . "</td>
+        <td id='thCart'><form method='post' action='ponder03_cart.php'>
         <input type='submit' value='REMOVE' name='removeSk'>
         </form></td>
     </tr>
@@ -56,9 +56,9 @@
 "<table class='items'>
     <tr class='info'>
         <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
-        <td>" . $_SESSION['fs'] . "</td>
-        <td>Quantity: " . $_SESSION['fs_qty'] . "</td>
-        <td><form method='post' action='ponder03_cart.php'>
+        <td id='thCart'>" . $_SESSION['fs'] . "</td>
+        <td id='thCart'>Quantity: " . $_SESSION['fs_qty'] . "</td>
+        <td id='thCart'><form method='post' action='ponder03_cart.php'>
         <input type='submit' value='REMOVE' name='removeFs'>
         </form></td>
     </tr>
@@ -80,9 +80,9 @@
 "<table class='items'>
     <tr class='info'>
         <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
-        <td>" . $_SESSION['wp'] . "</td>
-        <td>Quantity: " . $_SESSION['wp_qty'] . "</td>
-        <td><form method='post' action='ponder03_cart.php'>
+        <td id='thCart'>" . $_SESSION['wp'] . "</td>
+        <td id='thCart'>Quantity: " . $_SESSION['wp_qty'] . "</td>
+        <td id='thCart'><form method='post' action='ponder03_cart.php'>
         <input type='submit' value='REMOVE' name='removeWp'>
         </form></td>
     </tr>
