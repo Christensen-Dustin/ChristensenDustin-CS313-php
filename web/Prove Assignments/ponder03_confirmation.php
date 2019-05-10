@@ -50,7 +50,9 @@ if($_SESSION['isSk'] == true) {
         </th>
         <td id='tdCart'>" . $_SESSION['sk'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['sk_qty'] . "</td>
-        <td id='tdCart'></td>
+        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
+        <input type='submit' value='REMOVE' name='removeSk'>
+        </form></td>
     </tr>
 </table>"; }
     if($_SESSION['isFs'] == true) {
