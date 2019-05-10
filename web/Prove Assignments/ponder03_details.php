@@ -26,13 +26,13 @@
             $_SESSION['details'] = 'skDetails';
         }
         if(isset($_POST['fsDetails'])) {
-            $details = 'fsDetails';
+            $_SESSION['details'] = 'fsDetails';
         }
         if(isset($_POST['hpDetails'])) {
-            $details = 'hpDetails';
+            $_SESSION['details'] = 'hpDetails';
         }
         if(isset($_POST['wpDetails'])) {
-            $details = 'wpDetails';
+            $_SESSION['details'] = 'wpDetails';
         }
 
 ?>
@@ -123,7 +123,11 @@ if($details == 'wpDetails') {
         "<table class='details'>
             <tr class='info'>
                 <th class='thDetails' rowspan='2'><img class='thDetails' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
-                <td class='tdDetails'></td>
+                <td class='tdDetails'> Ideal for outdoor recreation, hiking, camping, scouting, domestic and international travel, and emergency preparedness<br>
+                High-performance 0.1 Micron absolute inline filter fits in the palm of your hand and weighs just 2 ounces; 100% of MINI units individually tested three times to performance standards by Sawyer<br>
+                Attaches to included drinking pouch, standard disposable water bottles, hydration packs, or use the straw to drink directly from your water source<br>
+                Removes 99.99999% of all bacteria (salmonella, cholera, and E. coli); removes 99.9999% of all protozoa (such as giardia and cryptosporidium); also removes 100% of microplastics<br>
+                Filter rated up to 100,000 gallons; includes 16-ounce reusable squeeze pouch, 7-inch drinking straw, and cleaning plunger </td>
             </tr>
             <tr class='info'>
                 <td>
