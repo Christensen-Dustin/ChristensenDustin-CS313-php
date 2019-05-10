@@ -15,7 +15,6 @@ header {
 .navBar {
     overflow: hidden;
     background-color: black;
-    height: 33px;
 }
 
 .navBar a {
@@ -52,21 +51,26 @@ p:hover {
     
 }
 
+.btnCheckout {
+    margin-left: 40%;
+    text-align: center;
+    width: 20%
+    
+}
+
 .btnCheckout a:link {
     font-family: serif;
     text-align: center;
     font-size: 33px;
     font-weight: bold;
-    width: 35%;
-    padding: 40px 80px;
+    padding: 13px 17px;
     background-color: chocolate;
     color: white;
 }
 
-btnCheckout a:hover, a:active {
+.btnCheckout a:hover, a:active {
     color: yellow;
     background-color: blue;
-    
 }
 
 #info1 {
