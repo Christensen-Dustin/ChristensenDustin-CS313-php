@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
 ?>
 <!DOCTYPE html>
 <html lang="eng-US">
@@ -26,7 +27,7 @@
 echo
     "<p>Your name: " . $_SESSION['fname'] . " " . $_SESSION['lname'] . "</p>
     <br>
-<p>   Street: " . $_SESSION['stNum'] . " " . $_SESSION['StName'] . "</p>
+<p>   Street: " . $_SESSION['stNum'] . " " . $_SESSION['stName'] . "</p>
     <br>
 <p>     City: " . $_SESSION['city'] . " - State: " . $_SESSION['state'] . " - Zip: " . $_SESSION['zip'] . "</p>
     <br>
