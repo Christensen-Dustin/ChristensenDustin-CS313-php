@@ -34,7 +34,7 @@
     <br>
     <br>";*/
 
-if($_SESSION['isSk'] == true) {
+/*if($_SESSION['isSk'] == true) {
         echo
 "<table class='cart'>
     <tr class='info'>
@@ -80,7 +80,7 @@ if($_SESSION['isSk'] == true) {
         <td id='tdCart'>" . $_SESSION['wp'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['wp_qty'] . "</td>
     </tr>
-</table>;" }
+</table>;" }*/
 
 echo "<br><br><br>";
 
