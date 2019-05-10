@@ -59,7 +59,7 @@
         <th><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td>" . $_SESSION['hp'] . "</td>
         <td>Quantity: " . $_SESSION['hp_qty'] . "</td>
-        <td><input type='submit' value='REMOVE'>" . $_SESSION['isHp'] = false . $_SESSION['hp_qty'] = 0 . "</td>
+        <td><input type='submit' value='REMOVE'>" . $_SESSION['isHp'] = false; . $_SESSION['hp_qty'] = 0; . "</td>
     </tr>
     <tr class='cartInfo'>
         <td>
