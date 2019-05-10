@@ -80,10 +80,9 @@ if($_SESSION['isSk'] == true) {
         <td id='tdCart'>" . $_SESSION['wp'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['wp_qty'] . "</td>
     </tr>
-</table>
-    <br>
-    <br>
-    <br>;" }
+</table>;" }
+
+echo "<br><br><br>";
 
 ?>        
 </body>
