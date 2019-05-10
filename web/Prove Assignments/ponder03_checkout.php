@@ -7,7 +7,7 @@
         $city = htmlspecialchars($_POST['city']);
         $state = htmlspecialchars($_POST['state']);
         $zip = htmlspecialchars($_POST['zip']);
-        $special = htmlspecialchars($_POST['special'];
+        $special = htmlspecialchars($_POST['special']);
 
         if(isset($_POST['fname'])) {
             $_SESSION['fname'] = $fname;
@@ -57,7 +57,8 @@
 <br>
 <?php
 echo
-    "<table class='client'>
+"<form method='post'>
+    <table class='client'>
         <tr class='trClient'>
             <th class='thClient'>First Name:</th>
             <td class='tdClient'><input type='text' name='fname'></td>
@@ -80,22 +81,16 @@ echo
         </tr>
         <tr class='trClient'>
             <th class='thClient'>Special Instructions:</th>
-            <td colspan='2' class='tdClient'><input type='text' name='city'></td>
+            <td colspan='2' class='tdClient'><input type='text' name='special'></td>
         </tr>
     </table>
-    <input type='submit' value='Check Information'>";
-
+    <input type='submit' value='Check Information'>;
+</form>";
 echo
     "<br>
     <br>
     <div class='btnCheckout'>
     <a href='ponder03_checkout.php'>Continue on to Confirmation</a>
-    </div>";
-
-echo
-    "<br>
-    <br>
-    <div class='btnCheckout'>
     <a href='ponder03.php'>Return to SHOPPING CART</a>
     </div>";    
 ?>
