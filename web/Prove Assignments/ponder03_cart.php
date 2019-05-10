@@ -34,7 +34,7 @@ function updateSK() {
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
         <td>" . $_SESSION['sk'] . "</td>
         <td>Quantity: " . $_SESSION['sk_qty'] . "</td>
-        <td><input type='button' value='REMOVE' onclick='" . updateSK() . "'></td>
+        <td><input type='button' value='REMOVE' onclick='updateSK()'></td>
     </tr>
     <tr class='cartInfo'>
         <td>
