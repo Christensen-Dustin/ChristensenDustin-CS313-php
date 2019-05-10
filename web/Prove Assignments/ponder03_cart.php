@@ -63,7 +63,9 @@
         <th><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td>" . $_SESSION['hp'] . "</td>
         <td>Quantity: " . $_SESSION['hp_qty'] . "</td>
-        <td><input type='submit' value='REMOVE' name='removeHp'></td>
+        <td>
+        <input type='submit' value='REMOVE' name='removeHp' href='ponder03_cart.php'>
+        </td>
     </tr>
     <tr class='cartInfo'>
         <td>
