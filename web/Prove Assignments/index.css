@@ -73,7 +73,11 @@ p:hover {
 }
 
 .client {
-    margin-left: 30%;
+    margin-left: 15%;
+}
+
+.clientSubmit {
+    margin-left: 45%;
 }
 
 .clientBtn {
@@ -85,7 +89,7 @@ p:hover {
 .clientBtn a {
     font-family: serif;
     text-align: center;
-    font-size: 33px;
+    font-size: 23px;
     font-weight: bold;
     padding: 13px 17px;
     background-color: chocolate;
