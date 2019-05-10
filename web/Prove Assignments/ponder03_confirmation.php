@@ -2,7 +2,7 @@
     session_start();
         $fname = htmlspecialchars($_POST['fname']);
         $lname = htmlspecialchars($_POST['lname']);
-        $stNum = htmlspecialchars($_POST['stNUm']);
+        $stNum = htmlspecialchars($_POST['stNum']);
         $stName = htmlspecialchars($_POST['stName']);
         $city = htmlspecialchars($_POST['city']);
         $state = htmlspecialchars($_POST['state']);
@@ -35,7 +35,7 @@
 echo
     "<p>Your name: " . $fname . " " . $lname . "</p>
     <p>Street: " . $stNum . " " . $stName . "</p>
-    <p>City: " . $city . " - State: " . $state . " - Zip: " . $zip . "</p>
+    <p>City: " . $city . "  -  State: " . $state . "  -  Zip: " . $zip . "</p>
     <p>Special Instructions:<br>" . $special . "</p>
     <br>";
 

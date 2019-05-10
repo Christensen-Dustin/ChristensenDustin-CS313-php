@@ -34,9 +34,9 @@ echo
         </tr>
         <tr class='trClient'>
             <th class='thClient'>Street Number:</th>
-            <td class='tdClient'><input type='text' name='strNum'></td>
+            <td class='tdClient'><input type='text' name='stNum'></td>
             <th class='thClient'>Street Name:</td>
-            <td class='tdClient'><input type='text' name='strName'></td>
+            <td class='tdClient'><input type='text' name='stName'></td>
         </tr>
         <tr class='trClient'>
             <th class='thClient'>City:</th>
