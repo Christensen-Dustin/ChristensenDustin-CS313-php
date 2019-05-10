@@ -1,6 +1,14 @@
 <?php
     session_start();
-    
+        $fname = htmlspecialchars($_SESSION['fname']);
+        $lname = htmlspecialchars($_SESSION['lname']);
+        $stNum = htmlspecialchars($_SESSION['stNUm']);
+        $stName = htmlspecialchars($_SESSION['stName']);
+        $city = htmlspecialchars($_SESSION['city']);
+        $state = htmlspecialchars($_SESSION['state']);
+        $zip = htmlspecialchars($_SESSION['zip']);
+        $special = htmlspecialchars($_SESSION['special']);
+
 ?>
 <!DOCTYPE html>
 <html lang="eng-US">
@@ -25,13 +33,10 @@
 <h1>Confirmation of your order</h1>
 <?php
 echo
-    "<p>Your name: " . $_SESSION['fname'] . " " . $_SESSION['lname'] . "</p>
-    <br>
-<p>   Street: " . $_SESSION['stNum'] . " " . $_SESSION['stName'] . "</p>
-    <br>
-<p>     City: " . $_SESSION['city'] . " - State: " . $_SESSION['state'] . " - Zip: " . $_SESSION['zip'] . "</p>
-    <br>
-<p>Special Instructions:<br>" . $_SESSION['special'] . "</p>
+    "<p>Your name: " . $fname . " " . $lname . "</p>
+<p>   Street: " . $stNum . " " . $stName . "</p>
+<p>     City: " . $city . " - State: " . $state . " - Zip: " . $zip . "</p>
+<p>Special Instructions:<br>" . $special . "</p>
     <br>
     <br>";
 

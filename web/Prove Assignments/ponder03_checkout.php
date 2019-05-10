@@ -1,13 +1,13 @@
 <?php
     session_start();
-        $fname = htmlspecialchars($_POST['fname']);
-        $lname = htmlspecialchars($_POST['lname']);
-        $stNum = htmlspecialchars($_POST['stNUm']);
-        $stName = htmlspecialchars($_POST['stName']);
-        $city = htmlspecialchars($_POST['city']);
-        $state = htmlspecialchars($_POST['state']);
-        $zip = htmlspecialchars($_POST['zip']);
-        $special = htmlspecialchars($_POST['special']);
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $stNum = $_POST['stNUm'];
+        $stName = $_POST['stName'];
+        $city = $_POST['city'];
+        $state = $_POST['state'];
+        $zip = $_POST['zip'];
+        $special = $_POST['special'];
 
         if(isset($_POST['fname'])) {
             $_SESSION['fname'] = $fname;
