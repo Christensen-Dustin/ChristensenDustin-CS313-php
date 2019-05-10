@@ -81,7 +81,7 @@ p:hover {
 }
 
 .clientBtn {
-    margin-left: 10%;
+    
     text-align: center;
     width: auto;
 }
@@ -101,6 +101,13 @@ p:hover {
     background-color: black;
 }
 
+.thClient {
+    text-align: right;
+}
+
+.tdClient {
+    text-align: left;
+}
 
 #info1 {
     background-color: brown;
