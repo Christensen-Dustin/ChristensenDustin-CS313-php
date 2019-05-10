@@ -38,10 +38,11 @@
 <br>
 <br>
 <?php
+
     if($_SESSION['isSk'] == true) {
         echo
 "<table class='items'>
-    <tr class='cartInfo'>
+    <tr class='info'>
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
         <td>" . $_SESSION['sk'] . "</td>
         <td>Quantity: " . $_SESSION['sk_qty'] . "</td>
@@ -53,7 +54,7 @@
     if($_SESSION['isFs'] == true) {
         echo
 "<table class='items'>
-    <tr class='cartInfo'>
+    <tr class='info'>
         <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
         <td>" . $_SESSION['fs'] . "</td>
         <td>Quantity: " . $_SESSION['fs_qty'] . "</td>
@@ -77,7 +78,7 @@
     if($_SESSION['isWp'] == true) {
         echo
 "<table class='items'>
-    <tr class='cartInfo'>
+    <tr class='info'>
         <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
         <td>" . $_SESSION['wp'] . "</td>
         <td>Quantity: " . $_SESSION['wp_qty'] . "</td>
