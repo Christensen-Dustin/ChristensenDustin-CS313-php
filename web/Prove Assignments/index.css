@@ -76,6 +76,12 @@ p:hover {
     margin-left: 25%;
 }
 
+.conf {
+    margin-left: 25%;
+    font-size: 40px;
+    color: beige;
+}
+
 .clientSubmit {
     margin-left: 45%;
 }
