@@ -65,7 +65,7 @@
     if($_SESSION['isHp'] == true) {
         echo
 "<table class='items'>
-    <tr class='cartInfo'>
+    <tr class='info'>
         <th id='thCart'><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td id='thCart'>" . $_SESSION['hp'] . "</td>
         <td id='thCart'>Quantity: " . $_SESSION['hp_qty'] . "</td>
