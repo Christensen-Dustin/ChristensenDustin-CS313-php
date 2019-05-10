@@ -40,7 +40,7 @@
 <?php
     if($_SESSION['isSk'] == true) {
         echo
-"<table class='cart'>
+"<table class='items'>
     <tr class='cartInfo'>
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
         <td>" . $_SESSION['sk'] . "</td>
@@ -52,7 +52,7 @@
 </table>"; }
     if($_SESSION['isFs'] == true) {
         echo
-"<table class='cart'>
+"<table class='items'>
     <tr class='cartInfo'>
         <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
         <td>" . $_SESSION['fs'] . "</td>
@@ -64,7 +64,7 @@
 </table>"; }
     if($_SESSION['isHp'] == true) {
         echo
-"<table class='cart'>
+"<table class='items'>
     <tr class='cartInfo'>
         <th id='thCart'><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td id='thCart'>" . $_SESSION['hp'] . "</td>
@@ -76,7 +76,7 @@
 </table>"; }
     if($_SESSION['isWp'] == true) {
         echo
-"<table class='cart'>
+"<table class='items'>
     <tr class='cartInfo'>
         <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
         <td>" . $_SESSION['wp'] . "</td>
@@ -87,13 +87,6 @@
     </tr>
 </table>"; }
     
-    echo "This is the item " . $_SESSION["sk"] . "<br>This is the quantity: " . $_SESSION["sk_qty"] . "<br>";
-  
-    echo "This is the item " . $_SESSION["fs"] . "<br>This is the quantity: " . $_SESSION["fs_qty"] . "<br>";
-
-    echo "This is the item " . $_SESSION["hp"] . "<br>This is the quantity: " . $_SESSION["hp_qty"] . "<br>";
-    
-    echo "This is the item " . $_SESSION["wp"] . "<br>This is the quantity: " . $_SESSION["wp_qty"] . "<br>";
 ?>
         
 </body>
