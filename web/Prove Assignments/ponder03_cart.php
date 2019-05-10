@@ -1,15 +1,5 @@
 <?php
     session_start();
-        if(isset($_POST["removeHP"])) {
-            unset($_SESSION["isHp"]);
-            unset($_SESSION["hp_qty"]);
-            header("Refresh:0");
-        }
-        if(isset($_POST['removeWP'])) {
-            $_SESSION['isWp'] = false;
-            $_SESSION['wp_qty'] = 0;
-            header("Refresh:0");
-        }
 ?>
 <!DOCTYPE html>
 <html lang="eng-US">
@@ -32,6 +22,11 @@
 <br>
 <br>
 <?php
+function updateSK() {
+    $_SESSION['isSk'] = false;
+    $_SESSION['is_qty'] = 0;
+}
+
     if($_SESSION['isSk'] == true) {
         echo
 "<table class='cart'>
@@ -39,7 +34,7 @@
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
         <td>" . $_SESSION['sk'] . "</td>
         <td>Quantity: " . $_SESSION['sk_qty'] . "</td>
-        <td><input type='submit' value='REMOVE'></td>
+        <td><input type='button' value='REMOVE' onclick='" . updateSK() . "'></td>
     </tr>
     <tr class='cartInfo'>
         <td>
