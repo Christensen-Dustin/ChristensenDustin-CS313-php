@@ -93,6 +93,25 @@
  <div class='btnCheckout'>
  <a href='ponder03_checkout.php'>To Continue to Checkout</a>
  </div>";
+
+if($_SESSION['isSk'] == true ||
+   $_SESSION['isFs'] == true ||
+   $_SESSION['isHP'] == true ||
+   $_SESSION['isWp'] == true) {    
+        echo
+            "<br>
+            <br>
+            <div class='btnCheckout'>
+            <a href='ponder03_checkout.php'>To Continue to Checkout</a>
+            </div>";
+} else {
+        echo
+            "<br>
+            <br>
+            <div class='btnCheckout'>
+            <a href='ponder03.php'>Return to ITEMS</a>
+            </div>";
+}
     
 ?>
         
