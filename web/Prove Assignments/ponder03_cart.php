@@ -90,8 +90,9 @@
         echo
 "<br>
  <br>
- <b href='ponder03_checkout.php'>To Continue to Checkout</b>";
-
+ <div class='btnCheckout'>
+ <a href='ponder03_checkout.php'>To Continue to Checkout</a>
+ </div>";
     
 ?>
         
