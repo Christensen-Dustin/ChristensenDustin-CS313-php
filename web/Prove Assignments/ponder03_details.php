@@ -54,7 +54,7 @@ if($details == 'skDetails') {
         "<table class='details'>
             <tr class='info'>
                 <th class='thDetails' rowspan='2'><img class='thDetails' src='survival_knife.jpg' alt='Survival Knife'></th>
-                <td class='tdDetails'>Description: This survival knife is the ideal tool for any outdoor enthusiast. The rugged 8 in. stainless steel blade on this hunting knife is designed for cutting, chopping and sawing. Features include a compass and survival kit stashed in the storage handle. This high quality knife doubles as a complete survival package. Precision sharpened 8 in. stainless steel blade. Sawtooth edge. Survival kit stores in handle</td>
+                <td class='tdDetails'>Description:<br> This survival knife is the ideal tool for any outdoor enthusiast. The rugged 8 in. stainless steel blade on this hunting knife is designed for cutting, chopping and sawing. Features include a compass and survival kit stashed in the storage handle. This high quality knife doubles as a complete survival package. Precision sharpened 8 in. stainless steel blade. Sawtooth edge. Survival kit stores in handle.<br>Manufacturer Warranty Detail:<br>We guarantee this product to be free from defects in materials and workmanship 90 days from the date of purchase. Limitations apply.</td>
             </tr>
             <tr class='info'>
                 <td>
