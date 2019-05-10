@@ -65,6 +65,24 @@ echo
             <td class='tdClient'>Last Name:</td>
             <td class='tdClient'><input type='text' name='lname'></td>
         </tr>
+        <tr class='trClient'>
+            <th class='thClient'>Street Number:</th>
+            <td class='tdClient'><input type='text' name='strNum'></td>
+            <td class='tdClient'>Street Name:</td>
+            <td class='tdClient'><input type='text' name='strName'></td>
+        </tr>
+        <tr class='trClient'>
+            <th class='thClient'>City:</th>
+            <td class='tdClient'><input type='text' name='city'></td>
+            <td class='tdClient'>State:</td>
+            <td class='tdClient'><input type='text' name='state'></td>
+            <td class='tdClient'>Zip:</td>
+            <td class='tdClient'><input type='text' name='zip'></td>
+        </tr>
+        <tr class='trClient'>
+            <th class='thClient'>Special Instructions:</th>
+            <td colspan='2' class='tdClient'><input type='text' name='city'></td>
+        </tr>
     </table>
     <input type='submit' value='Check Information'>
 </form>";
