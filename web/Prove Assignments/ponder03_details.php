@@ -75,7 +75,7 @@ if($_SESSION['details'] == 'skDetails') {
         </table>";
 }
 
-if($details == 'fsDetails') {
+if($_SESSION['details'] == 'fsDetails') {
     echo
         "<table class='details'>
             <tr class='info'>
@@ -96,7 +96,7 @@ if($details == 'fsDetails') {
         </table>";
 }
 
-if($details == 'hpDetails') {
+if($_SESSION['details'] == 'hpDetails') {
     echo
         "<table class='details'>
             <tr class='info'>
@@ -118,7 +118,7 @@ if($details == 'hpDetails') {
         </table>";
 }
 
-if($details == 'wpDetails') {
+if($_SESSION['details'] == 'wpDetails') {
     echo
         "<table class='details'>
             <tr class='info'>
