@@ -54,8 +54,7 @@ p:hover {
 .btnCheckout {
     margin-left: 40%;
     text-align: center;
-    width: 25%;
-    
+    width: 25%;    
 }
 
 .btnCheckout a {
@@ -72,6 +71,32 @@ p:hover {
     color: yellow;
     background-color: blue;
 }
+
+.client {
+    margin-left: 30%;
+}
+
+.clientBtn {
+    margin-left: 20%;
+    text-align: center;
+    width: auto;
+}
+
+.clientBtn a {
+    font-family: serif;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+    padding: 13px 17px;
+    background-color: chocolate;
+    color: white;
+}
+
+.clientBtn a:hover, a:active {
+    color: red;
+    background-color: black;
+}
+
 
 #info1 {
     background-color: brown;

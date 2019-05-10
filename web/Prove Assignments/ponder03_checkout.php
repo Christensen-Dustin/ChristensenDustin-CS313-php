@@ -81,15 +81,15 @@ echo
         </tr>
         <tr class='trClient'>
             <th class='thClient'>Special Instructions:</th>
-            <td colspan='2' class='tdClient'><input type='text' name='special'></td>
+            <td colspan='4' class='tdClient'><input type='text' name='special'></td>
         </tr>
     </table>
-    <input type='submit' value='Check Information'>;
+    <input class='clientSubmit' type='submit' value='Check Information'>
 </form>";
 echo
     "<br>
     <br>
-    <div class='btnCheckout'>
+    <div class='clientBtn'>
     <a href='ponder03_checkout.php'>Continue on to Confirmation</a>
     <a href='ponder03.php'>Return to SHOPPING CART</a>
     </div>";    
