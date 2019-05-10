@@ -1,6 +1,5 @@
 <?php
     session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="eng-US">
@@ -22,9 +21,9 @@
 </div>
 <br>
 <br>
-<h1>Confirmation of your order</h1>
+<h1 style="text-align:center;">Confirmation of your order</h1>
 <?php
-echo
+/***echo
     "<p>Your name: " . $_SESSION['fname'] . " " . $_SESSION['lname'] . "</p>
     <br>
 <p>   Street: " . $_SESSION['stNum'] . " " . $_SESSION['StName'] . "</p>
@@ -33,7 +32,7 @@ echo
     <br>
 <p>Special Instructions:<br>" . $_SESSION['special'] . "</p>
     <br>
-    <br>";
+    <br>";*/
 
 if($_SESSION['isSk'] == true) {
         echo
@@ -46,6 +45,7 @@ if($_SESSION['isSk'] == true) {
         <td id='tdCart'>Quantity: " . $_SESSION['sk_qty'] . "</td>
     </tr>
 </table>"; }
+
     if($_SESSION['isFs'] == true) {
         echo
 "<table class='cart'>
@@ -57,6 +57,7 @@ if($_SESSION['isSk'] == true) {
         <td id='tdCart'>Quantity: " . $_SESSION['fs_qty'] . "</td>
     </tr>
 </table>"; }
+
     if($_SESSION['isHp'] == true) {
         echo
 "<table class='cart'>
@@ -68,6 +69,7 @@ if($_SESSION['isSk'] == true) {
         <td id='tdCart'>Quantity: " . $_SESSION['hp_qty'] . "</td>
     </tr>
 </table>"; }
+
     if($_SESSION['isWp'] == true) {
         echo
 "<table class='cart'>
