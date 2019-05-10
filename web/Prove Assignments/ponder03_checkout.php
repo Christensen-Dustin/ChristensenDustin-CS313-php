@@ -1,20 +1,37 @@
 <?php
     session_start();
-        if(isset($_POST['removeSk'])) {
-            $_SESSION['isSk'] = false;
-            $_SESSION['sk_qty'] = 0;
+        $fname = htmlspecialchars($_POST['fname']);
+        $lname = htmlspecialchars($_POST['lname']);
+        $stNum = htmlspecialchars($_POST['stNUm']);
+        $stName = htmlspecialchars($_POST['stName']);
+        $city = htmlspecialchars($_POST['city']);
+        $state = htmlspecialchars($_POST['state']);
+        $zip = htmlspecialchars($_POST['zip']);
+        $special = htmlspecialchars($_POST['special'];
+
+        if(isset($_POST['fname'])) {
+            $_SESSION['fname'] = $fname;
         }
-        if(isset($_POST['removeFs'])) {
-            $_SESSION['isFs'] = false;
-            $_SESSION['fs_qty'] = 0;
+        if(isset($_POST['lname'])) {
+            $_SESSION['lname'] = $lname;
         }
-        if(isset($_POST['removeHp'])) {
-            $_SESSION['isHp'] = false;
-            $_SESSION['hp_qty'] = 0;
+        if(isset($_POST['stNum'])) {
+            $_SESSION['stNum'] = $stNum;
         }
-        if(isset($_POST['removeWp'])) {
-            $_SESSION['isWp'] = false;
-            $_SESSION['wp_qty'] = 0;
+        if(isset($_POST['stName'])) {
+            $_SESSION['stName'] = $stName;
+        }
+        if(isset($_POST['city'])) {
+            $_SESSION['city'] = $city;
+        }
+        if(isset($_POST['state'])) {
+            $_SESSION['state'] = $state;
+        }
+        if(isset($_POST['zip'])) {
+            $_SESSION['zip'] = $zip;
+        }
+        if(isset($_POST['special'])) {
+            $_SESSION['special'] = $special;
         }
 ?>
 <!DOCTYPE html>
@@ -39,58 +56,30 @@
 <br>
 <br>
 <?php
-
-    if($_SESSION['isSk'] == true) {
-        echo
-"<table class='cart'>
-    <tr class='info'>
-        <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
-        <td>" . $_SESSION['sk'] . "</td>
-        <td>Quantity: " . $_SESSION['sk_qty'] . "</td>
-        <td><form method='post' action='ponder03_cart.php'>
-        <input type='submit' value='REMOVE' name='removeSk'>
-        </form></td>
-    </tr>
-</table>"; }
-    if($_SESSION['isFs'] == true) {
-        echo
-"<table class='cart'>
-    <tr class='info'>
-        <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
-        <td>" . $_SESSION['fs'] . "</td>
-        <td>Quantity: " . $_SESSION['fs_qty'] . "</td>
-        <td><form method='post' action='ponder03_cart.php'>
-        <input type='submit' value='REMOVE' name='removeFs'>
-        </form></td>
-    </tr>
-</table>"; }
-    if($_SESSION['isHp'] == true) {
-        echo
-"<table class='cart'>
-    <tr class='info'>
-        <th id='thCart'><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
-        <td id='thCart'>" . $_SESSION['hp'] . "</td>
-        <td id='thCart'>Quantity: " . $_SESSION['hp_qty'] . "</td>
-        <td id='thCart'><form method='post' action='ponder03_cart.php'>
-        <input type='submit' value='REMOVE' name='removeHp'>
-        </form></td>
-    </tr>
-</table>"; }
-    if($_SESSION['isWp'] == true) {
-        echo
-"<table class='cart'>
-    <tr class='info'>
-        <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
-        <td>" . $_SESSION['wp'] . "</td>
-        <td>Quantity: " . $_SESSION['wp_qty'] . "</td>
-        <td><form method='post' action='ponder03_cart.php'>
-        <input type='submit' value='REMOVE' name='removeWp'>
-        </form></td>
-    </tr>
-</table>"; }
-    
-    
-    
+echo
+"<form method='post'>
+    <table class='client'>
+        <tr class='trClient'>
+            <th class='thClient'>First Name:</th>
+            <td class='tdClient'><input type='text' name='fname'></td>
+            <td class='tdClient'>Last Name:</td>
+            <td class='tdClient'><input type='text' name='lname'></td>
+        </tr>
+    </table>
+    <input type='submit' value='Check Information'>
+</form>";
+echo
+    "<br>
+    <br>
+    <div class='btnCheckout'>
+    <a href='ponder03_checkout.php'>Continue on to Confirmation</a>
+    </div>";
+echo
+    "<br>
+    <br>
+    <div class='btnCheckout'>
+    <a href='ponder03.php'>Return to SHOPPING CART</a>
+    </div>";    
 ?>
         
 </body>
