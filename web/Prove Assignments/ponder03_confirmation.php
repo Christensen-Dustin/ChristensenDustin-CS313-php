@@ -30,7 +30,7 @@
 </div>
 <br>
 <br>
-<h1>Confirmation of your order</h1>
+<h1 class="client">Confirmation of your order</h1>
 <?php
 echo
     "<p>Your name: " . $fname . " " . $lname . "</p>
@@ -39,7 +39,7 @@ echo
     <p>Special Instructions:<br>" . $special . "</p>
     <br>";
 
-/*if($_SESSION['isSk'] == true) {
+if($_SESSION['isSk'] == true) {
         echo
 "<table class='cart'>
     <tr class='info'>
@@ -85,7 +85,7 @@ echo
         <td id='tdCart'>" . $_SESSION['wp'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['wp_qty'] . "</td>
     </tr>
-</table>;" }*/
+</table>;" }
 
 echo "<br><br><br>";
 
