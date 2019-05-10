@@ -1,5 +1,9 @@
 <?php
     session_start();
+        if(isset($_POST['removeSk'])) {
+            $_SESSION['isSK'] = false;
+            $_SESSION['sk_qty'] = 0;
+        }
 ?>
 <!DOCTYPE html>
 <html lang="eng-US">
@@ -22,11 +26,6 @@
 <br>
 <br>
 <?php
-function updateSK() {
-    $_SESSION['isSk'] = false;
-    $_SESSION['is_qty'] = 0;
-}
-
     if($_SESSION['isSk'] == true) {
         echo
 "<table class='cart'>
@@ -34,7 +33,9 @@ function updateSK() {
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
         <td>" . $_SESSION['sk'] . "</td>
         <td>Quantity: " . $_SESSION['sk_qty'] . "</td>
-        <td><input type='button' value='REMOVE' onclick='updateSK()'></td>
+        <td><form method='post' action='ponder03_cart.php'>
+        <input type='submit' value='REMOVE' name='removeSk'>
+        </form></td>
     </tr>
     <tr class='cartInfo'>
         <td>
