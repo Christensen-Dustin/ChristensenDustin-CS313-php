@@ -58,7 +58,7 @@ p:hover {
     
 }
 
-.btnCheckout a:link {
+.btnCheckout a {
     font-family: serif;
     text-align: center;
     font-size: 33px;
