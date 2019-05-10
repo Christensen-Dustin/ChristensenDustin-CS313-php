@@ -80,7 +80,11 @@ if($details == 'fsDetails') {
         "<table class='details'>
             <tr class='info'>
                 <th class='thDetails' rowspan='2'><img class='thDetails' src='flint_steel.jpg' alt='Flint and Steel'></th>
-                <td class='tdDetails'></td>
+                <td class='tdDetails'> HANDCRAFTED HARDWOOD HANDLE — Traditionally inspired materials and ergonomics. We’ve intentionally left the grip natural, ready to earn that seasoned finish. Oil & grit… bare, calloused hands.<br>
+                BEST FERRO BLEND, PERIOD — Überleben’s Sånft-korr(TM) ferrocerium is the perfect balance between softness & durability, consistently outperforming the leading fire starters. Easily throw a 5,500ºF shower of molten sparks in any weather (waterproof), at any altitude.<br>
+                MULTIPLE SIZE OPTIONS — At nearly 5-inches in total length, the Zünden is available in three thickness variations, including: Trad 5/16” (8mm): 12,000+ strikes, Pro 3/8” (10mm): 15,000+ strikes, and Fatty 1/2” (12.5mm): 20,000+ strikes.<br>
+                DESIGNED FOR NECK CARRY — There’s no excuse. Even the Zünden Fatty weighs in at less than 3 oz. Includes Mil-spec 550 paracord lanyard + Multi-tool striker (straight-edge spine, concave tinder scraper, map scale, ruler, hex wrench… and most importantly, bottle opener).<br>
+                HASSLE FREE GUARANTEE — If you’re not stoked, we’re not stoked. You shouldn’t pay for something you don’t love. If for any reason you’re not absolutely thrilled with your Zünden, let us know. We’ll fix it. </td>
             </tr>
             <tr class='info'>
                 <td>

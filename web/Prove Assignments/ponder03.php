@@ -69,7 +69,9 @@
             <form method="post">
                 <input type="submit"  value="Add to Cart" name="fs">
             </form>
-            <input type="button" value="More Detail">
+            <form method="post" name='fsDetails' action="ponder03_details.php">
+                <input type="submit" value="More Detail" name="fsDetails">
+            </form>
         </td>
     </tr>
 </table>
@@ -84,7 +86,9 @@
             <form method="post">
                 <input type="submit"  value="Add to Cart" name="hp">
             </form>
-            <input type="button" value="More Detail">
+            <form method="post" name='hpDetails' action="ponder03_details.php">
+                <input type="submit" value="More Detail" name="hpDetails">
+            </form>
         </td>
     </tr>
 </table>
@@ -98,7 +102,9 @@
             <form method="post">
                 <input type="submit"  value="Add to Cart" name="wp">
             </form>
-            <input type="button" value="More Detail">
+            <form method="post" name='wpDetails' action="ponder03_details.php">
+                <input type="submit" value="More Detail" name="wpDetails">
+            </form>
         </td>
     </tr>
 </table>
