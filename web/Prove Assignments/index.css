@@ -52,7 +52,7 @@ p:hover {
     
 }
 
-.btnCheckout a {
+.btnCheckout a:link {
     font-family: serif;
     text-align: center;
     font-size: 33px;
@@ -63,7 +63,7 @@ p:hover {
     color: white;
 }
 
-btnCheckout a:hover {
+btnCheckout a:hover, a:active {
     color: yellow;
     background-color: blue;
     
