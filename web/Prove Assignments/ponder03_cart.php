@@ -1,12 +1,13 @@
 <?php
     session_start();
-        if(isset($_POST['removeHP'])) {
-            unset($_SESSION['isHp']);
-            unset($_SESSION['hp_qty']);
+        if(isset($_POST["removeHP"])) {
+            unset($_SESSION["isHp"]);
+            unset($_SESSION["hp_qty"]);
         }
         if(isset($_POST['removeWP'])) {
             $_SESSION['isWp'] = false;
             $_SESSION['wp_qty'] = 0;
+            header("Refresh:0");
         }
 ?>
 <!DOCTYPE html>
@@ -68,7 +69,7 @@
         <td>" . $_SESSION['hp'] . "</td>
         <td>Quantity: " . $_SESSION['hp_qty'] . "</td>
         <form method='post'><td>
-        <input type='submit' value='REMOVE' name='removeHp' href='ponder03_cart.php'>
+        <input type='submit' value='REMOVE' name='removeHp'>
         </td></form>
     </tr>
     <tr class='cartInfo'>
