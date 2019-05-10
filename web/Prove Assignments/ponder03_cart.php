@@ -41,48 +41,56 @@
 
     if($_SESSION['isSk'] == true) {
         echo
-"<table class='items'>
+"<table class='cart'>
     <tr class='info'>
-        <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
-        <td id='thCart'>" . $_SESSION['sk'] . "</td>
-        <td id='thCart'>Quantity: " . $_SESSION['sk_qty'] . "</td>
-        <td id='thCart'><form method='post' action='ponder03_cart.php'>
+        <th id='thCart'>
+            <img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'>
+        </th>
+        <td id='tdCart'>" . $_SESSION['sk'] . "</td>
+        <td id='tdCart'>Quantity: " . $_SESSION['sk_qty'] . "</td>
+        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
         <input type='submit' value='REMOVE' name='removeSk'>
         </form></td>
     </tr>
 </table>"; }
     if($_SESSION['isFs'] == true) {
         echo
-"<table class='items'>
+"<table class='cart'>
     <tr class='info'>
-        <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
-        <td id='thCart'>" . $_SESSION['fs'] . "</td>
-        <td id='thCart'>Quantity: " . $_SESSION['fs_qty'] . "</td>
-        <td id='thCart'><form method='post' action='ponder03_cart.php'>
+        <th id='thCart'>
+            <img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'>
+        </th>
+        <td id='tdCart'>" . $_SESSION['fs'] . "</td>
+        <td id='tdCart'>Quantity: " . $_SESSION['fs_qty'] . "</td>
+        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
         <input type='submit' value='REMOVE' name='removeFs'>
         </form></td>
     </tr>
 </table>"; }
     if($_SESSION['isHp'] == true) {
         echo
-"<table class='items'>
+"<table class='cart'>
     <tr class='info'>
-        <th id='thCart'><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
-        <td id='thCart'>" . $_SESSION['hp'] . "</td>
-        <td id='thCart'>Quantity: " . $_SESSION['hp_qty'] . "</td>
-        <td id='thCart'><form method='post' action='ponder03_cart.php'>
+        <th id='thCart'>
+            <img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'>
+        </th>
+        <td id='tdCart'>" . $_SESSION['hp'] . "</td>
+        <td id='tdCart'>Quantity: " . $_SESSION['hp_qty'] . "</td>
+        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
         <input type='submit' value='REMOVE' name='removeHp'>
         </form></td>
     </tr>
 </table>"; }
     if($_SESSION['isWp'] == true) {
         echo
-"<table class='items'>
+"<table class='cart'>
     <tr class='info'>
-        <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
-        <td id='thCart'>" . $_SESSION['wp'] . "</td>
-        <td id='thCart'>Quantity: " . $_SESSION['wp_qty'] . "</td>
-        <td id='thCart'><form method='post' action='ponder03_cart.php'>
+        <th id='thCart'>
+            <img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'>
+        </th>
+        <td id='tdCart'>" . $_SESSION['wp'] . "</td>
+        <td id='tdCart'>Quantity: " . $_SESSION['wp_qty'] . "</td>
+        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
         <input type='submit' value='REMOVE' name='removeWp'>
         </form></td>
     </tr>

@@ -114,12 +114,17 @@ th {
 }
 
 #thCart {
-    width: 80px;
+    width: 60px;
     
 }
 
 td {
     width: 400px;
+    
+}
+
+#tdCart {
+    width: 120px;
     
 }
 

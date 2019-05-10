@@ -42,7 +42,7 @@
 
     if($_SESSION['isSk'] == true) {
         echo
-"<table class='items'>
+"<table class='cart'>
     <tr class='info'>
         <th><img class='thumbPic' src='survival_knife.jpg' alt='Survival Knife'></th>
         <td>" . $_SESSION['sk'] . "</td>
@@ -54,7 +54,7 @@
 </table>"; }
     if($_SESSION['isFs'] == true) {
         echo
-"<table class='items'>
+"<table class='cart'>
     <tr class='info'>
         <th><img class='thumbPic' src='flint_steel.jpg' alt='Flint and Steel'></th>
         <td>" . $_SESSION['fs'] . "</td>
@@ -66,7 +66,7 @@
 </table>"; }
     if($_SESSION['isHp'] == true) {
         echo
-"<table class='items'>
+"<table class='cart'>
     <tr class='info'>
         <th id='thCart'><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td id='thCart'>" . $_SESSION['hp'] . "</td>
@@ -78,7 +78,7 @@
 </table>"; }
     if($_SESSION['isWp'] == true) {
         echo
-"<table class='items'>
+"<table class='cart'>
     <tr class='info'>
         <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
         <td>" . $_SESSION['wp'] . "</td>
