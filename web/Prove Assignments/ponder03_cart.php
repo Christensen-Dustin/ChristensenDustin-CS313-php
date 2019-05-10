@@ -1,8 +1,8 @@
 <?php
     session_start();
         if(isset($_POST['removeHP'])) {
-            $_SESSION['isHp'] = false;
-            $_SESSION['hp_qty'] = 0;
+            unset($_SESSION['isHp']);
+            unset($_SESSION['hp_qty']);
         }
         if(isset($_POST['removeWP'])) {
             $_SESSION['isWp'] = false;
