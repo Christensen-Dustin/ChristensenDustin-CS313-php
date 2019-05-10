@@ -87,6 +87,11 @@
         </form></td>
     </tr>
 </table>"; }
+        echo
+"<br>
+ <br>
+ <b href='ponder03_checkout.php'>To Continue to Checkout</b>";
+
     
 ?>
         
