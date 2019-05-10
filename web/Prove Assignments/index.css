@@ -107,6 +107,7 @@ p:hover {
 
 .tdClient {
     text-align: left;
+    width: auto;
 }
 
 #info1 {
