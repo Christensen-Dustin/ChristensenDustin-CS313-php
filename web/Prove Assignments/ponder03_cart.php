@@ -1,5 +1,9 @@
 <?php
     session_start();
+        if(isset($_POST['removeHP'])) {
+            $_SESSION['isHp'] = False;
+            $_SESSION['hp_qty'] = 0;
+        }
 ?>
 <!DOCTYPE html>
 <html lang="eng-US">
@@ -59,7 +63,7 @@
         <th><img class='thumbPic' src='water_pack.jpg' alt='Hydration Pack'></th>
         <td>" . $_SESSION['hp'] . "</td>
         <td>Quantity: " . $_SESSION['hp_qty'] . "</td>
-        <td><input type='submit' value='REMOVE'>" . $_SESSION['isHp'] = false; . $_SESSION['hp_qty'] = 0; . "</td>
+        <td><input type='submit' value='REMOVE' name='removeHp'></td>
     </tr>
     <tr class='cartInfo'>
         <td>
@@ -74,7 +78,9 @@
         <th><img class='thumbPic' src='water_purifier.jpg' alt='Portable Water Purifier'></th>
         <td>" . $_SESSION['wp'] . "</td>
         <td>Quantity: " . $_SESSION['wp_qty'] . "</td>
-        <td><input type='submit' value='REMOVE'></td>
+        <form method='POST'>
+            <td><input type='submit' value='REMOVE'></td>
+        </form>
     </tr>
     <tr class='cartInfo'>
         <td>
