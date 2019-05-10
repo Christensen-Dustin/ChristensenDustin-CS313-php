@@ -98,7 +98,7 @@
 
 if($_SESSION['isSk'] == true ||
    $_SESSION['isFs'] == true ||
-   $_SESSION['isHP'] == true ||
+   $_SESSION['isHp'] == true ||
    $_SESSION['isWp'] == true) {    
         echo
             "<br>
