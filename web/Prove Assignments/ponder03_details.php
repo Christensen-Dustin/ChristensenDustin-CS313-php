@@ -63,7 +63,7 @@ if($details == 'skDetails') {
                     </form>
                 </td>
             </tr>
-        </table>;"
+        </table>";
     }
     
 ?>        
