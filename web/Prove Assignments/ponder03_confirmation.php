@@ -23,15 +23,15 @@
 <br>
 <br>
 <h1>Confirmation of your order</h1>
-<p>Your name: <?=$_SESSION['fname'] ?> <?=$_SESSION['lname'] ?></p>
+<p>Your name: <?php $_SESSION['fname'] ?> <?php $_SESSION['lname'] ?></p>
     <br>
-<p>   Street: <?=$_SESSION['stNum'] ?> <?=$_SESSION['StName'] ?></p>
+<p>   Street: <?php $_SESSION['stNum'] ?> <?php $_SESSION['StName'] ?></p>
     <br>
-<p>     City: <?=$_SESSION['city'] ?> State: <?=$_SESSION['state'] ?> 
-    Zip: <?=$_SESSION['zip'] ?></p>
+<p>     City: <?php $_SESSION['city'] ?> State: <?php $_SESSION['state'] ?> 
+    Zip: <?php $_SESSION['zip'] ?></p>
     <br>
 <p>Special Instructions:<br>
-    <?=$_SESSION['special'] ?></p>
+    <?php $_SESSION['special'] ?></p>
     <br>
     <br>
 <?php
@@ -78,9 +78,10 @@ if($_SESSION['isSk'] == true) {
         <td id='tdCart'>" . $_SESSION['wp'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['wp_qty'] . "</td>
     </tr>
-</table>"; }
-
-
+</table>
+    <br>
+    <br>
+    <br>;" }
 
 ?>        
 </body>
