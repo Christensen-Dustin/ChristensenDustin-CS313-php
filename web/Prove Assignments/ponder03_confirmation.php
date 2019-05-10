@@ -50,6 +50,7 @@ if($_SESSION['isSk'] == true) {
         </th>
         <td id='tdCart'>" . $_SESSION['sk'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['sk_qty'] . "</td>
+        <td id='tdCart'></td>
     </tr>
 </table>"; }
     if($_SESSION['isFs'] == true) {
