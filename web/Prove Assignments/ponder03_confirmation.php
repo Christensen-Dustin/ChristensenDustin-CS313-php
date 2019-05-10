@@ -23,18 +23,18 @@
 <br>
 <br>
 <h1>Confirmation of your order</h1>
-<p>Your name: <?php $_SESSION['fname'] ?> <?php $_SESSION['lname'] ?></p>
-    <br>
-<p>   Street: <?php $_SESSION['stNum'] ?> <?php $_SESSION['StName'] ?></p>
-    <br>
-<p>     City: <?php $_SESSION['city'] ?> State: <?php $_SESSION['state'] ?> 
-    Zip: <?php $_SESSION['zip'] ?></p>
-    <br>
-<p>Special Instructions:<br>
-    <?php $_SESSION['special'] ?></p>
-    <br>
-    <br>
 <?php
+echo
+    "<p>Your name: " . $_SESSION['fname'] . " " . $_SESSION['lname'] . "</p>
+    <br>
+<p>   Street: " . $_SESSION['stNum'] . " " . $_SESSION['StName'] . "</p>
+    <br>
+<p>     City: " . $_SESSION['city'] . " - State: " . $_SESSION['state'] . " - Zip: " . $_SESSION['zip'] . "</p>
+    <br>
+<p>Special Instructions:<br>" . $_SESSION['special'] . "</p>
+    <br>
+    <br>";
+
 if($_SESSION['isSk'] == true) {
         echo
 "<table class='cart'>
