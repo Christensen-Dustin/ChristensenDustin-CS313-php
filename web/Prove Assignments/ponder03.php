@@ -19,7 +19,7 @@
             $_SESSION["isWp"] = true;
             $_SESSION["wp"] = "Portable Personal Water Purifier";
             $_SESSION["wp_qty"] = 1;
-        }    
+        }
 ?>
 <!DOCTYPE html> 
 <html lang="en-US">
@@ -49,10 +49,12 @@
     </tr>
     <tr class="info">
         <td>
-            <form method="post" onclick="<?php $sk = 'Survival Knife'; $sk_qty = 1;?>">
+            <form method="post">
                 <input type="submit"  value="Add to Cart" name="sk">
             </form>
-            <input type="button" value="More Detail">
+            <form method="post" name='skDetails' action="ponder03_details.php">
+                <input type="submit" value="More Detail" name="skDetails">
+            </form>
         </td>
     </tr>
 </table>
