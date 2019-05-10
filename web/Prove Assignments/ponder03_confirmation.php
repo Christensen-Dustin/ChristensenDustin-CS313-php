@@ -62,9 +62,6 @@ if($_SESSION['isFs'] == true) {
         </th>
         <td id='tdCart'>" . $_SESSION['fs'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['fs_qty'] . "</td>
-        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
-        <input type='submit' value='REMOVE' name='removeFs'>
-        </form></td>
     </tr>
 </table>"; }
 
@@ -77,9 +74,6 @@ if($_SESSION['isHp'] == true) {
         </th>
         <td id='tdCart'>" . $_SESSION['hp'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['hp_qty'] . "</td>
-        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
-        <input type='submit' value='REMOVE' name='removeHp'>
-        </form></td>
     </tr>
 </table>"; }
 
@@ -92,9 +86,6 @@ if($_SESSION['isWp'] == true) {
         </th>
         <td id='tdCart'>" . $_SESSION['wp'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['wp_qty'] . "</td>
-        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
-        <input type='submit' value='REMOVE' name='removeWp'>
-        </form></td>
     </tr>
 </table>"; }
 
