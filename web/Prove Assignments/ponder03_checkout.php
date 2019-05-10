@@ -20,14 +20,14 @@
 <!DOCTYPE html>
 <html lang="eng-US">
 <head>
-    <title> PHP-Shopping Cart </title>
+    <title> PHP-Checking Out </title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="index.css">
     <script type="text/javascript" src="name of file.js"></script>
 </head>
 <body>
 <header>
-    <h1>Welcome to YOUR SHOPPING CART</h1>
+    <h1>Checking Out</h1>
 </header>
 <div class="navBar">
     <a class="active" href="index.html">Home</a>
