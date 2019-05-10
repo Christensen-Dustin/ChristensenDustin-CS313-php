@@ -57,7 +57,7 @@
 <br>
 <?php
 echo
-"<form method='post'>
+"<form method='post' action='ponder03_confirmation.php'>
     <table class='client'>
         <tr class='trClient'>
             <th class='thClient'>First Name:</th>
@@ -84,14 +84,15 @@ echo
             <td colspan='4' class='tdClient'><input type='text' name='special'></td>
         </tr>
     </table>
+    <br>
+    <br>
     <input class='clientSubmit' type='submit' value='Check Information'>
 </form>";
 echo
     "<br>
     <br>
     <div class='clientBtn'>
-    <a href='ponder03_checkout.php'>Continue on to Confirmation</a>
-    <a href='ponder03.php'>Return to SHOPPING CART</a>
+    <a href='ponder03_cart.php'>Return to SHOPPING CART</a>
     </div>";    
 ?>
         
