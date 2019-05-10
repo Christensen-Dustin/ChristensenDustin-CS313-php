@@ -8,7 +8,7 @@ header {
     background-color: lightgray;
     height: 41px;
     text-align: center;
-    padding: 27px, 33px;
+    padding: 27px 33px;
     
 }
 
@@ -22,7 +22,7 @@ header {
     float: left;
     color: red;
     text-align: center;
-    padding: 21px, 27px;
+    padding: 21px 27px;
     text-decoration: none;
     font-size: 23px;
 }
@@ -58,7 +58,7 @@ p:hover {
     font-size: 33px;
     font-weight: bold;
     width: 35%;
-    padding: 37px, 37px;
+    padding: 40px 80px;
     background-color: chocolate;
     color: white;
 }
