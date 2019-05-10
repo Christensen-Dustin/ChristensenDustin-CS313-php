@@ -23,7 +23,7 @@
         }
 
         if(isset($_POST['skDetails'])) {
-            $details = 'skDetails';
+            $_SESSION['details'] = 'skDetails';
         }
         if(isset($_POST['fsDetails'])) {
             $details = 'fsDetails';
@@ -58,7 +58,7 @@
 <br>
 <br>
 <?php
-if($details == 'skDetails') {
+if($_SESSION['details'] == 'skDetails') {
     echo
         "<table class='details'>
             <tr class='info'>
@@ -101,7 +101,12 @@ if($details == 'hpDetails') {
         "<table class='details'>
             <tr class='info'>
                 <th class='thDetails' rowspan='2'><img class='thDetails' src='water_pack.jpg' alt='Hydration Pack'></th>
-                <td class='tdDetails'></td>
+                <td class='tdDetails'>Nylon Ripstop, 600D Coated Poly/PU<br>
+                LARGE, CONVENIENT STORAGE: large main compartment with a 16L capacity with a 2L hydration reservoir; an organizer compartment with divider pockets and convenient key clip holds essential items in place; includes an open front pocket for your helmet<br>
+                COMFORTABLE, ERGONOMIC DESIGN: featuring a comfortable and ergonomic design with padded back panel and shoulder straps that help keep your shoulders comfortable and your back cool and dry; an awesome adult hydration backpack or kids hydration pack<br>
+                COMFORT AND STABILITY: this running hydration backpack has an adjustable sternum strap and webbing hip belt to prevent horizontal shift, secure the bag on your back and keep shoulder straps centered on shoulders; compression straps add stability<br>
+                SAFE TO USE FOR NIGHT CAMPING: the best hydration pack to use for night camping with its reflective details on the front and back helping to keep you safe while out in the dark<br>
+                MADE TO LAST: this outdoor hydration pack is made with 600D poly and nylon ripstop make it strong and durable so you can enjoy many exciting hiking trips with this water hydration backpack </td>
             </tr>
             <tr class='info'>
                 <td>
