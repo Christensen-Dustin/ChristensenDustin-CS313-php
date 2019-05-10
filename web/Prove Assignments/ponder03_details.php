@@ -51,10 +51,10 @@
 <?php
 if($details == 'skDetails') {
     echo
-        "<table class='items'>
+        "<table class='details'>
             <tr class='info'>
-                <th rowspan='2'><img class='mainPic' src='survival_knife.jpg' alt='Survival Knife'></th>
-                <td>Description: This survival knife is the ideal tool for any outdoor enthusiast. The rugged 8 in. stainless steel blade on this hunting knife is designed for cutting, chopping and sawing. Features include a compass and survival kit stashed in the storage handle. This high quality knife doubles as a complete survival package. Precision sharpened 8 in. stainless steel blade. Sawtooth edge. Survival kit stores in handle</td>
+                <th class='thDetails' rowspan='2'><img class='mainPic' src='survival_knife.jpg' alt='Survival Knife'></th>
+                <td class='tdDetails'>Description: This survival knife is the ideal tool for any outdoor enthusiast. The rugged 8 in. stainless steel blade on this hunting knife is designed for cutting, chopping and sawing. Features include a compass and survival kit stashed in the storage handle. This high quality knife doubles as a complete survival package. Precision sharpened 8 in. stainless steel blade. Sawtooth edge. Survival kit stores in handle</td>
             </tr>
             <tr class='info'>
                 <td>

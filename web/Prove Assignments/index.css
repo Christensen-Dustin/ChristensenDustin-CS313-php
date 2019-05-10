@@ -143,6 +143,18 @@ p:hover {
     
 }
 
+.details {
+    margin-left: 20%;
+}
+
+.thDetails {
+    width: 400px;
+}
+
+.tdDetails {
+    width: 600px;
+}
+
 .info {
     text-align: left;
     font-size: 19px;
