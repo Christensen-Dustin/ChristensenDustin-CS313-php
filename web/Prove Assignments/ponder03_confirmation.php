@@ -21,7 +21,7 @@
 </div>
 <br>
 <br>
-<h1 style="text-align:center;">Confirmation of your order</h1>
+<h1>Confirmation of your order</h1>
 <?php
 /***echo
     "<p>Your name: " . $_SESSION['fname'] . " " . $_SESSION['lname'] . "</p>
