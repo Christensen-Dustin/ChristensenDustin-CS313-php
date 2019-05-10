@@ -19,9 +19,7 @@
             $_SESSION["isWp"] = true;
             $_SESSION["wp"] = "Portable Personal Water Purifier";
             $_SESSION["wp_qty"] = 1;
-        }
-        
-    
+        }    
 ?>
 <!DOCTYPE html> 
 <html lang="en-US">

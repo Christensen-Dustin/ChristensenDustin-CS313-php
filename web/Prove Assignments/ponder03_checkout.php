@@ -88,12 +88,25 @@
         </form></td>
     </tr>
 </table>"; }
+    
+    if(isset($_SESSION['isSk']) ||
+       isset($_SESSION['isFs']) ||
+       isset($_SESSION['isHP']) ||
+       isset($_SESSION['isWp'])) {    
         echo
-"<br>
- <br>
- <div class='btnCheckout'>
- <a href='ponder03_checkout.php'>To Continue to Checkout</a>
- </div>";
+            "<br>
+            <br>
+            <div class='btnCheckout'>
+            <a href='ponder03_checkout.php'>To Continue to Checkout</a>
+            </div>";
+    } else {
+        echo
+            "<br>
+            <br>
+            <div class='btnCheckout'>
+            <a href='ponder03.php'>Return to ITEMS</a>
+            </div>";
+    }
     
 ?>
         
