@@ -1,38 +1,5 @@
 <?php
     session_start();
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $stNum = $_POST['stNUm'];
-        $stName = $_POST['stName'];
-        $city = $_POST['city'];
-        $state = $_POST['state'];
-        $zip = $_POST['zip'];
-        $special = $_POST['special'];
-
-        if(isset($_POST['fname'])) {
-            $_SESSION['fname'] = $fname;
-        }
-        if(isset($_POST['lname'])) {
-            $_SESSION['lname'] = $lname;
-        }
-        if(isset($_POST['stNum'])) {
-            $_SESSION['stNum'] = $stNum;
-        }
-        if(isset($_POST['stName'])) {
-            $_SESSION['stName'] = $stName;
-        }
-        if(isset($_POST['city'])) {
-            $_SESSION['city'] = $city;
-        }
-        if(isset($_POST['state'])) {
-            $_SESSION['state'] = $state;
-        }
-        if(isset($_POST['zip'])) {
-            $_SESSION['zip'] = $zip;
-        }
-        if(isset($_POST['special'])) {
-            $_SESSION['special'] = $special;
-        }
 ?>
 <!DOCTYPE html>
 <html lang="eng-US">
