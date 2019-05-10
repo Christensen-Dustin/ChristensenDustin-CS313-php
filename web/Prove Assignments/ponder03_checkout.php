@@ -62,24 +62,24 @@ echo
         <tr class='trClient'>
             <th class='thClient'>First Name:</th>
             <td class='tdClient'><input type='text' name='fname'></td>
-            <td class='tdClient'>Last Name:</td>
+            <th class='thClient'>Last Name:</td>
             <td class='tdClient'><input type='text' name='lname'></td>
         </tr>
         <tr class='trClient'>
             <th class='thClient'>Street Number:</th>
             <td class='tdClient'><input type='text' name='strNum'></td>
-            <td class='tdClient'>Street Name:</td>
+            <th class='thClient'>Street Name:</td>
             <td class='tdClient'><input type='text' name='strName'></td>
         </tr>
         <tr class='trClient'>
             <th class='thClient'>City:</th>
             <td class='tdClient'><input type='text' name='city'></td>
-            <td class='tdClient'>State:</td>
+            <th class='thClient'>State:</td>
             <td class='tdClient'><input type='text' name='state'></td>
-            <td class='tdClient'>Zip:</td>
-            <td class='tdClient'><input type='text' name='zip'></td>
         </tr>
         <tr class='trClient'>
+            <th class='thClient'>Zip:</td>
+            <td class='tdClient'><input type='text' name='zip'></td>
             <th class='thClient'>Special Instructions:</th>
             <td colspan='4' class='tdClient'><input type='text' name='special'></td>
         </tr>
