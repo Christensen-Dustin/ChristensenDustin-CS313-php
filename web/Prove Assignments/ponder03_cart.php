@@ -3,6 +3,7 @@
         if(isset($_POST["removeHP"])) {
             unset($_SESSION["isHp"]);
             unset($_SESSION["hp_qty"]);
+            header("Refresh:0");
         }
         if(isset($_POST['removeWP'])) {
             $_SESSION['isWp'] = false;
