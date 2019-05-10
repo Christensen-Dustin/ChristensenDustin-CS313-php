@@ -33,10 +33,13 @@
 <h1>Confirmation of your order</h1>
 <?php
 echo
-    "<p>Your name: " . $fname . " " . $lname . "</p>
-<p>   Street: " . $stNum . " " . $stName . "</p>
-<p>     City: " . $city . " - State: " . $state . " - Zip: " . $zip . "</p>
-<p>Special Instructions:<br>" . $special . "</p>
+    "<div>Your name: " . $fname . " " . $lname . "</div>
+    <br>
+    <div>   Street: " . $stNum . " " . $stName . "</div>
+    <br>
+    <div>     City: " . $city . " - State: " . $state . " - Zip: " . $zip . "</div>
+    <br>
+    <div>Special Instructions:<br>" . $special . "</div>
     <br>
     <br>";
 
