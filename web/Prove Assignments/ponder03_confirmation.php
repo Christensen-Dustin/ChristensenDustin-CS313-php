@@ -1,13 +1,13 @@
 <?php
     session_start();
         $fname = htmlspecialchars($_POST['fname']);
-        $lname = htmlspecialchars($_SESSION['lname']);
-        $stNum = htmlspecialchars($_SESSION['stNUm']);
-        $stName = htmlspecialchars($_SESSION['stName']);
-        $city = htmlspecialchars($_SESSION['city']);
-        $state = htmlspecialchars($_SESSION['state']);
-        $zip = htmlspecialchars($_SESSION['zip']);
-        $special = htmlspecialchars($_SESSION['special']);
+        $lname = htmlspecialchars($_POST['lname']);
+        $stNum = htmlspecialchars($_POST['stNUm']);
+        $stName = htmlspecialchars($_POST['stName']);
+        $city = htmlspecialchars($_POST['city']);
+        $state = htmlspecialchars($_POST['state']);
+        $zip = htmlspecialchars($_POST['zip']);
+        $special = htmlspecialchars($_POST['special']);
 
 ?>
 <!DOCTYPE html>
@@ -33,10 +33,10 @@
 <h1>Confirmation of your order</h1>
 <?php
 echo
-    "Your name: " . $fname . " " . $lname . "<br>
-    Street: " . $stNum . " " . $stName . "<br>
-    City: " . $city . " - State: " . $state . " - Zip: " . $zip . "<br>
-    Special Instructions:<br>" . $special . "<br>
+    "<p>Your name: " . $fname . " " . $lname . "</p>
+    <p>Street: " . $stNum . " " . $stName . "</p>
+    <p>City: " . $city . " - State: " . $state . " - Zip: " . $zip . "</p>
+    <p>Special Instructions:<br>" . $special . "</p>
     <br>";
 
 /*if($_SESSION['isSk'] == true) {
