@@ -30,7 +30,7 @@
 </div>
 <br>
 <br>
-<h1 class="conf">Confirmation of your order</h1>
+<h1 class="conf">Address of the your order:</h1>
 <?php
 echo
     "<p>Your name: " . $fname . " " . $lname . "</p>
@@ -39,7 +39,7 @@ echo
     <p>Special Instructions:<br>" . $special . "</p>
     <br>";
 
-echo "<h1 class='conf'>Items ordered</h1>";
+echo "<h1 class='conf'>Confirmation of order:</h1>";
 
 if($_SESSION['isSk'] == true) {
         echo
@@ -50,9 +50,6 @@ if($_SESSION['isSk'] == true) {
         </th>
         <td id='tdCart'>" . $_SESSION['sk'] . "</td>
         <td id='tdCart'>Quantity: " . $_SESSION['sk_qty'] . "</td>
-        <td id='tdCart'><form method='post' action='ponder03_cart.php'>
-        <input type='submit' value='REMOVE' name='removeSk'>
-        </form></td>
     </tr>
 </table>"; }
 
