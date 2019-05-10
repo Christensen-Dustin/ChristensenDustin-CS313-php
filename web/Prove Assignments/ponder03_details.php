@@ -49,8 +49,8 @@
 <br>
 <br>
 <?php
-    if($details == 'skDetails') {
-        echo
+if($details == 'skDetails') {
+/*        echo
 "<table class='items'>
     <tr class='info'>
         <th rowspan='2'><img class='mainPic' src='survival_knife.jpg' alt='Survival Knife'></th>
@@ -65,7 +65,7 @@ This survival knife is the ideal tool for any outdoor enthusiast. The rugged 8 i
             </form>
         </td>
     </tr>
-</table>;"
+</table>;"*/
     }
     
 ?>        
