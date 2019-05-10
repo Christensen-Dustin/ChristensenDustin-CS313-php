@@ -87,12 +87,6 @@
         </form></td>
     </tr>
 </table>"; }
-        echo
-"<br>
- <br>
- <div class='btnCheckout'>
- <a href='ponder03_checkout.php'>To Continue to Checkout</a>
- </div>";
 
 if($_SESSION['isSk'] == true ||
    $_SESSION['isFs'] == true ||
