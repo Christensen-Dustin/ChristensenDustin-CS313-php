@@ -23,7 +23,7 @@
 <br>
 <h1>Confirmation of your order</h1>
 <?php
-/***echo
+echo
     "<p>Your name: " . $_SESSION['fname'] . " " . $_SESSION['lname'] . "</p>
     <br>
 <p>   Street: " . $_SESSION['stNum'] . " " . $_SESSION['StName'] . "</p>
@@ -32,7 +32,7 @@
     <br>
 <p>Special Instructions:<br>" . $_SESSION['special'] . "</p>
     <br>
-    <br>";*/
+    <br>";
 
 /*if($_SESSION['isSk'] == true) {
         echo
