@@ -56,14 +56,14 @@ create table steps (
 
 -- Goal Table
 create table goal (
-    goal_pk             serial not null primary key,    -- goal ID
-    goal_name           varchar(80) not null,           -- name of goal
-    goal_details        text not null,                  -- details surrounding the goal
-    goal_expire         boolean not null,               -- Does the goal expire
-    goal_repeat         boolean not null,               -- Does the goal repeat
-    goal_done           boolean not null,               -- Is the goal completed
-    goal_date           date[] not null,                -- date goal expires
-    goal_steps          int not null references steps(steps_pk)-- references the steps
+    goal_pk        serial not null primary key,    -- goal ID
+    goal_name      varchar(80) not null,           -- name of goal
+    goal_details   text not null,                  -- details surrounding the goal
+    goal_expire    boolean not null,               -- Does the goal expire
+    goal_repeat    boolean not null,               -- Does the goal repeat
+    goal_done      boolean not null,               -- Is the goal completed
+    goal_date      date[] not null,                -- date goal expires
+    goal_steps_fk  int not null references steps(steps_pk) not null-- references the steps
 );
 
 -- Family Table
