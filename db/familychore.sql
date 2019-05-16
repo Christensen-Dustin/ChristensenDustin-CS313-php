@@ -29,7 +29,7 @@ create table child (
 create table chore (
     chore_pk            serial not null primary key,    -- chore ID
     chore_name          varchar(80) not null,           -- name of chore
-    chore_details       varchar(120) not null,          -- details surrounding the chore
+    chore_details       text not null,                  -- details surrounding the chore
     chore_expire        boolean not null,               -- Does the chore expire
     chore_repeat        boolean not null,               -- Does the chore repeat
     chore_done          boolean not null,               -- Is the chore completed
@@ -40,7 +40,7 @@ create table chore (
 create table reward (
     reward_pk           serial not null primary key,    -- reward ID
     reward_name         varchar(80) not null,           -- name of reward
-    reward_details      varchar(120) not null,          -- details surrounding the reward
+    reward_details      text not null,                  -- details surrounding the reward
     reward_expire       boolean not null,               -- Does the reward expire
     reward_repeat       boolean not null,               -- Does the reward repeat
     reward_done         boolean not null,               -- Is the reward completed
@@ -50,19 +50,20 @@ create table reward (
 -- Steps Table
 create table steps (
     steps_pk            serial not null primary key,    -- steps ID
-    steps_details       varchar(80) not null            -- step details
+    steps_details       varchar(120) not null,          -- step details
+    steps_done          boolean not null                -- Is the step completed
 );
 
 -- Goal Table
 create table goal (
     goal_pk             serial not null primary key,    -- goal ID
     goal_name           varchar(80) not null,           -- name of goal
-    goal_details        varchar(120) not null,          -- details surrounding the goal
+    goal_details        text not null,                  -- details surrounding the goal
     goal_expire         boolean not null,               -- Does the goal expire
     goal_repeat         boolean not null,               -- Does the goal repeat
     goal_done           boolean not null,               -- Is the goal completed
     goal_date           date[] not null,                -- date goal expires
-    goal_steps_fk       int not null references steps(steps_pk)  -- references the steps
+    goal_steps          int references steps(steps_pk) not null-- references the steps
 );
 
 -- Family Table
