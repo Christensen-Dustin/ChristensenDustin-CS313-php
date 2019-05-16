@@ -63,7 +63,7 @@ create table goal (
     goal_repeat    boolean not null,               -- Does the goal repeat
     goal_done      boolean not null,               -- Is the goal completed
     goal_date      date[] not null,                -- date goal expires
-    goal_steps_fk  int not null references steps(steps_pk) not null-- references the steps
+    goal_steps_fk  int not null references steps(steps_pk)-- references the steps
 );
 
 -- Family Table
