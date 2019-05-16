@@ -1,14 +1,11 @@
 -- Database for the Family Chore Tracker
---
 -- Account Table
---
 create table account (
     account_pk          serial not null primary key,    -- account ID
-    account_marker      varchar(13) not null            -- additional unique marker
+    account_marker      varchar(13) not null unique     -- additional unique marker
 );
 
 -- Parent Table
---
 create table parent (
     parent_pk           serial not null primary key,    -- parent ID
     parent_fname        varchar(20) not null,           -- first name
@@ -19,7 +16,6 @@ create table parent (
 );
 
 -- Child Table
-__
 create table child (
     child_pk            serial not null primary key,    -- child ID
     child_fname         varchar(20) not null,           -- first name
@@ -30,7 +26,6 @@ create table child (
 );
 
 -- Chore Table
---
 create table chore (
     chore_pk            serial not null primary key,    -- chore ID
     chore_name          varchar(80) not null,           -- name of chore
@@ -42,7 +37,6 @@ create table chore (
 );
 
 -- Reward Table
---
 create table reward (
     reward_pk           serial not null primary key,    -- reward ID
     reward_name         varchar(80) not null,           -- name of reward
@@ -54,14 +48,12 @@ create table reward (
 );
 
 -- Steps Table
---
 create table steps (
     steps_pk            serial not null primary key,    -- steps ID
     steps_details       varchar(80) not null            -- step details
 );
 
 -- Goal Table
---
 create table goal (
     goal_pk             serial not null primary key,    -- goal ID
     goal_name           varchar(80) not null,           -- name of goal
@@ -74,7 +66,6 @@ create table goal (
 );
 
 -- Family Table
---
 create table family (
     family_pk           serial not null primary key,                -- family ID
     family_chore_fk     int not null references chore(chore_pk),    -- reference chore ID
