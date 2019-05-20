@@ -4,7 +4,7 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Title of Project/Site</title>
+	<title>Prepare 05</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script type="text/javascript" src="name of file.js"></script>
 	<style></style>
@@ -26,7 +26,7 @@ try
     
     $db = new PDO("psql:host=$dbHost;port=$dbPost;dbname=$dbName", $dbUser, $dbPassword);
     
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $ex) 
 {
@@ -51,7 +51,7 @@ while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
 
 // Third style to display a query
 $statement2 = $db->query('select username, password, from note_user');
-$results = statement->fetchALL(PDO::FETCH_ASSOC);
+$results = $statement2->fetchALL(PDO::FETCH_ASSOC);
 
 
 
