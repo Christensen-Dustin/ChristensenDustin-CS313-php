@@ -10,7 +10,7 @@
 	<style></style>
 </head>  
 <body>
-
+<?php
 // Connecting to the database
 try
 {
@@ -79,6 +79,6 @@ $results = statement->fetchALL(PDO::FETCH_ASSOC);
 
 
 
-
+?>
 </body>
 </html>
