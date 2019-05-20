@@ -46,7 +46,7 @@ foreach ($db->query('select username, password from note_user') as $row)
 $statement = $db->query('select username, password from note_user');
 while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
 {
-    echo 'user: ' . $row2['username']. ' password: ' . $row2['password'] . '<br/>';
+    echo 'user: ' . $row2['username'] . ' password: ' . $row2['password'] . '<br/>';
 }
 
 // Third style to display a query
