@@ -31,6 +31,7 @@ while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
 // Third style to display a query
 $statement2 = $db->query('select username, password, from note_user');
 $results = $statement2->fetchAll(PDO::FETCH_ASSOC);
+    echo $results;
 
 // Prepared statements style one
 $stmt = $db->prepare('select * from table where id=:id and name=:name');
@@ -38,11 +39,13 @@ $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->execute();
 $row3 = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo $row3;
    
 // Prepared statements style two
 $stmt2 = $db->prepare('select * from table where id=:id and name=:name');
 $stmt2->execute(array(':name' => $name, ':id' => $id));
 $row4 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+    echo $row4;
 
 ?>
 </body>
