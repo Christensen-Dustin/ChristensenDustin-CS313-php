@@ -18,7 +18,7 @@ include 'connectDB.php';
         echo '<b>';
         echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . ' - "';
         echo '</b>';
-        echo $row[content] .'" <br/>';
+        echo $row[content] .'" <br/><br/>';
     }
 
 
