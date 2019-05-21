@@ -17,7 +17,7 @@ include 'connectDB.php';
 foreach ($db->query('select username, password from note_user') as $row)
 {
     echo 'user: ' . $row['username'];
-    echo 'password: ' . $row['passwork'];
+    echo ' password: ' . $row['password'];
     echo '<br/>';
 }
 
@@ -30,7 +30,7 @@ while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
 
 // Third style to display a query
 $statement2 = $db->query('select username, password, from note_user');
-$results = $statement2->fetchALL(PDO::FETCH_ASSOC);
+$results = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 
 
