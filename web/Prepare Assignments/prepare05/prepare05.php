@@ -32,7 +32,7 @@ while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
 $statement2 = $db->query('select username, password, from note_user');
 $results = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
-
+/**
 // Prepared statements style one
 $stmt = $db->prepare('select * from table where id=:id and name=:name');
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
