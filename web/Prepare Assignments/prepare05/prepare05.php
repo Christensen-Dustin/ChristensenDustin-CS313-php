@@ -27,7 +27,7 @@ while ($row2 = $statement->fetch(PDO::FETCH_ASSOC))
 {
     echo 'user: ' . $row2['username'] . ' password: ' . $row2['password'] . '<br/>';
 }
-/**
+
 // Third style to display a query
 $statement2 = $db->query('select username, password, from note_user');
 $results = $statement2->fetchAll(PDO::FETCH_ASSOC);
