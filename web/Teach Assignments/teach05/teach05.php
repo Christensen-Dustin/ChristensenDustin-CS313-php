@@ -1,5 +1,5 @@
 <?php
-        $name = $_GET['name'];
+        $name = $_GET['book'];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
