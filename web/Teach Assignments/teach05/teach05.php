@@ -21,7 +21,7 @@ include 'connectDB.php';
         echo '</b>';
         echo $row[content] .'" <br/><br/>';
     }
-    
+echo "name = " . $name;
     
 ?>
 </body>
