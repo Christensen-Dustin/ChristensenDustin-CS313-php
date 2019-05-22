@@ -1,3 +1,15 @@
+-- Database for topic
+
+create table topics (
+    id      serial not null primary key,    -- topic ID
+    name    varchar(20) not null            -- Faith, Sacrifice, Charity
+);
+
+insert into topics (name) values ('Faith');
+insert into topics (name) values ('Sacrifice');
+insert into topics (name) values ('Charity');
+
+
 -- Database for scriptures
 
 create table scriptures (
