@@ -9,7 +9,7 @@ create table account (
 create table parent (
     parent_pk           serial not null primary key,    -- parent ID
     parent_fname        varchar(20) not null,           -- first name
-    parent_last         varchar(20) not null,           -- last name
+    parent_lname        varchar(20) not null,           -- last name
     parent_bday         date not null,                -- birthdate
     parent_display      varchar(20) not null,           -- display name
     parent_password     varchar(120) not null           -- hashed password
