@@ -28,94 +28,61 @@ insert into chore
 insert into chore
 (chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
     values
-    ('Walk the dog', 'Take Lucy on a walk around the block', 0, 1, 0, '2019-05-23');
+    ('Wash laundry', 'All laundry has to be washed, folded, and put away', 1, 1, 0, '2019-05-25');
 insert into chore
 (chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
     values
-    ('Walk the dog', 'Take Lucy on a walk around the block', 0, 1, 0, '2019-05-23');
+    ('Sweep Patio', 'Patio must be swept and organized', 1, 1, 0, '2019-05-25');
 insert into chore
 (chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
     values
-    ('Walk the dog', 'Take Lucy on a walk around the block', 0, 1, 0, '2019-05-23');
+    ('Feed Lucy', 'Make sure Lucy gets fed and fresh water', 1, 1, 0, '2019-05-23');
 insert into chore
 (chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
     values
-    ('Walk the dog', 'Take Lucy on a walk around the block', 0, 1, 0, '2019-05-23');
+    ('Wash dishes', 'Dishes must be washed after the last meal of the day', 1, 1, 0, '2019-05-23');
 insert into chore
 (chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
     values
-    ('Walk the dog', 'Take Lucy on a walk around the block', 0, 1, 0, '2019-05-23');
+    ('Clean Bathroom', 'Tub, Toilet, Counter, mirror and floor must be cleaned', 0, 1, 0, '2019-05-25');
 
 -- Reward Table Trial Information
 insert into reward
 (reward_name, reward_details, reward_expire, reward_repeat, reward_done, reward_date)
     values
-    ('Pick the Movie', 'Gets to pick the movie the family watches for family night', 0, 1, 0, '2019-05-23');
+    ('Pick the Movie', 'Gets to pick the movie the family watches for family night', 0, 1, 0, '2019-08-23');
 insert into reward
 (reward_name, reward_details, reward_expire, reward_repeat, reward_done, reward_date)
     values
-    ('Pick the Movie', 'Gets to pick the movie the family watches for family night', 0, 1, 0, '2019-05-23');
+    ('Pick a restaurant', 'Gets to pick the restaurant for the next family meal out', 0, 1, 0, '2019-06-23');
 insert into reward
 (reward_name, reward_details, reward_expire, reward_repeat, reward_done, reward_date)
     values
-    ('Pick the Movie', 'Gets to pick the movie the family watches for family night', 0, 1, 0, '2019-05-23');
+    ('Pick a game', 'Gets to pick the game the family plays for family night', 0, 1, 0, '2019-07-23');
 insert into reward
 (reward_name, reward_details, reward_expire, reward_repeat, reward_done, reward_date)
     values
-    ('Pick the Movie', 'Gets to pick the movie the family watches for family night', 0, 1, 0, '2019-05-23');
+    ('Pass a chore', 'Gets to pass off a single chore, one time, to another family member', 0, 1, 0, '2019-06-23');
 insert into reward
 (reward_name, reward_details, reward_expire, reward_repeat, reward_done, reward_date)
     values
-    ('Pick the Movie', 'Gets to pick the movie the family watches for family night', 0, 1, 0, '2019-05-23');
+    ('Breakfast with a Parent', 'Gets to go out to breakfast with parent of choice', 0, 1, 0, '2019-07-23');
 insert into reward
 (reward_name, reward_details, reward_expire, reward_repeat, reward_done, reward_date)
     values
-    ('Pick the Movie', 'Gets to pick the movie the family watches for family night', 0, 1, 0, '2019-05-23');
+    ('Lunch with a Parent', 'Gets to go out to lunch with a parent of choice', 0, 1, 0, '2019-09-23');
 
 -- Goal Table Trial Information
 insert into goal
 (goal_name, goal_details, goal_expire, goal_repeat, goal_done, goal_date)
     values
-    ('Family Vacation', 'Annual trip to Washington State', 1, 1, 0, '2019-06-13');
+    ('Hollywood Bowl Concerts', 'Buying packs of tickets for the summer concert season', 1, 1, 0, '2019-06-07');
 insert into goal
 (goal_name, goal_details, goal_expire, goal_repeat, goal_done, goal_date)
     values
-    ('Family Vacation', 'Annual trip to Washington State', 1, 1, 0, '2019-06-13');
+    ('Thanksgiving Dinner', 'Plan on hosting the dinner this year', 1, 1, 0, '2019-11-28');
 insert into goal
 (goal_name, goal_details, goal_expire, goal_repeat, goal_done, goal_date)
     values
     ('Family Vacation', 'Annual trip to Washington State', 1, 1, 0, '2019-06-13');
 
--- Steps Table Trial Information
-insert into steps (steps_details, steps_done, steps_goal-fk)
-    values ('Save money', 0, );
-insert into steps (steps_details, steps_done, steps_goal-fk)
-    values ('Make reservations', 0, );
-insert into steps (steps_details, steps_done, steps_goal-fk)
-    values ('Pack lugage', 0, );
-insert into steps (steps_details, steps_done, steps_goal-fk)
-    values ('Place hold on mail', 0, );
-insert into steps (steps_details, steps_done, steps_goal-fk)
-    values ('Ask Carol to watch Lucy', 0, );
-insert into steps (steps_details, steps_done, steps_goal-fk)
-    values ('Save money', 0, );
-
--- Family Table Trial Information
-insert into family
-(family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk, family_account_fk)
-    values ();
-insert into family
-(family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk, family_account_fk)
-    values ();
-insert into family
-(family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk, family_account_fk)
-    values ();
-insert into family
-(family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk, family_account_fk)
-    values ();
-insert into family
-(family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk, family_account_fk)
-    values ();
-insert into family
-(family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk, family_account_fk)
-    values ();
