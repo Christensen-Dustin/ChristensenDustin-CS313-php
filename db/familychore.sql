@@ -55,14 +55,14 @@ create table goal (
     goal_expire    boolean not null,               -- Does the goal expire
     goal_repeat    boolean not null,               -- Does the goal repeat
     goal_done      boolean not null,               -- Is the goal completed
-    goal_date      date not null,                -- date goal expires
+    goal_date      date not null                   -- date goal expires
 );
 
 -- Steps Table
 create table steps (
     steps_pk            serial not null primary key,    -- steps ID
     steps_details       varchar(120) not null,          -- step details
-    steps_done          boolean not null                -- Is the step completed
+    steps_done          boolean not null,               -- Is the step completed
     steps_goal_fk       int not null references goal(goal_pk) -- references the goal
 );
 
