@@ -22,7 +22,7 @@ create table child (
     child_lname         varchar(20) not null,           -- last name
     child_bday          date[] not null,                -- birthday
     child_display       varchar(20) not null,           -- display name
-    child_passwork      varchar(120) not null           -- hashed password
+    child_password      varchar(120) not null           -- hashed password
 );
 
 -- Chore Table
@@ -47,13 +47,6 @@ create table reward (
     reward_date         date[] not null                 -- date reward expires
 );
 
--- Steps Table
-create table steps (
-    steps_pk            serial not null primary key,    -- steps ID
-    steps_details       varchar(120) not null,          -- step details
-    steps_done          boolean not null                -- Is the step completed
-);
-
 -- Goal Table
 create table goal (
     goal_pk        serial not null primary key,    -- goal ID
@@ -63,7 +56,14 @@ create table goal (
     goal_repeat    boolean not null,               -- Does the goal repeat
     goal_done      boolean not null,               -- Is the goal completed
     goal_date      date[] not null,                -- date goal expires
-    goal_steps_fk  int not null references steps(steps_pk)-- references the steps
+);
+
+-- Steps Table
+create table steps (
+    steps_pk            serial not null primary key,    -- steps ID
+    steps_details       varchar(120) not null,          -- step details
+    steps_done          boolean not null                -- Is the step completed
+    steps_goal_fk       int not null references goal(goal_pk) -- references the goal
 );
 
 -- Family Table
