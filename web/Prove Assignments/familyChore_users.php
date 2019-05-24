@@ -1,7 +1,7 @@
 <?php
     include 'connectDB.php';
     session_start();
-    $display = $_GET['userName'];
+    $result = $_GET['userName'];
     $expanded = explode($result);
     $id = $expanded[0];
     $display = $expanded[1];
