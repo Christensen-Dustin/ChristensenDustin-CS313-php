@@ -14,7 +14,7 @@
 </head>  
 <body>
 <h1 id="title">Users - Display Name</h1>
-    <form method="get" action="familyChore_mail.php"><select><option selected="selected">Select a user by there Display Name</option>
+    <form method="get" action="familyChore_main.php"><select><option selected="selected">Select a user by there Display Name</option>
 <?php
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent") as $rowParent)
 {
