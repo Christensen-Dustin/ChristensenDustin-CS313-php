@@ -14,7 +14,7 @@
 </head>  
 <body>
 <h1 id="title">Users - Display Name</h1>
-    <form method="get" action="familyChore_main.php"><select><option selected="selected">Select a user by there Display Name</option>
+    <form method="get" action="familyChore_users.php"><select><option selected="selected">Select a user by there Display Name</option>
 <?php
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent") as $rowParent)
 {
@@ -26,21 +26,6 @@ foreach ($db->query("select child_fname, child_lname, child_bday, child_display 
 }
 ?>
 </select></form>
-<div id="userInfo">
-<?php
-    foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_pk='$userName'") as $rowParent)
-{
-    echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
-    echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
-}
-foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child where child_pk='$userName'") as $rowChild)
-{
-    echo 'User Name: ' . $rowParent['child_fname'] . ' ' . $rowParent['child_lname'] . '</br>';
-    echo 'Birthday: ' . $rowParent['child_bday'] . '</br>';
-}
-?>
-</div>
-
 
 <?php
 echo '</br><h1> Chores </h1></br>';
