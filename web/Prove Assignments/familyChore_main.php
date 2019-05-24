@@ -60,7 +60,7 @@ foreach ($db->query("select reward_pk, reward_name from reward") as $rowReward)
 <h1> Goals </h1>
     <form method="get" action="familyChore_goals.php"><select name="goals"><option selected="selected">Select a goal</option>
 <?php
-foreach ($db->query("select goal-pk, goal_name from goal") as $rowGoal)
+foreach ($db->query("select goal_pk, goal_name from goal") as $rowGoal)
 {
     echo '<option value=' . $rowGoal['goal_pk'] . '>' . $rowGoal['goal_name'] . '</option>';
 }
