@@ -68,7 +68,7 @@ create table steps (
 
 -- Family Table
 create table family (
-    family_pk           serial not null primary key,                -- family ID
+    family_pk           serial not null primary key,       -- family ID
     family_chore_fk     int references chore(chore_pk),    -- reference chore ID
     family_goal_fk      int references goal(goal_pk),      -- reference goal ID
     family_reward_fk    int references reward(reward_pk),  -- reference reward ID

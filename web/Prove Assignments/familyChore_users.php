@@ -25,7 +25,7 @@
 <?php
 
     echo 'ID = ' . $id . '</br>';
-    echo 'Display = ' . $display . '</b>';
+    echo 'Display = ' . $display . '</br>';
     
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_display='$display'") as $rowParent)
 {
@@ -33,7 +33,7 @@ foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_disp
     echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
 }
 
-foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child where child_display='$display'") as $rowChild)
+foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child where child_pk='$id'") as $rowChild)
 {
     echo 'User Name: ' . $rowChild['child_fname'] . ' ' . $rowChild['child_lname'] . '</br>';
     echo 'Birthday: ' . $rowChild['child_bday'] . '</br>';
