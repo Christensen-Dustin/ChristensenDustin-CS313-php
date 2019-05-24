@@ -15,13 +15,13 @@
 
 <?php
 echo '<h1> Parents </h1>';
-foreach ($dbParent->query("select parent_fname, parent_lname, parent_bday, parent_display from parent") as $rowParent)
+foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent") as $rowParent)
 {
     echo $rowParent['parent_display'] . '</br>';
 }
 
 echo '</br><h1> Children </h1></br>';
-foreach ($dbChild->query("select child_fname, child_lname, child_bday, child_display from child") as $rowChild)
+foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child") as $rowChild)
 {
     echo $rowChild['child_display'] . '</br>';
 }
