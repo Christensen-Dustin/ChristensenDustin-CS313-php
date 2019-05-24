@@ -29,7 +29,7 @@ foreach ($db->query("select reward_name, reward_details, reward_date from reward
 }
 
 echo '</br><h1> Users </h1></br>';
-foreach ($db->query("select family_reward_fk, reward_pk, reward_name, parent_fname, parent_lname, parent_bday, parent_display, from family, reward, parent where family_reward_fk = '$rewards' and reward_pk = '$rewards'") as $rowParent)
+foreach ($db->query("select family_reward_fk, reward_pk, reward_name, parent_fname, parent_lname, parent_bday, parent_display from family, reward, parent where family_reward_fk = '$rewards' and reward_pk = '$rewards'") as $rowParent)
 {
     echo 'Display Name: ' . $rowParent['parent_display'] . '</br>';
     echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
