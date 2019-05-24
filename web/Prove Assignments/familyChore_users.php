@@ -46,7 +46,7 @@ foreach ($db->query("select parent_pk, parent_display, family_pk, chore_name, fa
     echo $rowFamily['chore_name'] . '</br>';
 }
 
-foreach ($db->query("select child_pk, child_display, family_pk, chore_name, family_chore_fk, family_parent_fk from parent, chore, family where child_display='$display' and child_pk='$id' and family_pk='$id'") as $rowFamily)
+foreach ($db->query("select child_pk, child_display, family_pk, chore_name, family_chore_fk, family_parent_fk from parent, chore, family where child_pk='$id' and family_pk='$id'") as $rowFamily)
 {
     echo $rowFamily['chore_name'] . '</br>';
 }
