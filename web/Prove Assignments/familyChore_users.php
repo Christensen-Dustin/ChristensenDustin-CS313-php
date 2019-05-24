@@ -2,7 +2,7 @@
     include 'connectDB.php';
     session_start();
     $result = $_GET['userName'];
-    $expanded = explode(":", $result);
+    $expanded = explode("|", $result);
     $id = $expanded[0];
     $display = $expanded[1];
 ?>
