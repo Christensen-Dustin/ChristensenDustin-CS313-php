@@ -18,7 +18,7 @@ insert into child
         values ('Garrison', 'Christensen', '2004-07-30', 'Son', 'BYUI2033');
 insert into child
     (child_fname, child_lname, child_bday, child_display, child_password)
-        values ('Lucy', 'Christensen', '2018-11-08', 'Little Dog', 'schooloflife');
+        values ('Lucy', 'Christensen', '2018-11-08', 'LittleDog', 'schooloflife');
 -- Chore Table Trial Information
 insert into chore
 (chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
