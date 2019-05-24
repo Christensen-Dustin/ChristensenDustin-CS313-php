@@ -27,31 +27,31 @@ foreach ($db->query("select child_fname, child_lname, child_bday, child_display 
 }
 
 echo '</br><h1> Chores </h1></br>';
-foreach ($dbChore->query("select chore_name, chore_details, chore_date from chore") as $rowChore)
+foreach ($db->query("select chore_name, chore_details, chore_date from chore") as $rowChore)
 {
     echo $rowChore['chore_name'] . '</br>';
 }
 
 echo '</br><h1> Rewards </h1></br>';
-foreach ($dbReward->query("select reward_name, reward_details, reward_date from reward") as $rowReward)
+foreach ($db->query("select reward_name, reward_details, reward_date from reward") as $rowReward)
 {
     echo $rowReward['reward_name'] . '</br>';
 }
 
 echo '</br><h1> Goals </h1></br>';
-foreach ($dbGoal->query("select goal_name, goal_details, goal_date from goal") as $rowGoal)
+foreach ($db->query("select goal_name, goal_details, goal_date from goal") as $rowGoal)
 {
     echo $rowGoal['goal_name'] . '</br>';
 }
 
 echo '</br><h1> Steps </h1></br>';
-foreach ($dbSteps->query("select steps_details, steps_goal_fk from steps") as $rowSteps)
+foreach ($db->query("select steps_details, steps_goal_fk from steps") as $rowSteps)
 {
     echo $rowSteps['steps_details'] . '</br>';
 }
 
 echo '</br><h1> Family  </h1></br>';
-foreach ($dbFamily->query("select family_pk, family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk") as $rowFamily)
+foreach ($db->query("select family_pk, family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk") as $rowFamily)
 {
     echo $rowFamily['family_pk'] . '</br>';
 }
