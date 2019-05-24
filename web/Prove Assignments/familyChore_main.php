@@ -22,11 +22,11 @@
 <?php
 foreach ($db->query("select parent_pk, parent_display from parent") as $rowParent)
 {
-    echo '<option value={' . $rowParent['parent_pk'] . ':' . $rowParent['parent_display'] . '}>' . $rowParent['parent_display'] . '</option>';
+    echo '<option value={' . $rowParent['parent_pk'] . ' : ' . $rowParent['parent_display'] . '}>' . $rowParent['parent_display'] . '</option>';
 }
 foreach ($db->query("select child_pk, child_display from child") as $rowChild)
 {
-    echo '<option value=' . $rowChild['child_pk'] . ':' . $rowChild['child_display'] . '}>' . $rowChild['child_display'] . '</option>';
+    echo '<option value=' . $rowChild['child_pk'] . ' : ' . $rowChild['child_display'] . '}>' . $rowChild['child_display'] . '</option>';
 }
 ?>
 <input type="submit" value="User Details">
