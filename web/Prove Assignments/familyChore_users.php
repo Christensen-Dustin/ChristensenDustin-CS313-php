@@ -2,7 +2,7 @@
     include 'connectDB.php';
     session_start();
     $result = $_GET['userName'];
-    $expanded = explode($result);
+    $expanded = explode(":", $result);
     $id = $expanded[0];
     $display = $expanded[1];
 ?>
@@ -24,7 +24,7 @@
 <h1>User Details</h1>
 <?php
 
-    echo 'ID = ' . $id;
+    echo 'ID = ' . $id . '</br>;
     echo 'Display = ' . $display;
     
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_display='$display'") as $rowParent)
