@@ -4,7 +4,7 @@
     $result = $_GET['userName'];
     $expanded = ('|', $result);
     $id = $expanded[0];
-    $display = expanded[1];
+    $display = $expanded[1];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
