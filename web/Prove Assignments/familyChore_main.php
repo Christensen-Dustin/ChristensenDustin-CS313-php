@@ -1,5 +1,7 @@
 <?php
     include 'connectDB.php';
+    session_start();
+    $userName = $_GET['userName'];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -12,18 +14,32 @@
 </head>  
 <body>
 <h1 id="title">Users - Display Name</h1>
-    <select><option selected="selected">Select a user by there Display Name</option>
+    <form method="get" action="familyChore_mail.php"><select><option selected="selected">Select a user by there Display Name</option>
 <?php
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent") as $rowParent)
 {
-    echo '<option value=' . $rowParent['parent_display'] . '>' . $rowParent['parent_display'] . '</option>';
+    echo '<option name="userName" value=' . $rowParent['parent_display'] . '>' . $rowParent['parent_display'] . '</option>';
 }
 foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child") as $rowChild)
 {
-    echo '<option value=' . $rowChild['child_display'] . '>' . $rowChild['child_display'] . '</option>';
+    echo '<option name="userName" value=' . $rowChild['child_display'] . '>' . $rowChild['child_display'] . '</option>';
 }
 ?>
-    </select>
+</select></form>
+<div id="userInfo">
+<?php
+    foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_pk='$userName'") as $rowParent)
+{
+    echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
+    echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
+}
+foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child where child_pk='$userName'") as $rowChild)
+{
+    echo 'User Name: ' . $rowParent['child_fname'] . ' ' . $rowParent['child_lname'] . '</br>';
+    echo 'Birthday: ' . $rowParent['child_bday'] . '</br>';
+}
+?>
+</div>
 
 
 <?php
