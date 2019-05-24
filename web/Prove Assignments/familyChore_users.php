@@ -21,7 +21,7 @@
 <h1>User Details</h1>
 <?php
 
-$family_hk;
+$family_fk;
 
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_display='$userName'") as $rowParent)
 {
