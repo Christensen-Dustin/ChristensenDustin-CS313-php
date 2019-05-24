@@ -20,7 +20,7 @@
 
 <h1>Goal Details</h1>
 <?php
-foreach ($db->query("select goal_name, goal_details, goal_date from goal where goal_pk='$goals'") as $rowGoal)
+foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goal where goal_pk='$goals'") as $rowGoal)
 {
     echo 'Goal Name: ' . $rowGoal['goal_name'] . '<br>';
     echo 'Due Date :' . $rowGoal['goal_date'] . '<br>';
@@ -28,7 +28,7 @@ foreach ($db->query("select goal_name, goal_details, goal_date from goal where g
 }
     
 echo '</br><h1> Steps </h1></br>';
-foreach ($db->query("select steps_details, steps_goal_fk from steps") as $rowSteps)
+foreach ($db->query("select steps_details, steps_goal_fk from steps where steps_goal_fk = goal_pk from goal") as $rowSteps)
 {
     echo $rowSteps['steps_details'] . '</br>';
 }
