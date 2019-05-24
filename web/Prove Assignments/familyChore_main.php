@@ -26,7 +26,7 @@ foreach ($db->query("select parent_pk, parent_display from parent") as $rowParen
 }
 foreach ($db->query("select child_pk, child_display from child") as $rowChild)
 {
-    echo '<option value={' . $rowChild['child_pk'] . ' : ' . $rowChild['child_display'] . '}>' . $rowChild['child_display'] . '</option>';
+    echo '<option value={' . $rowChild['child_pk'] . ' : "' . $rowChild['child_display'] . '"}>' . $rowChild['child_display'] . '</option>';
 }
 ?>
 <input type="submit" value="User Details">
