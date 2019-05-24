@@ -1,10 +1,10 @@
 <?php
     include 'connectDB.php';
     session_start();
-    $result = $_GET['userName'];
-    $expanded = explode(': ', $result);
-    $id = $expanded[0];
-    $display = $expanded[1];
+    // $result = $_GET['userName'];
+    list($id, $display) = explode('-', $_GET['userName'], 2);
+    // $id = $expanded[0];
+    // $display = $expanded[1];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
