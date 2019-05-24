@@ -20,11 +20,11 @@
 <h1 id="title">Users - Display Name</h1>
     <form method="get" action="familyChore_users.php"><select name="userName"><option selected="selected">Select a user by there Display Name</option>
 <?php
-foreach ($db->query("select parent_display from parent") as $rowParent)
+foreach ($db->query("select parent_pk, parent_display from parent") as $rowParent)
 {
     echo '<option value=' . $rowParent['parent_pk'] . '>' . $rowParent['parent_display'] . '</option>';
 }
-foreach ($db->query("select child_display from child") as $rowChild)
+foreach ($db->query("select parent_pk, child_display from child") as $rowChild)
 {
     echo '<option value=' . $rowChild['child_pk'] . '>' . $rowChild['child_display'] . '</option>';
 }
