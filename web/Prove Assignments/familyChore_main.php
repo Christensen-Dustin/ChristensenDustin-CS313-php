@@ -25,6 +25,7 @@ foreach ($db->query("select child_fname, child_lname, child_bday, child_display 
     echo '<option name="userName" value=' . $rowChild['child_display'] . '>' . $rowChild['child_display'] . '</option>';
 }
 ?>
+<input type="submit" value="User Details">
 </select></form>
 
 <?php
