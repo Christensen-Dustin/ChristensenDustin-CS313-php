@@ -1,10 +1,7 @@
 <?php
     include 'connectDB.php';
     session_start();
-    // $result = $_GET['userName'];
     list($id, $display) = explode('-', $_GET['userName'], 2);
-    // $id = $expanded[0];
-    // $display = $expanded[1];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -23,9 +20,6 @@
 
 <h1>User Details</h1>
 <?php
-
-    echo 'ID = ' . $id . '</br>';
-    echo 'Display = ' . $display . '</br>';
     
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_display='$display'") as $rowParent)
 {
@@ -51,6 +45,16 @@ foreach ($db->query("select child_pk, child_display, family_pk, chore_name, fami
     echo $rowFamily['chore_name'] . '</br>';
 }
 
+echo '<h2> Rewards </h2>';
+foreach ($db->query("select parent_pk, parent_display, family_pk, reward_name, family_reward_fk, family_parent_fk from parent, rewards, family where parent_display='$display' and parent_pk='$id' and family_pk='$id'") as $rowFamily)
+{
+    echo $rowFamily['reward_name'] . '</br>';
+}
+
+foreach ($db->query("select child_pk, child_display, family_pk, reward_name, family_reward_fk, family_child_fk from child, reward, family where child_display = '$display' and child_pk='$id' and family_pk='$id'") as $rowFamily)
+{
+    echo $rowFamily['reward_name'] . '</br>';
+}
 
 ?>
 
