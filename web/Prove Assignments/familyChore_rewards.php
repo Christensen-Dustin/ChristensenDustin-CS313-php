@@ -14,24 +14,19 @@
 </head>  
 <body>
 <header>
-
+<a href="familyChore_main.php">Main Page</a>
 
 </header>
 
 
+<h1>Reward Details</h1>
 <?php
-foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_display='$userName'") as $rowParent)
+foreach ($db->query("select reward_name, reward_details, reward_date from reward where reward_pk='$rewards'") as $rowReward)
 {
-    echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
-    echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
+    echo 'Reward Name: ' . $rowReward['reward_name'] . '<br>';
+    echo 'Due Date :' . $rowReward['reward_date'] . '<br>';
+    echo 'Reward Details: ' . $rowReward['reward_details'] . '<br>';
 }
-
-foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child where child_display='$userName'") as $rowChild)
-{
-    echo 'User Name: ' . $rowParent['child_fname'] . ' ' . $rowParent['child_lname'] . '</br>';
-    echo 'Birthday: ' . $rowParent['child_bday'] . '</br>';
-}
-
 ?>
 
 

@@ -14,7 +14,7 @@
 </head>  
 <body>
 <header>
-
+<a href="familyChore_main.php">Main Page</a>
 
 </header>
 

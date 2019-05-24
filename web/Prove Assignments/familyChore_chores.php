@@ -14,7 +14,7 @@
 </head>  
 <body>
 <header>
-
+<a href="familyChore_main.php">Main Page</a>
 
 </header>
 
@@ -22,7 +22,8 @@
 <?php
 foreach ($db->query("select chore_name, chore_details, chore_date from chore where chore_pk='$chores'") as $rowChore)
 {
-    echo 'Chore Name: ' . $rowChore['chore_name'] . ' Due Date :' . $rowChore['chore_date'] . '<br>';
+    echo 'Chore Name: ' . $rowChore['chore_name'] . '<br>';
+    echo 'Due Date :' . $rowChore['chore_date'] . '<br>';
     echo 'Chore Details: ' . $rowChore['chore_details'] . '<br>';
 }
 ?>

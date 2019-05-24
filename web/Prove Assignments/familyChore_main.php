@@ -13,7 +13,7 @@
 </head>  
 <body>
 <header>
-
+<a href="assignment.html">Assignment Page</a>
 
 </header>
 
@@ -48,9 +48,9 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
 <h1> Rewards </h1>
     <form method="get" action="familyChore_rewards.php"><select name="rewards"><option selected="selected">Select a reward</option>
 <?php
-foreach ($db->query("select reward_name, reward_details, reward_date from reward") as $rowReward)
+foreach ($db->query("select reward_pk, reward_name from reward") as $rowReward)
 {
-    echo '<option value=' . $rowReward['reward_name'] . '>' . $rowReward['reward_name'] . '</option>';
+    echo '<option value=' . $rowReward['reward_pk'] . '>' . $rowReward['reward_name'] . '</option>';
 }
 ?>
 <input type="submit" value="Reward Details">
@@ -60,9 +60,9 @@ foreach ($db->query("select reward_name, reward_details, reward_date from reward
 <h1> Goals </h1>
     <form method="get" action="familyChore_goals.php"><select name="goals"><option selected="selected">Select a goal</option>
 <?php
-foreach ($db->query("select goal_name, goal_details, goal_date from goal") as $rowGoal)
+foreach ($db->query("select goal-pk, goal_name from goal") as $rowGoal)
 {
-    echo '<option value=' . $rowGoal['goal_name'] . '>' . $rowGoal['goal_name'] . '</option>';
+    echo '<option value=' . $rowGoal['goal_pk'] . '>' . $rowGoal['goal_name'] . '</option>';
 }
 ?>
 <input type="submit" value="Goal Details">
