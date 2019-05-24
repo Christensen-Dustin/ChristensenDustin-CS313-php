@@ -28,8 +28,8 @@ foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_disp
 
 foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child where child_display='$userName'") as $rowChild)
 {
-    echo 'User Name: ' . $rowParent['child_fname'] . ' ' . $rowParent['child_lname'] . '</br>';
-    echo 'Birthday: ' . $rowParent['child_bday'] . '</br>';
+    echo 'User Name: ' . $rowChild['child_fname'] . ' ' . $rowChild['child_lname'] . '</br>';
+    echo 'Birthday: ' . $rowChild['child_bday'] . '</br>';
 }
 
 echo '</br><h1> Family  </h1></br>';

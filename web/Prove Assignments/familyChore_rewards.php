@@ -27,8 +27,23 @@ foreach ($db->query("select reward_name, reward_details, reward_date from reward
     echo 'Due Date :' . $rowReward['reward_date'] . '<br>';
     echo 'Reward Details: ' . $rowReward['reward_details'] . '<br>';
 }
-?>
 
+echo '</br><h1> Users </h1></br>';
+foreach ($db->query("select family_reward_fk, reward_pk, reward_name, parent_fname, parent_lname, parent_bday, parent_display, child_fname, child_lname, child_bday, child_display from family, reward, parent, child where family_reward_fk = '$rewards' and reward_pk = '$rewards'") as $rowParent)
+{
+    echo 'Display Name: ' . $rowParent['parent_display'] . '</br>';
+    echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
+    echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
+}
+
+foreach ($db->query("select family_reward_fk, reward_pk, reward_name, child_fname, child_lname, child_bday, child_display from family, reward, parent, child where family_reward_fk = '$rewards' and reward_pk = '$rewards'") as $rowChild)
+{
+    echo 'Display Name: ' . $rowChild['child_display'] . '</br>';
+    echo 'User Name: ' . $rowChild['child_fname'] . ' ' . $rowChild['child_lname'] . '</br>';
+    echo 'Birthday: ' . $rowChild['child_bday'] . '</br>';
+}
+
+?>
 
 </body>
 </html>
