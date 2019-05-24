@@ -16,11 +16,11 @@
 <?php
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent") as $rowParent)
 {
-    echo '<option$ value=' . $rowParent['parent_display'] . '>' . $rowParent['parent_display'] . '</option>';
+    echo '<option value=' . $rowParent['parent_display'] . '>' . $rowParent['parent_display'] . '</option>';
 }
 foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child") as $rowChild)
 {
-    echo '<option$ value=' . $rowChild['parent_display'] . '>' . $rowChild['parent_display'] . '</option>';
+    echo '<option value=' . $rowChild['parent_display'] . '>' . $rowChild['parent_display'] . '</option>';
 }
 ?>
     </select>
