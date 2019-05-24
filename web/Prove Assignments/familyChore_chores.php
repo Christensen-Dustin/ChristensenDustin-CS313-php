@@ -7,29 +7,25 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Title of Project/Site</title>
+	<title>Family Chore Tracker - Chores Detail Page</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
 	<script type="text/javascript" src="name of familyChore.js"></script>
 	<style></style>
 </head>  
 <body>
+<header>
 
 
+</header>
+
+<h1>Chores Details</h1>
 <?php
-foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_display='$userName'") as $rowParent)
+foreach ($db->query("select chore_name, chore_details, chore_date from chore where chore_name='$chores'") as $rowChore)
 {
-    echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
-    echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
+    echo 'Chore Name: ' . $rowChore['chore_name'] . ' Due Date :' . $rowChore['chore_date'] . '<br>';
+    echo 'Chore Details: ' . $rowChore['chore_details'] . '<br>';
 }
-
-foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child where child_display='$userName'") as $rowChild)
-{
-    echo 'User Name: ' . $rowParent['child_fname'] . ' ' . $rowParent['child_lname'] . '</br>';
-    echo 'Birthday: ' . $rowParent['child_bday'] . '</br>';
-}
-
 ?>
-
 
 </body>
 </html>

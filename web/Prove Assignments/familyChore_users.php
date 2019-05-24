@@ -7,14 +7,18 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Title of Project/Site</title>
+	<title>User Details</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
 	<script type="text/javascript" src="name of familyChore.js"></script>
 	<style></style>
 </head>  
 <body>
+<header>
 
 
+</header>
+
+<h1>User Details</h1>
 <?php
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_display='$userName'") as $rowParent)
 {

@@ -6,12 +6,17 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Title of Project/Site</title>
+	<title>Family Chore Tracker - Main Page</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
 	<script type="text/javascript" src="name of familyChore.js"></script>
 	<style></style>
 </head>  
 <body>
+<header>
+
+
+</header>
+
 <h1 id="title">Users - Display Name</h1>
     <form method="get" action="familyChore_users.php"><select name="userName"><option selected="selected">Select a user by there Display Name</option>
 <?php
