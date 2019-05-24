@@ -20,7 +20,7 @@
 
 <h1>Chores Details</h1>
 <?php
-foreach ($db->query("select chore_name, chore_details, chore_date from chore where chore_name='$chores'") as $rowChore)
+foreach ($db->query("select chore_name, chore_details, chore_date from chore where chore_pk='$chores'") as $rowChore)
 {
     echo 'Chore Name: ' . $rowChore['chore_name'] . ' Due Date :' . $rowChore['chore_date'] . '<br>';
     echo 'Chore Details: ' . $rowChore['chore_details'] . '<br>';
