@@ -11,21 +11,22 @@
 	<style></style>
 </head>  
 <body>
+<h1 id="title">Users - Display Name</h1>
+    <select><option selected="selected">Select a user by there Display Name</option>
+<?php
+foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent") as $rowParent)
+{
+    echo '<option$ value=' . $rowParent['parent_display'] . '>' . $rowParent['parent_display'] . '</option>';
+}
+foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child") as $rowChild)
+{
+    echo '<option$ value=' . $rowChild['parent_display'] . '>' . $rowChild['parent_display'] . '</option>';
+}
+?>
+    </select>
 
 
 <?php
-echo '<h1> Parents </h1>';
-foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent") as $rowParent)
-{
-    echo $rowParent['parent_display'] . '</br>';
-}
-
-echo '</br><h1> Children </h1></br>';
-foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child") as $rowChild)
-{
-    echo $rowChild['child_display'] . '</br>';
-}
-
 echo '</br><h1> Chores </h1></br>';
 foreach ($db->query("select chore_name, chore_details, chore_date from chore") as $rowChore)
 {
