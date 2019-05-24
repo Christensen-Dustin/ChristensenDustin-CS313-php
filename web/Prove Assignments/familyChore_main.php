@@ -20,7 +20,7 @@ foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_disp
 }
 foreach ($db->query("select child_fname, child_lname, child_bday, child_display from child") as $rowChild)
 {
-    echo '<option value=' . $rowChild['parent_display'] . '>' . $rowChild['parent_display'] . '</option>';
+    echo '<option value=' . $rowChild['child_display'] . '>' . $rowChild['child_display'] . '</option>';
 }
 ?>
     </select>
