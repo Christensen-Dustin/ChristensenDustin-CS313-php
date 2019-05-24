@@ -24,6 +24,9 @@
 <h1>User Details</h1>
 <?php
 
+    echo 'ID = ' . $id;
+    echo 'Display = ' . $display;
+    
 foreach ($db->query("select parent_fname, parent_lname, parent_bday, parent_display from parent where parent_display='$display'") as $rowParent)
 {
     echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
