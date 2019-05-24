@@ -1,7 +1,7 @@
 <?php
     include 'connectDB.php';
     session_start();
-    $userName = $_GET['userName'];
+    $goals = $_GET['goals'];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -27,14 +27,15 @@ foreach ($db->query("select child_fname, child_lname, child_bday, child_display 
     echo 'User Name: ' . $rowParent['child_fname'] . ' ' . $rowParent['child_lname'] . '</br>';
     echo 'Birthday: ' . $rowParent['child_bday'] . '</br>';
 }
-
-echo '</br><h1> Family  </h1></br>';
-foreach ($db->query("select family_pk, family_chore_fk, family_goal_fk, family_reward_fk, family_parent_fk, family_child_fk") as $rowFamily)
+    
+echo '</br><h1> Steps </h1></br>';
+foreach ($db->query("select steps_details, steps_goal_fk from steps") as $rowSteps)
 {
-    echo $rowFamily['family_pk'] . '</br>';
+    echo $rowSteps['steps_details'] . '</br>';
 }
 
 ?>
+
 
 </body>
 </html>
