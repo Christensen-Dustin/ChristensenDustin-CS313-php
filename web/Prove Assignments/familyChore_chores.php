@@ -35,7 +35,7 @@ foreach ($db->query("select family_chore_fk, chore_pk, parent_fname, parent_lnam
     echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
 }
 
-foreach ($db->query("select family_chore_fk, chore_pk, child_fname, child_lname, child_bday, child_display from chore in join family on family_chore_fk=chore_pk inner join child on family_child_fk=child_pk where chore_name='$chores'") as $rowChild)
+foreach ($db->query("select family_chore_fk, chore_pk, child_fname, child_lname, child_bday, child_display from chore inner join family on family_chore_fk=chore_pk inner join child on family_child_fk=child_pk where chore_name='$chores'") as $rowChild)
 {
     echo 'Display Name: ' . $rowChild['child_display'] . '</br>';
     echo 'User Name: ' . $rowChild['child_fname'] . ' ' . $rowChild['child_lname'] . '</br>';
