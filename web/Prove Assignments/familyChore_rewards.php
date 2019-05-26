@@ -2,6 +2,7 @@
     include 'connectDB.php';
     session_start();
     $rewards = $_GET['rewards'];
+    $db->query("select reward_name from reward where reward_pk='$rewards'") as $rowHeader;
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -14,11 +15,20 @@
 </head>  
 <body>
 <header>
-<a href="familyChore_main.php">Main Page</a>
-
+<h1>Here are the details regarding <?php echo '$rowHeader' ?></h1>
 </header>
+<br>
+<div class="navBar">
+    <a class="active" href="index.html">Home - Little about myself</a>
+    <a href="interest.php"> Other Interest</a>
+    <a href="assignment.html">Assignments Page</a>
+    <a href="familyChore_main.php">Home Page</a>
+</div>
+<br>
+<br>
 
-
+<div id="adjust">
+    <div id="left">
 <h1>Reward Details</h1>
 <?php
 foreach ($db->query("select reward_name, reward_details, reward_date from reward where reward_pk='$rewards'") as $rowReward)
@@ -27,7 +37,10 @@ foreach ($db->query("select reward_name, reward_details, reward_date from reward
     echo 'Due Date :' . $rowReward['reward_date'] . '<br>';
     echo 'Reward Details: ' . $rowReward['reward_details'] . '</br></br>';
 }
-
+?>
+    </div>
+    <div id="right">
+<?php
 echo '<h1> Users </h1>';
 foreach ($db->query("select family_reward_fk, reward_pk, parent_fname, parent_lname, parent_bday, parent_display from reward inner join family on family_reward_fk=reward_pk inner join parent on family_parent_fk=parent_pk where reward_pk = '$rewards'") as $rowParent)
 {
@@ -44,6 +57,7 @@ foreach ($db->query("select family_reward_fk, child_fname, child_lname, child_bd
 }
 
 ?>
-
+    </div>
+</div>
 </body>
 </html>
