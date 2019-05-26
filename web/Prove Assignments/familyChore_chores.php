@@ -32,14 +32,14 @@ foreach ($db->query("select family_chore_fk, chore_pk, parent_fname, parent_lnam
 {
     echo 'Display Name: ' . $rowParent['parent_display'] . '</br>';
     echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
-    echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
+    echo 'Birthday: ' . $rowParent['parent_bday'] . '</br></br>'; 
 }
 
 foreach ($db->query("select family_chore_fk, family_child_fk, chore_pk, child_fname, child_lname, child_bday, child_display, child_pk from chore inner join family on family_chore_fk=chore_pk inner join child on family_child_fk=child_pk where chore_pk='$chores'") as $rowChild)
 {
     echo 'Display Name: ' . $rowChild['child_display'] . '</br>';
     echo 'User Name: ' . $rowChild['child_fname'] . ' ' . $rowChild['child_lname'] . '</br>';
-    echo 'Birthday: ' . $rowChild['child_bday'] . '</br>';
+    echo 'Birthday: ' . $rowChild['child_bday'] . '</br></br>';
 }
 
 ?>
