@@ -2,13 +2,18 @@
     include 'connectDB.php';
     session_start();
     $chores = $_GET['chores'];
-    $db->query("select chore_name from chore where chore_pk='$chores'") as $rowHeader;
+    
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
 <body>
 <header>
-<h1>Here are the details regarding <?php echo $rowHeader['chore_name']?></h1>
+<h1>Here are the details regarding <?php
+    foreach ($db->query("select chore_name from chore where chore_pk='$chores'") as $rowHeader)
+    {
+        echo $rowHeader['chore_name']?>
+    }
+    </h1>
 </header>
 <br>
 <div class="navBar">
