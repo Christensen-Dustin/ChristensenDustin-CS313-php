@@ -18,9 +18,10 @@
 </header>
 <br>
 <div class="navBar">
-  <a class="active" href="index.html">Home - Little about myself</a>
-  <a href="interest.php"> Other Interest</a>
-  <a href="assignment.html">Assignments Page</a>
+    <a class="active" href="index.html">Home - Little about myself</a>
+    <a href="interest.php"> Other Interest</a>
+    <a href="assignment.html">Assignments Page</a>
+    <a href="familyChore_main.php">Home Page</a>
 </div>
 <br>
 <br>
@@ -41,7 +42,10 @@ foreach ($db->query("select child_fname, child_lname, child_bday, child_display 
     echo 'User Name: ' . $rowChild['child_fname'] . ' ' . $rowChild['child_lname'] . '</br>';
     echo 'Birthday: ' . $rowChild['child_bday'] . '</br>';
 }
-
+?>
+    </div>    
+    <div id="right">
+<?php
 echo '<h1> Related Details  </h1>';
 echo '<h2> Chores </h2>';
 foreach ($db->query("select parent_pk, parent_display, family_pk, chore_name, family_chore_fk, family_parent_fk from parent inner join family on family_parent_fk=parent_pk inner join chore on family_chore_fk=chore_pk where parent_display='$display'") as $rowFamily)
@@ -54,8 +58,7 @@ foreach ($db->query("select child_pk, child_display, family_pk, chore_name, fami
     echo $rowFamily['chore_name'] . '</br>';
 }
 ?>
-    </div>    
-    <div id="right">
+
 <h2> Rewards </h2>
 <?php
 foreach ($db->query("select parent_pk, parent_display, family_pk, reward_name, family_reward_fk, family_parent_fk from parent inner join family on family_parent_fk=parent_pk inner join reward on family_reward_fk=reward_pk  where parent_display='$display'") as $rowFamily)
