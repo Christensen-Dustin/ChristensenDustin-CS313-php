@@ -46,12 +46,12 @@ foreach ($db->query("select child_pk, child_display, family_pk, chore_name, fami
 }
 
 echo '<h2> Rewards </h2>';
-foreach ($db->query("select parent_pk, parent_display, family_pk, reward_name, family_reward_fk, family_parent_fk from parent inner join family on family_parent_fk = parent_pk inner join reward on family_reward_fk = reward_pk  where parent_display='$display'") as $rowFamily)
+foreach ($db->query("select parent_pk, parent_display, family_pk, reward_name, family_reward_fk, family_parent_fk from parent inner join family on family_parent_fk = parent_pk inner join reward on family_reward_fk = reward_pk  where parent_display='$id'") as $rowFamily)
 {
     echo $rowFamily['reward_name'] . '</br>';
 }
 
-foreach ($db->query("select child_pk, child_display, family_pk, reward_name, family_reward_fk, family_child_fk from child inner join family on family_child_fk = child_pk inner join reward on family_reward_fk = reward_pk where child_display = '$display'") as $rowFamily)
+foreach ($db->query("select child_pk, child_display, family_pk, reward_name, family_reward_fk, family_child_fk from child inner join family on family_child_fk = child_pk inner join reward on family_reward_fk = reward_pk where child_display = '$id'") as $rowFamily)
 {
     echo $rowFamily['reward_name'] . '</br>';
 }
