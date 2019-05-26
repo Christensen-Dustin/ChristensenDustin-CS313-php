@@ -27,7 +27,7 @@ foreach ($db->query("select chore_name, chore_details, chore_date from chore whe
     echo 'Chore Details: ' . $rowChore['chore_details'] . '<br>';
 }
 
-echo '</br><h1> Users </h1></br>';
+echo '<h1> Users </h1>';
 foreach ($db->query("select family_chore_fk, chore_pk, parent_fname, parent_lname, parent_bday, parent_display from chore inner join family on family_chore_fk=chore_pk inner join parent on family_parent_fk=parent_pk where chore_pk='$chores'") as $rowParent)
 {
     echo 'Display Name: ' . $rowParent['parent_display'] . '</br>';
