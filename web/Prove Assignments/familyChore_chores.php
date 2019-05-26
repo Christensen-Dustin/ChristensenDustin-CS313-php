@@ -5,15 +5,22 @@
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Title of Project/Site</title>
+	<link rel="stylesheet" type="text/css" href="familyChore.css">
+	<script type="text/javascript" src="name of familyChore.js"></script>
+	<style></style>
+</head>
 <body>
 <header>
-<h1>Here are the details regarding
+<h1>Here are the details regarding - "
     <?php
     foreach ($db->query("select chore_name from chore where chore_pk='$chores'") as $rowHeader)
     {
         echo $rowHeader['chore_name'];
     }
-    ?>
+    ?>"
 </h1>
 </header>
 <br>

@@ -2,7 +2,6 @@
     include 'connectDB.php';
     session_start();
     $rewards = $_GET['rewards'];
-    $db->query("select reward_name from reward where reward_pk='$rewards'") as $rowHeader;
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -15,7 +14,14 @@
 </head>  
 <body>
 <header>
-<h1>Here are the details regarding <?php echo '$rowHeader'; ?></h1>
+<h1>Here are the details regarding - "
+    <?php
+    foreach ($db->query("select reward_name from reward where reward_pk='$rewards'") as $rowHeader)
+    {
+        echo $rowHeader['reward_name'];
+    }
+    ?>"
+</h1>
 </header>
 <br>
 <div class="navBar">
