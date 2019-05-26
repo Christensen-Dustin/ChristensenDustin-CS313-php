@@ -28,14 +28,14 @@ foreach ($db->query("select chore_name, chore_details, chore_date from chore whe
 }
 
 echo '</br><h1> Users </h1></br>';
-foreach ($db->query("select family_chore_fk, chore_pk, parent_fname, parent_lname, parent_bday, parent_display from chore inner join family on family_chore_fk=chore_pk inner join parent on family_parent_fk=parent_pk where chore_name='$chores'") as $rowParent)
+foreach ($db->query("select family_chore_fk, chore_pk, parent_fname, parent_lname, parent_bday, parent_display from chore inner join family on family_chore_fk=chore_pk inner join parent on family_parent_fk=parent_pk where chore_pk='$chores'") as $rowParent)
 {
     echo 'Display Name: ' . $rowParent['parent_display'] . '</br>';
     echo 'User Name: ' . $rowParent['parent_fname'] . ' ' . $rowParent['parent_lname'] . '</br>';
     echo 'Birthday: ' . $rowParent['parent_bday'] . '</br>'; 
 }
 
-foreach ($db->query("select family_chore_fk, chore_pk, child_fname, child_lname, child_bday, child_display from chore inner join family on family_chore_fk=chore_pk inner join child on family_child_fk=child_pk where chore_name='$chores'") as $rowChild)
+foreach ($db->query("select family_chore_fk, family_child_fk, chore_pk, child_fname, child_lname, child_bday, child_display, child_pk from chore inner join family on family_chore_fk=chore_pk inner join child on family_child_fk=child_pk where chore_pk='$chores'") as $rowChild)
 {
     echo 'Display Name: ' . $rowChild['child_display'] . '</br>';
     echo 'User Name: ' . $rowChild['child_fname'] . ' ' . $rowChild['child_lname'] . '</br>';
