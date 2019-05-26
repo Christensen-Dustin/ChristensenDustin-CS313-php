@@ -15,7 +15,7 @@
 </head>  
 <body>
 <header>
-<h1>Here are the details regarding <?php echo '$rowHeader' ?></h1>
+<h1>Here are the details regarding <?php echo '$rowHeader'; ?></h1>
 </header>
 <br>
 <div class="navBar">

@@ -2,7 +2,6 @@
     include 'connectDB.php';
     session_start();
     $chores = $_GET['chores'];
-    
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -12,7 +11,7 @@
     <?php
     foreach ($db->query("select chore_name from chore where chore_pk='$chores'") as $rowHeader)
     {
-        echo $rowHeader['chore_name']
+        echo $rowHeader['chore_name'];
     }
     ?>
 </h1>
