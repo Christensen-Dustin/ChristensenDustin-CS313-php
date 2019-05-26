@@ -14,10 +14,19 @@
 </head>  
 <body>
 <header>
-<a href="familyChore_main.php">Main Page</a>
-
+<h1>Welcome to the Family Chore Tracker</h1>
 </header>
+<br>
+<div class="navBar">
+  <a class="active" href="index.html">Home - Little about myself</a>
+  <a href="interest.php"> Other Interest</a>
+  <a href="assignment.html">Assignments Page</a>
+</div>
+<br>
+<br>
 
+<div id="adjust">
+    <div id="left">
 <h1>User Details</h1>
 <?php
     
@@ -44,8 +53,11 @@ foreach ($db->query("select child_pk, child_display, family_pk, chore_name, fami
 {
     echo $rowFamily['chore_name'] . '</br>';
 }
-
-echo '<h2> Rewards </h2>';
+?>
+    </div>    
+    <div id="right">
+<h2> Rewards </h2>
+<?php
 foreach ($db->query("select parent_pk, parent_display, family_pk, reward_name, family_reward_fk, family_parent_fk from parent inner join family on family_parent_fk=parent_pk inner join reward on family_reward_fk=reward_pk  where parent_display='$display'") as $rowFamily)
 {
     echo $rowFamily['reward_name'] . '</br>';
@@ -55,8 +67,8 @@ foreach ($db->query("select child_pk, child_display, family_pk, reward_name, fam
 {
     echo $rowFamily['reward_name'] . '</br>';
 }
-
 ?>
-
+    </div>
+</div>
 </body>
 </html>

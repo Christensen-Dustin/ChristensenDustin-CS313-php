@@ -16,15 +16,15 @@
 <h1>Welcome to the Family Chore Tracker</h1>
 </header>
 <br>
-<div class="navBar">
-  <a class="active" href="index.html">Home - Little about myself</a>
-  <a href="interest.php"> Other Interest</a>
-  <a href="assignment.html">Assignments Page</a>
-</div>
+    <div class="navBar">
+      <a class="active" href="index.html">Home - Little about myself</a>
+      <a href="interest.php"> Other Interest</a>
+      <a href="assignment.html">Assignments Page</a>
+    </div>
 <br>
 <br>
 <div id="adjust">
-<div id="left">
+    <div id="left">
 <h1 >Users - Display Name</h1>
     <form method="get" action="familyChore_users.php"><select name="userName"><option selected="selected">Select a user by there Display Name</option>
 <?php
@@ -39,9 +39,9 @@ foreach ($db->query("select child_pk, child_display from child") as $rowChild)
 ?>
 <input type="submit" value="User Details">
 </select></form>
-</div>
+    </div>
 
-<div id="right">
+    <div id="right">
 <h1> Chores </h1>
     <form method="get" action="familyChore_chores.php"><select name="chores"><option selected="selected">Select a chore</option>
 <?php
@@ -52,11 +52,11 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
 ?>
 <input type="submit" value="Chore Details">
 </select></form>
-</div>
+    </div>
 </div>
 
 <div id="adjust">
-<div id="left">
+    <div id="left">
 <h1> Rewards </h1>
     <form method="get" action="familyChore_rewards.php"><select name="rewards"><option selected="selected">Select a reward</option>
 <?php
@@ -67,9 +67,9 @@ foreach ($db->query("select reward_pk, reward_name from reward") as $rowReward)
 ?>
 <input type="submit" value="Reward Details">
 </select></form>
-</div>
+    </div>
 
-<div id="right">
+    <div id="right">
 <h1> Goals </h1>
     <form method="get" action="familyChore_goals.php"><select name="goals"><option selected="selected">Select a goal</option>
 <?php
@@ -80,7 +80,7 @@ foreach ($db->query("select goal_pk, goal_name from goal") as $rowGoal)
 ?>
 <input type="submit" value="Goal Details">
 </select></form>
-</div>
+    </div>
 </div>
 
 </body>
