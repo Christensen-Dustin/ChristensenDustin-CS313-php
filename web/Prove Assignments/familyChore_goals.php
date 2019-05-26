@@ -20,7 +20,7 @@
     {
         echo '"' . $rowHeader['goal_name'] . '"';
     }
-    ?>"
+    ?>
 </h1>
 </header>
 <br>

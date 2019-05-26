@@ -14,10 +14,10 @@
 </head>  
 <body>
 <header>
-<h1>Here are the details regarding - 
+<h1>Here are the details regarding - "
     <?php
-        echo '"'$display'"';
-    ?>
+        echo '$display';
+    ?>"
 </h1>
 </header>
 <br>
