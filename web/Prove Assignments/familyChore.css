@@ -1,0 +1,64 @@
+body {
+    background-color: gainsboro;
+}
+
+header {
+    background-color: lightgray;
+    height: 41px;
+    text-align: center;
+    padding: 27px 33px;
+    
+}
+
+.navBar {
+    overflow: hidden;
+    background-color: black;
+}
+
+.navBar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 21px 27px;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.navBar a:hover {
+    background-color: green;
+    color: yellow;
+    
+}
+
+.navBar a:active {
+    background-color: red;
+    color: white;
+    
+}
+
+#adjust {
+    background-color: white;
+    width: 50%;
+    border: 3px solid red;
+    overflow: hidden;
+    margin: auto;
+    padding: 5px;
+}
+
+#left {
+    background-color:lightgoldenrodyellow;
+    width: 45%;
+    float: left;
+    border: 3px solid green;
+    padding: 21px 13px;
+}
+
+#right {
+    background-color: lightgoldenrodyellow;
+    width: 45%;
+    margin-left: auto;
+    border: 3px solid green;
+    overflow: hidden;
+    padding: 21px 13px;
+    
+}
