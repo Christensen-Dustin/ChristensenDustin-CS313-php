@@ -43,7 +43,6 @@ foreach ($db->query("select family_chore_fk, chore_pk, child_fname, child_lname,
 }
 
 ?>
-?>
 
 </body>
 </html>
