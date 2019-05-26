@@ -35,23 +35,23 @@ foreach ($db->query("select child_fname, child_lname, child_bday, child_display 
 
 echo '<h1> Related Details  </h1>';
 echo '<h2> Chores </h2>';
-foreach ($db->query("select parent_pk, parent_display, family_pk, chore_name, family_chore_fk, family_parent_fk from parent, chore, family where parent_display='$display' and parent_pk='$id' and family_pk='$id'") as $rowFamily)
+foreach ($db->query("select parent_pk, parent_display, family_pk, chore_name, family_chore_fk, family_parent_fk from parent inner join family on family_parent_fk=parent_pk inner join chore on family_chore_fk = chore_pk where parent_pk='$id'") as $rowFamily)
 {
     echo $rowFamily['chore_name'] . '</br>';
 }
 
-foreach ($db->query("select child_pk, child_display, family_pk, chore_name, family_chore_fk, family_child_fk from child, chore, family where child_display = '$display' and child_pk='$id' and family_pk='$id'") as $rowFamily)
+foreach ($db->query("select child_pk, child_display, family_pk, chore_name, family_chore_fk, family_child_fk from child inner join on family family_child_fk = child_pk inner join chore on family_chore_fk = chore_pk where child_pk='$id'") as $rowFamily)
 {
     echo $rowFamily['chore_name'] . '</br>';
 }
 
 echo '<h2> Rewards </h2>';
-foreach ($db->query("select parent_pk, parent_display, family_pk, reward_name, family_reward_fk, family_parent_fk from parent, rewards, family where parent_display='$display' and parent_pk='$id' and family_pk='$id'") as $rowFamily)
+foreach ($db->query("select parent_pk, parent_display, family_pk, reward_name, family_reward_fk, family_parent_fk from parent inner join family on family_parent_fk = parent_pk inner join reward on family_reward_fk = reward_pk  where parent_display='$display'") as $rowFamily)
 {
     echo $rowFamily['reward_name'] . '</br>';
 }
 
-foreach ($db->query("select child_pk, child_display, family_pk, reward_name, family_reward_fk, family_child_fk from child, reward, family where child_display = '$display' and child_pk='$id' and family_pk='$id'") as $rowFamily)
+foreach ($db->query("select child_pk, child_display, family_pk, reward_name, family_reward_fk, family_child_fk from child inner join family on family_child_fk = child_pk inner join reward on family_reward_fk = reward_pk where child_display = '$display'") as $rowFamily)
 {
     echo $rowFamily['reward_name'] . '</br>';
 }
