@@ -28,7 +28,7 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goa
 }
     
 echo '</br><h1> Steps </h1></br>';
-foreach ($db->query("select goal_name, steps_details, steps_done, steps_goal_fk from steps, goal where steps_goal_fk = '$goals' and goal_pk = '$goals'") as $rowSteps)
+foreach ($db->query("select goal_name, steps_details, steps_done, steps_goal_fk from goal inner join on steps steps_goal_fk = goal_pk where goal_pk = '$goals'") as $rowSteps)
 {
     echo $rowSteps['steps_details'] . '</br>';
 }
