@@ -14,11 +14,11 @@
 </head>  
 <body>
 <header>
-<h1>Here are the details regarding - "
+<h1>Here are the details regarding - 
     <?php
     foreach ($db->query("select goal_name from goal where goal_pk='$goals'") as $rowHeader)
     {
-        echo $rowHeader['goal_name'];
+        echo '"' . $rowHeader['goal_name'] . '"';
     }
     ?>"
 </h1>

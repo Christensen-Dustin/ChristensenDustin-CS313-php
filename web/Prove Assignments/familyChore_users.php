@@ -14,7 +14,11 @@
 </head>  
 <body>
 <header>
-<h1>Welcome to the Family Chore Tracker</h1>
+<h1>Here are the details regarding - 
+    <?php
+        echo '"'$display'"';
+    ?>
+</h1>
 </header>
 <br>
 <div class="navBar">
