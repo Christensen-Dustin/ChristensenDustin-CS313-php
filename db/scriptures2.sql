@@ -31,9 +31,9 @@ insert into scriptures (book, chapter, verse, content)
     -- Many-to-many Database
     
 create table topicLinks (
-    id          serial not null primary key;                        -- link ID
-    topics_fk   int not null foreign key references topics(id);     -- topic foreign key
-    script_fk   int not null foreign key references scriptures(id); -- scripture FK
+    id          serial not null primary key,                        -- link ID
+    topics_fk   int not null foreign key references topics(id),     -- topic foreign key
+    script_fk   int not null foreign key references scriptures(id) -- scripture FK
 );
 
 
