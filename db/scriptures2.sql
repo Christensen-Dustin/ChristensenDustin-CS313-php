@@ -1,3 +1,14 @@
+-- Database for topic
+
+create table topics (
+    id      serial not null primary key,    -- topic ID
+    name    varchar(20) not null            -- Faith, Sacrifice, Charity
+);
+
+insert into topics (name) values ('Faith');
+insert into topics (name) values ('Sacrifice');
+insert into topics (name) values ('Charity');
+
 -- Database for scriptures
 
 create table scriptures (
@@ -16,3 +27,73 @@ insert into scriptures (book, chapter, verse, content)
     values ('Doctrine and Covenants', 93, 28, 'He that keepeth his commandments receiveth truth and light, until he is glorified in the truth and knoweth all things.');
 insert into scriptures (book, chapter, verse, content)
     values ('Mosiah', 16, 9, 'He is the light and the life of the world; yea, a light that is endless, that can never be darkened; yea, and also a life which is endless, that there can be no more death.');
+    
+    -- Many-to-many Database
+    
+create table topicLinks (
+    id          serial not null primary key;                        -- link ID
+    topics_fk   int not null foreign key references topics(id);     -- topic foreign key
+    script_fk   int not null foreign key references scriptures(id); -- scripture FK
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

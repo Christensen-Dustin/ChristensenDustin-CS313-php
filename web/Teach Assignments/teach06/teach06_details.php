@@ -10,6 +10,11 @@
 	<style></style>
 </head>  
 <body>
+<header>
+<?php
+    include 'navigationBar.php';
+?>
+</header>
 <?php
 include 'connectDB.php';
     echo "name = " . $name;
