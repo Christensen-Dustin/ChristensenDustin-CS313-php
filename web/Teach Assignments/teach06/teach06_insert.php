@@ -19,7 +19,7 @@
     <br>
 <?php
 include 'connectDB.php';
-echo "name = " . $name;
+
 echo '<h1>Scripture Add/Edit</h1>';
 
 echo '<form method="post" action="teach06_search.php"><select name="addEdit"><option selected="new">Enter in a new Scripture</option>';
