@@ -1,6 +1,9 @@
 <?php
     session_start();
     $name=$_POST['book'];
+    if(isset($_POST['book'])) {
+        $_SESSION['book'] = $_POST['book'];
+    }
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">

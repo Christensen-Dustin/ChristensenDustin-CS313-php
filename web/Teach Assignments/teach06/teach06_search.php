@@ -1,8 +1,5 @@
 <?php
-    session_start();
-    if(isset($_POST['book'])) {
-        $_SESSION['book'] = $_POST['book'];
-}        
+    session_start();        
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
