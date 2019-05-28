@@ -1,6 +1,5 @@
 <?php
-        session_start();
-        $name = $_POST['book'];
+    session_start();    
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -17,17 +16,14 @@
 </header>
 <?php
 include 'connectDB.php';
-    echo "name = " . $name;
     echo '<h1>Scripture Resources</h1>';
     foreach ($db->query("select book, chapter, verse, id from scriptures where book = '$name'") as $row)
     {
         echo '<b>';
         echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . ' - "';
         $details = $row['id'];
-        echo "</b><a href='teach06_details.php?id=$details'>click here for details</a>";
+        echo "</b><a href='teach06_details.php'>click here for details</a>";
     }
-echo "name = " . $name;
-    
 ?>
 </body>
 </html>

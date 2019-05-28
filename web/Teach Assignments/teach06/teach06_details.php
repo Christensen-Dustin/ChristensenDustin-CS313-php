@@ -1,6 +1,6 @@
 <?php
-        session_start();
-        $name = $_POST['id'];
+    session_start();
+    $book=$_SESSION['book'];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -19,7 +19,7 @@
 include 'connectDB.php';
     echo "name = " . $name;
     echo '<h1>Scripture Resources</h1>';
-    foreach ($db->query("select book, chapter, verse, content from scriptures where id = '$name'") as $row)
+    foreach ($db->query("select book, chapter, verse, content from scriptures where id = '$book'") as $row)
     {
         echo '<b>';
         echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b>- "';
