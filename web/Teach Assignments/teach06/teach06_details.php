@@ -19,9 +19,9 @@
     <br>
 <?php
 include 'connectDB.php';
-    echo "name = " . $name;
+    echo "name = " . $book;
     echo '<h1>Scripture Resources</h1>';
-    foreach ($db->query("select book, chapter, verse, content from scriptures where id = '$book'") as $row)
+    foreach ($db->query("select book, chapter, verse, content from scriptures where book = '$book'") as $row)
     {
         echo '<b>';
         echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b>- "';
