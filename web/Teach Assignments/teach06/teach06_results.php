@@ -29,7 +29,7 @@ foreach ($db->query("select book, chapter, verse, id from scriptures where book 
 {
     echo '<b>';
     echo $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - ';
-    echo '<a href='teach06_details.php'>click here to view the verse</a>';
+    echo '<a href="teach06_details.php">click here to view the verse</a>';
 }
 ?>
 </body>
