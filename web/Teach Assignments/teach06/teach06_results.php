@@ -2,7 +2,7 @@
     session_start();
     $name=htmlspecialchars($_POST['book']);
     if(isset($_POST['book'])) {
-        $_SESSION['book'] = htmlspecialchars($_POST['book']);
+        $_SESSION['book'] = $name;
     }
 ?>
 <!DOCTYPE html> 
