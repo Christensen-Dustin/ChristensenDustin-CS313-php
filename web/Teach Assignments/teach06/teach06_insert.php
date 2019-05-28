@@ -29,7 +29,7 @@ foreach ($db->query("select id, book, chapter, verse from scriptures") as $rowSc
     echo '<option value=' . $rowScript['id'] . '>' . $rowScript['book'] . ' ' . $rowScript['chapter'] . ':' . $rowScript['verse'] . '</option>';
 }
 
-echo '<input type="submit" value="Chore Details">';
+// echo '<input type="submit" value="Chore Details">';
 echo '</select></form>';
 ?>
 

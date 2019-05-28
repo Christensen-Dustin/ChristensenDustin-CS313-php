@@ -6,7 +6,7 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Scripture Resource</title>
+	<title>Scripture Details</title>
 	<style></style>
 </head>  
 <body>
@@ -19,8 +19,8 @@
     <br>
 <?php
 include 'connectDB.php';
-    echo "name = " . $book;
-    echo '<h1>Scripture Resources</h1>';
+    
+    echo '<h1>Scripture Details</h1>';
     foreach ($db->query("select book, chapter, verse, content from scriptures where book = '$book'") as $row)
     {
         echo '<b>';
