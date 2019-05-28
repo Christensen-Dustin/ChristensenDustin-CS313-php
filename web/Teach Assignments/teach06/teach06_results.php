@@ -1,9 +1,9 @@
 <?php
     session_start();
-    
-    $_SESSION['book'] = htmlspecialchars($_POST['book'];
-    $name = $_SESSION['book'];
-    
+    $name=htmlspecialchars($_POST['book']);
+    if(isset($_POST['book'])) {
+        $_SESSION['book'] = $name;
+    }
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
