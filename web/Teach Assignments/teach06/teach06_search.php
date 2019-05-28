@@ -5,7 +5,7 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Scripture Resource</title>
+	<title>Scripture Search</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script type="text/javascript" src="name of file.js"></script>
 	<style></style>
@@ -18,6 +18,7 @@
 </header>
     <br>
     <br>
+    <h1>Secriptures Search</h1>
 <form method="post" action="teach06_results.php">
     <input type="text" name="book">
     <input type="submit" value="click me"> 
