@@ -8,7 +8,7 @@ echo '<div class="menu">';
         if(!in_array($page, $notWanted)) {
             $link = $page;
             $safeName = strtoupper(str_replace('.php', '', $page));
-        echo '<a href="' . $link . '">' . $safeName . '</a>   ';
+        echo '<a href="' . $link . '">' . $safeName . '</a> &nbsp;';
         } // close if
     } // close foreach
 echo '</div>';

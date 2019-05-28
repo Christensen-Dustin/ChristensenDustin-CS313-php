@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $name=$_SESSION['book'];
+    $name=$_POST['book'];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">

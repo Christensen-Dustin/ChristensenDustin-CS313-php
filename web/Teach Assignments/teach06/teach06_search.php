@@ -15,13 +15,12 @@
 </head>  
 <body>
 <header>
-<br>
-<br>
 <?php
     include 'navigationBar.php';
 ?>
 </header>
-
+    <br>
+    <br>
 <form method="post" action="teach06_results.php">
     <input type="text" name="book">
     <input type="submit" value="click me"> 
