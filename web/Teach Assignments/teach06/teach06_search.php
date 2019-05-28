@@ -15,6 +15,8 @@
 </head>  
 <body>
 <header>
+<br>
+<br>
 <?php
     include 'navigationBar.php';
 ?>

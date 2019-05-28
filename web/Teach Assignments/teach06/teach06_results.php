@@ -1,5 +1,6 @@
 <?php
-    session_start();    
+    session_start();
+    $name=$_SESSION['book'];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -14,6 +15,8 @@
     include 'navigationBar.php';
 ?>
 </header>
+    <br>
+    <br>
 <?php
 include 'connectDB.php';
     echo '<h1>Scripture Resources</h1>';

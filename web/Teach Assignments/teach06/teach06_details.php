@@ -15,6 +15,8 @@
     include 'navigationBar.php';
 ?>
 </header>
+    <br>
+    <br>
 <?php
 include 'connectDB.php';
     echo "name = " . $name;
