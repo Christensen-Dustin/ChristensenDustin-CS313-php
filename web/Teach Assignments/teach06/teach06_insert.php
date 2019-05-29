@@ -17,7 +17,7 @@ $stmtScript->execute();
 
 $id = null;
 
-foreach ($db->query("SELECT id FROM scriptures WHERE book='$book' chapter='$chapter' verse='$verse'") as $rowTopic) {
+foreach ($db->query("SELECT s_id FROM scriptures WHERE book='$book' chapter='$chapter' verse='$verse'") as $rowTopic) {
     $id = $rowTopic['id'];
 }
 

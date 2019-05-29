@@ -27,9 +27,9 @@
     Scripture: <textarea name="content"></textarea><br>
     Topic: 
 <?php
-foreach ($db->query("select id, name from topics") as $rowTopic)
+foreach ($db->query("select t_id, name from topics") as $rowTopic)
 {
-    echo '<input type="checkbox" name="topics[]" value=' . $rowTopic['id'] . '>' . $rowTopic['name'] . ' - ';
+    echo '<input type="checkbox" name="topics[]" value=' . $rowTopic['t_id'] . '>' . $rowTopic['name'] . ' - ';
 } 
 ?>
 <br>
