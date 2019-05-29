@@ -36,7 +36,7 @@ create table topicLinks (
     script_fk   int references scriptures(id)      -- scripture foreign key
 );
 
-
+INSERT INTO topicLinks (topics_fk, script_fk) VALUES (1, 5);
 
 
 

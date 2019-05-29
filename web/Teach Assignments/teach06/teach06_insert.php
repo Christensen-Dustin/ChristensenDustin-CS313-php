@@ -22,7 +22,7 @@ foreach ($db->query("SELECT id FROM scriptures WHERE book='$book' chapter='$chap
 }
 
 foreach ($topics as $topic) {
-    $stmtTopic = $db->prepare('INSERT INTO topicLinks(topic_fk, script_fk)
+    $stmtTopic = $db->prepare('INSERT INTO topicLinks(topics_fk, script_fk)
     VALUES (:topic, :script);');
     $stmtTopic->bindValue(':topic', $topic, PDO::PARAM_INT);
     $stmtTopic->bindValue(':script', $id, PDO::PARAM_INT);

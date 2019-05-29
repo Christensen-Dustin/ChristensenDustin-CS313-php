@@ -23,7 +23,6 @@
     <br>
 <?php
 include 'connectDB.php';
-echo 'name: ' . $name;
 
 echo '<h1>Scripture Resources</h1>';
     
