@@ -1,10 +1,9 @@
 <?php
     session_start();
     
-    if(isset($_GET['book'])) {
-        $name=htmlspecialchars($_GET['book']);
-        $_SESSION['book'] = $name;
-    }else{
+    $name=htmlspecialchars($_GET['book']);
+    $_SESSION['book'] = $name;
+    if(!isset($_GET['book'])) {
         $name =$_SESSION['book'];
     }
 ?>
