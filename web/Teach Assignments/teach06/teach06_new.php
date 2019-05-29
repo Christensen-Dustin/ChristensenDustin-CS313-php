@@ -18,17 +18,14 @@
 </header>
     <br>
     <br>
-<?php
+<h1>Scripture Add/Edit</h1>
 
-
-echo '<h1>Scripture Add/Edit</h1>';
-
-echo '<form method="post" action="teach06_results.php">';
-echo 'Book: <input type=
-
-
-echo '<input type="submit" value="Chore Details">';
-echo '</select></form>';
+<form method="post" action="teach06_insert.php">
+    Book: <input type="text" name="book"> - 
+    Chapter: <input type="text" name="chapter"> - 
+    verse: <input type="verse" name="verse"><br>
+    Scripture: <textarea name="content"></textarea>
+<input type="submit" value="Chore Details">
+</form>
 
 </body>
-</html>
