@@ -1,6 +1,5 @@
 <?php
     session_start();
-    
     $name=htmlspecialchars($_GET['book']);
     $_SESSION['book'] = $name;
     if(!isset($_GET['book'])) {
@@ -18,6 +17,7 @@
 <header>
 <?php
     include 'navigationBar.php';
+    echo $name;
 ?>
 </header>
     <br>
