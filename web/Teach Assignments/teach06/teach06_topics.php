@@ -1,6 +1,6 @@
 <?php
         session_start();
-        $name = $_SESSION['book'];
+        $topic = $_POST['topic'];
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -22,7 +22,7 @@ include 'connectDB.php';
 
 echo '<h1>Scripture Topics</h1>';
 
-echo '<form method="post"><select name="topics"><option value="none">Select a Topic</option>';
+echo '<form method="post"><select name="topic"><option value="none">Select a Topic</option>';
     
 foreach ($db->query("select id, name from topics") as $rowTopic)
 {
@@ -34,9 +34,13 @@ echo '</select></form>';
 ?>
 <div id="list">
 <?php
+foreach ($db->query("SELECT id, name, topics_fk, script_fk, book, chapter, verse, content FROM topics INNER JOIN topicLinks ON id=topics_fk INNER JOIN scriptures ON script_fk=id WHERE id='$topic'") as $rowTopic)
+{
+    echo '<b>';
+    echo $rowTopic['book'] . ' ' . $rowTopic['chapter'] . ':' . $rowTopic['verse'] . '</b>- "';
+    echo $rowTopic['content'] . '"';
     
-    
-    
+}
 ?>
 </div>
 </body>
