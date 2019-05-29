@@ -1,6 +1,8 @@
 <?php
-        session_start();
-        $topic = $_POST['topic'];
+session_start();
+if(isset($_POST['topic'])){
+    $topic = $_POST['topic'];
+}
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
