@@ -34,13 +34,15 @@ foreach ($db->query("select t_id, name from topics") as $rowTopic)
 echo '<input type="submit" value="Search by Topic">';
 echo '</select></form>';
 ?>
+    <br>
+    <br>
 <div id="list">
 <?php
 foreach ($db->query("SELECT t_id, name, topics_fk, script_fk, book, chapter, verse, content FROM topics INNER JOIN topicLinks ON t_id=topics_fk INNER JOIN scriptures ON script_fk=s_id WHERE t_id='$topic'") as $rowTopic)
 {
     echo '<b>';
     echo $rowTopic['book'] . ' ' . $rowTopic['chapter'] . ':' . $rowTopic['verse'] . '</b>- "';
-    echo $rowTopic['content'] . '"';
+    echo $rowTopic['content'] . '"<br>';
     
 }
 ?>
