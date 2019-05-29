@@ -23,12 +23,13 @@
 <form method="post" action="teach06_insert.php">
     Book: <input type="text" name="book"><br> 
     Chapter: <input type="text" name="chapter"> - 
-    verse: <input type="verse" name="Verse"><br>
-    Scripture: <textarea name="content"></textarea>
+    Verse: <input type="text" name="verse"><br>
+    Scripture: <textarea name="content"></textarea><br>
+    Topic: 
 <?php
 foreach ($db->query("select id, name from topics") as $rowTopic)
 {
-    echo '<input type="checkbox" name="topic[]" value=' . $rowTopic['name'] . '>' . $rowTopic['name'] . '>   ';
+    echo '<input type="checkbox" name="topics[]" value=' . $rowTopic['id'] . '>' . $rowTopic['name'] . ' - ';
 } 
 ?>
 <br>

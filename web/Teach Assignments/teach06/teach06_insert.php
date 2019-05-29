@@ -1,7 +1,32 @@
 <?php
-    include 'connectDB.php';
-    session_start();
-    $name = $_SESSION['book'];
+include 'connectDB.php';
+session_start();
+$book = htmlspecialchars($_POST['book']);
+$chapter = htmlspecialchars($_POST['chapter']);
+$verse = htmlspecialchars($_POST['verse']);
+$content = htmlspecialchars($_POST['content']);
+$topics = $_POST['topics'];
+
+$stmtScript = $db->prepare('INSERT INTO scriptures(book, chapter, verse, content)
+    VALUES (:book, :chapter, :verse, :content);');
+$stmtScript->bindValue(':book', $book, PDO::PARAM_STR);
+$stmtScript->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+$stmtScript->bindValue(':verse', $verse, PDO::PARAM_INT);
+$stmtScript->bindValue(':content', $content, PDO::PARAM_STR);
+$stmtScript->execute();
+
+foreach ($db->query("SELECT id FROM scriptures WHERE book='$book' chapter='$chapter' verse='$verse'") as $rowTopic) {
+    $id = $rowTopic['id'];
+}
+
+foreach ($topics as $topic) {
+    $stmtTopic = $db->prepare('INSERT INTO topicLinks(topic_fk, script_fk)
+    VALUES (:topic, :script);');
+    $stmtTopic->bindValue(':topic', $topic, PDO::PARAM_INT);
+    $stmtTopic->bindValue(':script', $id, PDO::PARAM_INT);
+    $stmtTopic->execute();
+}
+
 ?>
 <!DOCTYPE html> 
 <html lang="eng-US">
@@ -19,16 +44,9 @@
     <br>
     <br>
 <?php
+echo '<h1>Scripture DATABASE</h1>';
 
 
-echo '<h1>Scripture Add/Edit</h1>';
-
-echo '<form method="post" action="teach06_results.php">';
-echo 'Book: <input type=
-
-
-echo '<input type="submit" value="Chore Details">';
-echo '</select></form>';
-
+?>
 </body>
 </html>
