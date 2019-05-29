@@ -22,7 +22,7 @@
 <form method="get" action="teach06_results.php">
     <input type="text" name="book">
     <input type="submit" value="click me"> 
-</form>    
+</form>     
     
     
 </body>
