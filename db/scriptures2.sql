@@ -32,8 +32,8 @@ insert into scriptures (book, chapter, verse, content)
     
 create table topicLinks (
     id          serial not null primary key,                -- link ID
-    topics_fk   int not null references topics(id),         -- topic foreign key
-    script_fk   int not null references scriptures(id)      -- scripture foreign key
+    topics_fk   int references topics(id),         -- topic foreign key
+    script_fk   int references scriptures(id)      -- scripture foreign key
 );
 
 

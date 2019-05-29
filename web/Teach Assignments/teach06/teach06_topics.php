@@ -22,7 +22,7 @@ include 'connectDB.php';
 
 echo '<h1>Scripture Topics</h1>';
 
-echo '<form method="post" action="teach06_search.php"><select name="topics"><option selected="new">Select a Topic</option>';
+echo '<form method="post" action="teach06_search.php"><select name="topics"><option value="none">Select a Topic</option>';
     
 foreach ($db->query("select id, name from topics") as $rowTopic)
 {
@@ -32,6 +32,12 @@ foreach ($db->query("select id, name from topics") as $rowTopic)
 // echo '<input type="submit" value="Chore Details">';
 echo '</select></form>';
 ?>
-
+<div id="list">
+<?php
+    
+    
+    
+?>
+</div>
 </body>
 </html>

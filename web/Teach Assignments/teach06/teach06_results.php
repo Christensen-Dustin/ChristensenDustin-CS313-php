@@ -1,8 +1,11 @@
 <?php
     session_start();
-    $name=htmlspecialchars($_POST['book']);
+    
     if(isset($_POST['book'])) {
-        $_SESSION['book'] = $name;
+        $_SESSION['book']=htmlspecialchars($_POST['book']);
+        $name = $_SESSION['book'];
+    }else{
+        $name =$_SESSION['book'];
     }
 ?>
 <!DOCTYPE html> 
