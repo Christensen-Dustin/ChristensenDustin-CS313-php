@@ -24,6 +24,7 @@
     <br>
 <?php
 include 'connectDB.php';
+$db = $getDB();
     
 echo '<h1>Scripture Resources</h1>';
     
