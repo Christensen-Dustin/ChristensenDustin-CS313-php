@@ -21,11 +21,18 @@
 <h1>Scripture Add/Edit</h1>
 
 <form method="post" action="teach06_insert.php">
-    Book: <input type="text" name="book"> - 
+    Book: <input type="text" name="book"><br> 
     Chapter: <input type="text" name="chapter"> - 
-    verse: <input type="verse" name="verse"><br>
+    verse: <input type="verse" name="Verse"><br>
     Scripture: <textarea name="content"></textarea>
-<input type="submit" value="Chore Details">
+<?php
+foreach ($db->query("select id, name from topics") as $rowTopic)
+{
+    echo '<input type="checkbox" name="topic[]" value=' . $rowTopic['name'] . '>' . $rowTopic['name'] . '>   ';
+} 
+?>
+<br>
+<input type="submit" value="Create New Entry">
 </form>
 
 </body>
