@@ -15,6 +15,8 @@ $stmtScript->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmtScript->bindValue(':content', $content, PDO::PARAM_STR);
 $stmtScript->execute();
 
+$id = null;
+
 foreach ($db->query("SELECT id FROM scriptures WHERE book='$book' chapter='$chapter' verse='$verse'") as $rowTopic) {
     $id = $rowTopic['id'];
 }
