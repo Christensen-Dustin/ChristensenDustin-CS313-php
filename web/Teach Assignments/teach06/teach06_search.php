@@ -19,7 +19,7 @@
     <br>
     <br>
     <h1>Secriptures Search</h1>
-<form method="post" action="teach06_results.php">
+<form method="get" action="teach06_results.php">
     <input type="text" name="book">
     <input type="submit" value="click me"> 
 </form>    
