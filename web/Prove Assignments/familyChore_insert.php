@@ -99,7 +99,7 @@ if(isset($_POST['reward_account']))
     $child_pks = $_POST['child_pks'];
 
     // Create NEW chore entry
-    $stmtChore = $db->prepare('INSERT INTO reward(reward_name, reward_details, reward_expire, reward_repeat, reward_done, reward_date)
+    $stmtReward = $db->prepare('INSERT INTO reward(reward_name, reward_details, reward_expire, reward_repeat, reward_done, reward_date)
         VALUES (:reward_name, :reward_details, :reward_expire, :reward_repeat, :reward_done, :reward_date);');
     $stmtReward->bindValue(':reward_name', $reward_name, PDO::PARAM_STR);
     $stmtReward->bindValue(':reward_details', $reward_details, PDO::PARAM_STR);
@@ -109,9 +109,9 @@ if(isset($_POST['reward_account']))
     $stmtReward->bindValue(':reward_date', $reward_date);
     $stmtReward->execute();
     
-    // Find New chore_pk
+    // Find New reward_pk
     $reward_pk = null;
-    foreach ($db->query("SELECT reward_pk FROM chore where reward_name='$reward_name' and reward_details='$reward_details' and reward_date='$reward_date'") as $rowReward )
+    foreach ($db->query("SELECT reward_pk FROM reward where reward_name='$reward_name' and reward_details='$reward_details' and reward_date='$reward_date'") as $rowReward )
     {
         $reward_pk = $rowReward['reward_pk'];
     }
