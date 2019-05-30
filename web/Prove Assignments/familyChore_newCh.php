@@ -28,16 +28,16 @@
 <div id="adjust">
     <div id="left">
 <h1>Input all NEW Chore information</h1>
-    <input type="hidden" name="account_pk" value="1">
+    <input type="hidden" name="chore_account" value="1">
     Chore Name: <input type="text" name="chore_name"><br>
     Chore Details: <textarea name="chore_details">      </textarea><br>
     Chore Expire: <select name="chore_expire">
-                    <option value="true">True</option>
-                    <option value="false">False</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
                 </select>
     Chore Repeats : <select name="chore_repeat">
-                    <option value="true">True</option>
-                    <option value="false">False</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
                 </select><br>
     <input type="hidden" name="chore_done" value="false">
     Chore Start Date: 
