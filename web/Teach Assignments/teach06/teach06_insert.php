@@ -15,7 +15,8 @@ if(isset($_POST['newTopic']))
     
     $stmt = $db->prepare("SELECT t_id from topics where name=:name;");
     $stmt->bindValue(':name', $topicName, PDO::PARAM_STR);
-    $result = $stmt->execute();
+    $stmt->execute();
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
     array_push($topics, $result['t_id']);
     echo "topic pk = " . $result['t_id'] . "<br>";
 }
