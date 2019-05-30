@@ -27,9 +27,9 @@ if(isset($_POST['chore_account']))
         VALUES (:chore_name, :chore_details, :chore_expire, :chore_repeat, :chore_done, :chore_date);');
     $stmtChore->bindValue(':chore_name', $chore_name, PDO::PARAM_STR);
     $stmtChore->bindValue(':chore_details', $chore_details, PDO::PARAM_STR);
-    $stmtChore->bindValue(':chore_expire', $chore_expire, PDO::PARAM_STR);
-    $stmtChore->bindValue(':chore_repeat', $chore_repeat, PDO::PARAM_STR);
-    $stmtChore->bindValue(':chore_done', $chore_done, PDO::PARAM_STR);
+    $stmtChore->bindValue(':chore_expire', $chore_expire);
+    $stmtChore->bindValue(':chore_repeat', $chore_repeat);
+    $stmtChore->bindValue(':chore_done', $chore_done);
     $stmtChore->bindValue(':chore_date', $chore_date);
     $stmtChore->execute();
     
