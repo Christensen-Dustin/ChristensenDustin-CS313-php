@@ -50,8 +50,8 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
     echo '<option value=' . $rowChore['chore_pk'] . '>' . $rowChore['chore_name'] . '</option>';
 }
 ?>
-<input type="submit" value="Chore Details">
-<input type="button" value="Add Chore" onclick="familyChore_newCh.php">
+<input type="submit" value="Chore Details"><br>
+<input type="button" value="Add Chore" action="familyChore_newCh.php">
 </select></form>
     </div>
 </div>
