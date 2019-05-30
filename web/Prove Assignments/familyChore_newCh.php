@@ -49,11 +49,11 @@
 <?php
 foreach ($db->query("select parent_pk, parent_display from parent") as $row)
 {
-    echo '<input type="checkbox" name="parent_pk[]" value=' . $row['parent_pk'] . '>' . $row['parent_display'] . '<br>';
+    echo '<input type="checkbox" name="parent_pks[]" value=' . $row['parent_pk'] . '>' . $row['parent_display'] . '<br>';
 }
 foreach ($db->query("select child_pk, child_display from child") as $row)
 {
-    echo '<input type="checkbox" name="child_pk[]" value=' . $row['child_pk'] . '>' . $row['child_display'] . '<br>';
+    echo '<input type="checkbox" name="child_pks[]" value=' . $row['child_pk'] . '>' . $row['child_display'] . '<br>';
 }
 ?>
     </div>
