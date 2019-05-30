@@ -40,8 +40,8 @@
                     <option value="false">False</option>
                 </select><br>
     <input type="hidden" name="chore_done" value="false">
-    Chore Start Date: <input placeholder="2011-01-01" type="date" id="date"/>
-                      <input value="2011-01-01" type="date" id="date"/>
+    Chore Start Date: 
+    <input placeholder="2011-01-01" type="date" id="date" name="chore_date"/>
     </div>
 
     <div id="right">
@@ -61,9 +61,6 @@ foreach ($db->query("select child_pk, child_display from child") as $row)
 
 <div id="adjust">
     <div id="left">
-
-    </div>
-    <div id="right">
 <input type="submit" value="Add Chore">
     </div>
 </div>
