@@ -35,7 +35,7 @@ if(isset($_POST['chore_account']))
     
     // Find New chore_pk
     $chore_pk = null;
-    foreach ($db->query("SELECT chore_pk FROM chore where chore_name='$chore_name' and chore_details='$chore_details' and chore_date='$chore_date'") as $rowChore )
+    foreach ($db->query("SELECT chore_pk FROM chore where chore_name='$chore_name' and chore_details='$chore_details'") as $rowChore )
     {
         $chore_pk = $rowChore['chore_pk'];
     }
