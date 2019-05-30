@@ -39,7 +39,7 @@ foreach ($db->query("SELECT reward_pk FROM reward where reward_name='$reward_nam
 }
     
 // Create New family entry for parent
-if (isset($_POST['parent_pks']))
+if (isset($_POST['parent_pk']))
 {
     foreach ($parent_pks as $parent_pk)
     {
@@ -53,7 +53,7 @@ if (isset($_POST['parent_pks']))
 }
     
 // Create New family entry for child
-if (isset($_POST['child_pks']))
+if (isset($_POST['child_pk']))
 {
     foreach ($child_pks as $child_pk)
     {

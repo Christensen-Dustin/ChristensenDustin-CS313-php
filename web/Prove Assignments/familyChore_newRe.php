@@ -6,14 +6,14 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Family Chore Tracker - Add a Chore</title>
+	<title>Family Chore Tracker - Add a Reward</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
 	<script type="text/javascript" src="familyChore.js"></script>
 	<style></style>
 </head>  
 <body>
 <header>
-<h1>Add a NEW Chore</h1>
+<h1>Add a NEW Reward</h1>
 </header>
 <br>
     <div class="navBar">
