@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Family Chore Tracker - Main Page</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
-	<script type="text/javascript" src="name of familyChore.js"></script>
+	<script type="text/javascript" src="familyChore.js"></script>
 	<style></style>
 </head>  
 <body>
@@ -51,7 +51,7 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
 }
 ?>
 <input type="submit" value="Chore Details"><br>
-<input type="button" value="Add Chore" onclick="href = 'familyChore_newCh.php';">
+<input type="button" value="Add Chore" onclick="window.location.href='familyChore_newCh.php';">
 </select></form>
     </div>
 </div>

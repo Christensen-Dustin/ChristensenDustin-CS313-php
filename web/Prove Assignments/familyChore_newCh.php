@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Family Chore Tracker - Add a Chore</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
-	<script type="text/javascript" src="name of familyChore.js"></script>
+	<script type="text/javascript" src="familyChore.js"></script>
 	<style></style>
 </head>  
 <body>
