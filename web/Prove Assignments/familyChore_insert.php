@@ -27,9 +27,9 @@ if(isset($_POST['chore_account']))
         VALUES (:chore_name, :chore_details, :chore_expire, :chore_repeat, :chore_done, :chore_date);');
     $stmtChore->bindValue(':chore_name', $chore_name, PDO::PARAM_STR);
     $stmtChore->bindValue(':chore_details', $chore_details, PDO::PARAM_STR);
-    $stmtChore->bindValue(':chore_expire', $chore_expire, PDO::PARAM_BOOL);
-    $stmtChore->bindValue(':chore_repeat', $chore_repeat, PDO::PARAM_BOOL);
-    $stmtChore->bindValue(':chore_done', $chore_done, PDO::PARAM_BOOL);
+    $stmtChore->bindValue(':chore_expire', $chore_expire, PDO::PARAM_STR);
+    $stmtChore->bindValue(':chore_repeat', $chore_repeat, PDO::PARAM_STR);
+    $stmtChore->bindValue(':chore_done', $chore_done, PDO::PARAM_STR);
     $stmtChore->bindValue(':chore_date', $chore_date);
     $stmtChore->execute();
     
@@ -101,9 +101,9 @@ if(isset($_POST['reward_account']))
         VALUES (:reward_name, :reward_details, :reward_expire, :reward_repeat, :reward_done, :reward_date);');
     $stmtReward->bindValue(':reward_name', $reward_name, PDO::PARAM_STR);
     $stmtReward->bindValue(':reward_details', $reward_details, PDO::PARAM_STR);
-    $stmtReward->bindValue(':reward_expire', $reward_expire, PDO::PARAM_BOOL);
-    $stmtReward->bindValue(':reward_repeat', $reward_repeat, PDO::PARAM_BOOL);
-    $stmtReward->bindValue(':reward_done', $reward_done, PDO::PARAM_BOOL);
+    $stmtReward->bindValue(':reward_expire', $reward_expire, PDO::PARAM_STR);
+    $stmtReward->bindValue(':reward_repeat', $reward_repeat, PDO::PARAM_STR);
+    $stmtReward->bindValue(':reward_done', $reward_done, PDO::PARAM_STR);
     $stmtReward->bindValue(':reward_date', $reward_date);
     $stmtReward->execute();
     
