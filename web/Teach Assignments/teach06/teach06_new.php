@@ -8,7 +8,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Scripture Add/Edit</title>
-	<style></style>
+	<script type="text/javascript" src="teach06.js"></script>
 </head>  
 <body>
 <header>
@@ -34,7 +34,8 @@ foreach ($db->query("select t_id, name from topics") as $rowTopic)
 ?>
     <input type="checkbox" name="newTopic" value="new"><input type="text" name="topicName">
 <br>
-<input type="submit" value="Create New Entry">
+<input type="button" value="Create New Entry" onclick="submitform()">
 </form>
+    <div id="result"> </div>
 
 </body>
