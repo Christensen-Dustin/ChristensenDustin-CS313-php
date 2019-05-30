@@ -40,7 +40,7 @@
 foreach ($db->query("select reward_name, reward_details, reward_date from reward where reward_pk='$rewards'") as $rowReward)
 {
     echo 'Reward Name: ' . $rowReward['reward_name'] . '<br>';
-    echo 'Due Date :' . $rowReward['reward_date'] . '<br>';
+    echo 'Start Date: ' . $rowReward['reward_date'] . '<br>';
     echo 'Reward Details: ' . $rowReward['reward_details'] . '</br></br>';
 }
 ?>
