@@ -17,8 +17,8 @@ $stmtScript->execute();
 
 $id = null;
 
-foreach ($db->query("SELECT s_id FROM scriptures WHERE book='$book' chapter='$chapter' verse='$verse'") as $rowTopic) {
-    $id = $rowTopic['id'];
+foreach ($db->query("SELECT s_id FROM scriptures WHERE book='$book' AND chapter='$chapter' AND verse='$verse'") as $rowTopic) {
+    $id = $rowTopic['s_id'];
 }
 
 foreach ($topics as $topic) {

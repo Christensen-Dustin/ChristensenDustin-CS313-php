@@ -18,7 +18,7 @@
 </header>
     <br>
     <br>
-    <h1>Secriptures Search</h1>
+    <h1>Scriptures Search</h1>
 <form method="get" action="teach06_results.php">
     <input type="text" name="book">
     <input type="submit" value="click me"> 
