@@ -12,6 +12,11 @@ if(isset($_POST['newTopic']))
     $stmt = $db->prepare('INSERT INTO topics(name) VALUES (:name);');
     $stmt->bindValue(':name', $topicName, PDO::PARAM_STR);
     $stmt->execute();
+    
+    $stmt = $db->prepare("SELECT t_id from topics where name=:name;");
+    $stmt->bindValue(':name', $topicName, PDO::PARAM_STR);
+    $result = $stmt->execute();
+    array_push($topics, $result['t_id']);
 }
 
 $stmtScript = $db->prepare('INSERT INTO scriptures(book, chapter, verse, content)
