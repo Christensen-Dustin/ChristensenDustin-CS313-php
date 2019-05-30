@@ -24,6 +24,41 @@
     </div>
 <br>
 <br>
+    <form method="post" action="familyChore_insert.php">
+<div id="adjust">
+    <div id="left">
+<h1>Input all NEW Chore information</h1>
+    <input type="hidden" name="account_pk" value="1">
+    Chore Name: <input type="text" name="chore_name"><br>
+    Chore Details: <textarea name="chore_details">      </textarea><br>
+    Chore Expire: <select name="chore_expire">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+    Chore Repeats : <select name="chore_repeat">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select><br>
+    <input type="hidden" name="chore_done" value="false">
+    Chore Start Date: <input placeholder="2011-01-01" type="date" id="date"/>
+                      <input value="2011-01-01" type="date" id="date"/>
+    </div>
 
+    <div id="right">
+<h1> Add a User</h1>    
+<?php
+foreach ($db->query("select parent_pk, parent_display from parent") as $row)
+{
+    echo '<input type="checkbox" name="parent_pk[]" value=' . $row['parent_pk'] . '>' . $row['parent_display'] . '<br>';
+}
+foreach ($db->query("select child_pk, child_display from child") as $row)
+{
+    echo '<input type="checkbox" name="child_pk[]" value=' . $row['child_pk'] . '>' . $row['child_display'] . '<br>';
+}
+?>
+    </div>
+</div>
+<input type="submit" value="Add Chore">
+    </form>
 </body>
 </html>
