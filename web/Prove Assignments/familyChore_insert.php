@@ -1,6 +1,5 @@
 <?php
 include 'connectDB.php';
-session_start();
 
 // Adding a New chore
 // Chore Variables
@@ -23,12 +22,12 @@ $child_pks = $_POST['child_pks'];
 // Create NEW chore entry
 $stmtChore = $db->prepare('INSERT INTO chore(chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
     VALUES (:chore_name, :chore_details, :chore_expire, :chore_repeat, :chore_done, :chore_date);');
-$stmtChore->bindValue(':chore_name', $chore_name, PDO::PARAM_STR);
+$stmtChore->bindValue(':chore_name',    $chore_name,    PDO::PARAM_STR);
 $stmtChore->bindValue(':chore_details', $chore_details, PDO::PARAM_STR);
-$stmtChore->bindValue(':chore_expire', $chore_expire, PDO::PARAM_BOOL);
-$stmtChore->bindValue(':chore_repeat', $chore_repeat, PDO::PARAM_BOOL);
-$stmtChore->bindValue(':chore_done', $chore_done, PDO::PARAM_BOOL);
-$stmtChore->bindValue(':chore_date', $chore_date);
+$stmtChore->bindValue(':chore_expire',  $chore_expire,  PDO::PARAM_BOOL);
+$stmtChore->bindValue(':chore_repeat',  $chore_repeat,  PDO::PARAM_BOOL);
+$stmtChore->bindValue(':chore_done',    $chore_done,    PDO::PARAM_BOOL);
+$stmtChore->bindValue(':chore_date',    $chore_date);
 $stmtChore->execute();
     
 // Find New chore_pk
@@ -40,9 +39,7 @@ foreach ($db->query("SELECT chore_pk FROM chore where chore_name='$chore_name' a
     
 // Create New family entry for parent
 if (isset($_POST['parent_pks']))
-{
-    $parent_pks = htmlspecialchars $_POST['parent_pks'];
-        
+{        
     foreach ($parent_pks as $parent_pk)
     {
         $stmtFamily = $db->prepare('INSERT INTO family(family_chore_fk,     family_parent_fk, family_account_fk)
