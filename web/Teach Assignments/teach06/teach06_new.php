@@ -32,7 +32,7 @@ foreach ($db->query("select t_id, name from topics") as $rowTopic)
     echo '<input type="checkbox" name="topics[]" value=' . $rowTopic['t_id'] . '>' . $rowTopic['name'] . ' - ';
 } 
 ?>
-    <input type="checkbox" name="newTopic" value="new"><input type="text" name="newTopic">
+    <input type="checkbox" name="newTopic" value="new"><input type="text" name="topicName">
 <br>
 <input type="submit" value="Create New Entry">
 </form>

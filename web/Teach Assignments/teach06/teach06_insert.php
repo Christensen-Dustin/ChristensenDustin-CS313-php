@@ -6,6 +6,13 @@ $chapter = htmlspecialchars($_POST['chapter']);
 $verse = htmlspecialchars($_POST['verse']);
 $content = htmlspecialchars($_POST['content']);
 $topics = $_POST['topics'];
+if(isset($_POST['newTopic']))
+{
+    $topicName = htmlspecialchars($_POST['topicName']);
+    $stmt = $db->prepare('INSERT INTO topics(name) VALUES (:name);');
+    $stmt->bindValue(':name', $topicName, PDO::PARAM_STR);
+    $stmt->execute();
+}
 
 $stmtScript = $db->prepare('INSERT INTO scriptures(book, chapter, verse, content)
     VALUES (:book, :chapter, :verse, :content);');
@@ -50,7 +57,7 @@ echo '<h1>Scripture DATABASE</h1>';
 foreach ($db->query('select book, chapter, verse, content, name from scriptures inner join topicLinks on s_id = script_fk inner join topics on t_id = topics_fk;') as $row)
 {
     echo 'Book: ' . $row['book'] . " " . $row['chapter'] . ':' . $row['verse'] . ' - ' . $row['name'] . '<br>';
-    echo 'Scripture:<br>' . $row['content'];    
+    echo 'Scripture:<br>' . $row['content'] . '<br>';    
 }
 
 ?>
