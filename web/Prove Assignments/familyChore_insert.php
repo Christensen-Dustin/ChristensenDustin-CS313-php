@@ -21,7 +21,7 @@ if(isset($_POST['chore_account']))
     // Child variable
     $child_pks = $_POST['child_pks'];
     
-    require('connectDB.php');
+    include 'connectDB.php';
 
     // Create NEW chore entry
     $stmtChore = $db->prepare('INSERT INTO chore(chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
