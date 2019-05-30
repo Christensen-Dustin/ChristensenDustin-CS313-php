@@ -17,10 +17,10 @@ if(isset($_POST['chore_account']))
     $account_pk = htmlspecialchars($_POST['chore_account']);
     
     // Parent variable
-    $parent_pks = $_POST['parent_pks'];
+    // $parent_pks = $_POST['parent_pks'];
     
     // Child variable
-    $child_pks = $_POST['child_pks'];
+    // $child_pks = $_POST['child_pks'];
 
     // Create NEW chore entry
     $stmtChore = $db->prepare('INSERT INTO chore(chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
@@ -41,8 +41,10 @@ if(isset($_POST['chore_account']))
     }
     
     // Create New family entry for parent
-    if (isset($_POST['parent_pk']))
+    if (isset($_POST['parent_pks']))
     {
+        $parent_pks = htmlspecialchars $_POST['parent_pks'];
+        
         foreach ($parent_pks as $parent_pk)
         {
             $stmtFamily = $db->prepare('INSERT INTO family(family_chore_fk,     family_parent_fk, family_account_fk)
