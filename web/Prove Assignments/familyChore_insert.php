@@ -1,27 +1,26 @@
 <?php
+include 'connectDB.php';
 session_start();
 
 // Adding a New chore
 if(isset($_POST['chore_account']))
 {
     // Chore Variables
-    $chore_name = htmlspecialchars $_POST['chore_name'];
-    $chore_details = htmlspecialchars $_POST['chore_details'];
-    $chore_expire = htmlspecialchars $_POST['chore_expire'];
-    $chore_repeat = htmlspecialchars $_POST['chore_repeat'];
-    $chore_done = htmlspecialchars $_POST['chore_done'];
-    $chore_date = htmlspecialchars $_POST['chore_date'];
+    $chore_name = htmlspecialchars($_POST['chore_name']);
+    $chore_details = htmlspecialchars($_POST['chore_details']);
+    $chore_expire = htmlspecialchars($_POST['chore_expire']);
+    $chore_repeat = htmlspecialchars($_POST['chore_repeat']);
+    $chore_done = htmlspecialchars($_POST['chore_done']);
+    $chore_date = htmlspecialchars($_POST['chore_date']);
     
     // Account variable
-    $account_pk = htmlspecialchars $_POST['chore_account'];
+    $account_pk = htmlspecialchars($_POST['chore_account']);
     
     // Parent variable
     $parent_pks = $_POST['parent_pks'];
     
     // Child variable
     $child_pks = $_POST['child_pks'];
-    
-    include 'connectDB.php';
 
     // Create NEW chore entry
     $stmtChore = $db->prepare('INSERT INTO chore(chore_name, chore_details, chore_expire, chore_repeat, chore_done, chore_date)
@@ -81,15 +80,15 @@ if(isset($_POST['chore_account']))
 if(isset($_POST['reward_account']))
 {
     // Chore Variables
-    $reward_name = htmlspecialchars $_POST['reward_name'];
-    $reward_details = htmlspecialchars $_POST['reward_details'];
-    $reward_expire = htmlspecialchars $_POST['reward_expire'];
-    $reward_repeat = htmlspecialchars $_POST['reward_repeat'];
-    $reward_done = htmlspecialchars $_POST['reward_done'];
-    $reward_date = htmlspecialchars $_POST['reward_date'];
+    $reward_name = htmlspecialchars($_POST['reward_name']);
+    $reward_details = htmlspecialchars($_POST['reward_details']);
+    $reward_expire = htmlspecialchars($_POST['reward_expire']);
+    $reward_repeat = htmlspecialchars($_POST['reward_repeat']);
+    $reward_done = htmlspecialchars($_POST['reward_done']);
+    $reward_date = htmlspecialchars($_POST['reward_date']);
     
     // Account variable
-    $account_pk = htmlspecialchars $_POST['reward_account'];
+    $account_pk = htmlspecialchars($_POST['reward_account']);
     
     // Parent variable
     $parent_pks = $_POST['parent_pks'];
