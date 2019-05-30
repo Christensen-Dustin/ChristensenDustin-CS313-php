@@ -17,8 +17,12 @@ if(isset($_POST['newTopic']))
     $stmt->bindValue(':name', $topicName, PDO::PARAM_STR);
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    array_push($topics, $result['t_id']);
-    echo "topic pk = " . $result['t_id'] . "<br>";
+    if (isset($_POST['topics']))
+    {
+        array_push($topics, $result['t_id']);
+    } else {
+        $topics=array($result['t_id']);
+    }
 }
 
 $stmtScript = $db->prepare('INSERT INTO scriptures(book, chapter, verse, content)
