@@ -38,10 +38,11 @@ if(isset($_POST['chore_account']))
     foreach ($db->query("SELECT chore_pk FROM chore where chore_name='$chore_name' and chore_details='$chore_details'") as $rowChore )
     {
         $chore_pk = $rowChore['chore_pk'];
+        echo 'alert($chore_pk);'
     }
     
     // Create New family entry for parent
-    if (isset($_POST['parent_pks']))
+    if (isset($_POST['parent_pk']))
     {
         $parent_pks = htmlspecialchars $_POST['parent_pks'];
         
