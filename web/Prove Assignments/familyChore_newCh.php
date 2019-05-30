@@ -32,14 +32,14 @@
     Chore Name: <input type="text" name="chore_name"><br>
     Chore Details: <textarea name="chore_details">      </textarea><br>
     Chore Expire: <select name="chore_expire">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
                 </select>
     Chore Repeats : <select name="chore_repeat">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
                 </select><br>
-    <input type="hidden" name="chore_done" value="false">
+    <input type="hidden" name="chore_done" value="0">
     Chore Start Date: 
     <input placeholder="2011-01-01" type="date" id="date" name="chore_date"/>
     </div>
