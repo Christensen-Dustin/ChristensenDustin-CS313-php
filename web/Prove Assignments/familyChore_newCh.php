@@ -58,7 +58,15 @@ foreach ($db->query("select child_pk, child_display from child") as $row)
 ?>
     </div>
 </div>
+
+<div id="adjust">
+    <div id="left">
+
+    </div>
+    <div id="right">
 <input type="submit" value="Add Chore">
+    </div>
+</div>
     </form>
 </body>
 </html>
