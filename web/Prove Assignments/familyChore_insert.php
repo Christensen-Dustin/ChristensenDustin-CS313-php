@@ -55,7 +55,7 @@ if(isset($_POST['chore_account']))
     }
     
     // Create New family entry for child
-    if (isset($_POST['child_pks']))
+    if (isset($_POST['child_pk']))
     {
         foreach ($child_pks as $child_pk)
         {
