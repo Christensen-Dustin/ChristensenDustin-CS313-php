@@ -35,12 +35,12 @@
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </select>
-    Chore Repeats : <select name="reward_repeat">
+    Reward Repeats : <select name="reward_repeat">
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </select><br>
     <input type="hidden" name="reward_done" value="0">
-    Chore Start Date: 
+    Reward Start Date: 
     <input placeholder="2001-01-01" type="date" id="date" name="reward_date"/>
     </div>
 

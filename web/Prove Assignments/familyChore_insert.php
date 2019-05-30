@@ -103,9 +103,9 @@ if(isset($_POST['reward_account']))
         VALUES (:reward_name, :reward_details, :reward_expire, :reward_repeat, :reward_done, :reward_date);');
     $stmtReward->bindValue(':reward_name', $reward_name, PDO::PARAM_STR);
     $stmtReward->bindValue(':reward_details', $reward_details, PDO::PARAM_STR);
-    $stmtReward->bindValue(':reward_expire', $reward_expire, PDO::PARAM_STR);
-    $stmtReward->bindValue(':reward_repeat', $reward_repeat, PDO::PARAM_STR);
-    $stmtReward->bindValue(':reward_done', $reward_done, PDO::PARAM_STR);
+    $stmtReward->bindValue(':reward_expire', $reward_expire, PDO::PARAM_BOOL);
+    $stmtReward->bindValue(':reward_repeat', $reward_repeat, PDO::PARAM_BOOL);
+    $stmtReward->bindValue(':reward_done', $reward_done, PDO::PARAM_BOOL);
     $stmtReward->bindValue(':reward_date', $reward_date);
     $stmtReward->execute();
     

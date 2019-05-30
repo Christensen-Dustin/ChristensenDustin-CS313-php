@@ -66,7 +66,7 @@ foreach ($db->query("select reward_pk, reward_name from reward") as $rowReward)
     echo '<option value=' . $rowReward['reward_pk'] . '>' . $rowReward['reward_name'] . '</option>';
 }
 ?>
-<input type="submit" value="Reward Details">
+<input type="submit" value="Reward Details"><br>
 <input type="button" value="Add Reward" onclick="window.location.href='familyChore_newRe.php';">
 </select></form>
     </div>
