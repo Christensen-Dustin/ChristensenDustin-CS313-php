@@ -33,7 +33,7 @@ function submitform(){
         document.getElementById('result').innerHTML = xhttp.responseText;
       }
     }
-  }
+  
   xhttp.open("POST", "teach06_insert.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(postString);
