@@ -24,10 +24,10 @@
     </div>
 <br>
 <br>
-    <form method="post" action="familyChore_insert.php">
+    <form method="post" action="familyChore_insert2.php">
 <div id="adjust">
     <div id="left">
-<h1>Input all NEW Chore information</h1>
+<h1>Input all NEW Reward information</h1>
     <input type="hidden" name="reward_account" value="1">
     Reward Name: <input type="text" name="reward_name"><br>
     Reward Details: <textarea name="reward_details">      </textarea><br>
