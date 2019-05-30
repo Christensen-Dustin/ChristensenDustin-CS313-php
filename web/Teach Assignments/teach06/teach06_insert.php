@@ -49,7 +49,8 @@ foreach ($topics as $topic) {
 echo '<h1>Scripture DATABASE</h1>';
 foreach ($db->query('select book, chapter, verse, content, name from scriptures inner join topicLinks on s_id = script_fk inner join topics on t_id = topics_fk;') as $row)
 {
-    echo 'Book: ' . $row['book'];
+    echo 'Book: ' . $row['book'] . " " . $row['chapter'] . ':' . $row['verse'] . ' - ' . $row['name'] . '<br>';
+    echo 'Scripture:<br>' . $row['content'];    
 }
 
 ?>
