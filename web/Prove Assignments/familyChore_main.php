@@ -51,7 +51,7 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
 }
 ?>
 <input type="submit" value="Chore Details"><br>
-<button type="button" action="familyChore_newCh.php">Add New Chore</button>
+<input type="button" value="Add Chore" onclick="href = 'familyChore_newCh.php';">
 </select></form>
     </div>
 </div>
