@@ -41,7 +41,7 @@ foreach ($db->query("SELECT chore_pk FROM chore where chore_name='$chore_name' a
 // Create New family entry for parent
 if (isset($_POST['parent_pks']))
 {
-    $_SESSION['test2'] = 'This is a test'. $count;
+    $_SESSION['test2'] = 'This is a test';
     
     $count = 0;
     
