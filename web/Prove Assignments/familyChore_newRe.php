@@ -24,7 +24,7 @@
     </div>
 <br>
 <br>
-    <form method="post" action="familyChore_insert2.php">
+    <form method="post" action="familyChore_insert.php">
 <div id="adjust">
     <div id="left">
 <h1>Input all NEW Reward information</h1>
