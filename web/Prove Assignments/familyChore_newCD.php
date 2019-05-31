@@ -50,7 +50,7 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
 
 <div id="adjust">
     <div id="left">
-<input type="submit" value="Add Parent">
+<input type="submit" value="Add Child">
     </div>
     <div id="right">
 <h1> Add a Reward</h1>    

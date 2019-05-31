@@ -83,6 +83,7 @@ foreach ($db->query("select goal_pk, goal_name from goal") as $rowGoal)
 }
 ?>
 <input type="submit" value="Goal Details">
+<input type="button" value="Add Reward" onclick="window.location.href='familyChore_newGo.php';">
 </select></form>
     </div>
 </div>
