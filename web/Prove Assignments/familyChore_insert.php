@@ -60,7 +60,7 @@ if (isset($_POST['parent_pks']))
     $_SESSION['test1'] = '$$chore_pk = ' . $chore_pk;
 
 // Create New family entry for child
-if (isset($_POST['child_pk']))
+if (isset($_POST['child_pks']))
 {
     foreach ($child_pks as $child_pk)
     {
