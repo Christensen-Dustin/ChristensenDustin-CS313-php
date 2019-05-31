@@ -28,7 +28,6 @@
 <div id="adjust">
     <div id="left">
 <h1>Input all NEW Goal information</h1>
-    <input type="hidden" name="goal_account" value="1">
     Goal Name: <input type="text" name="goal_name"><br>
     Goal Details: <textarea name="goal_details">      </textarea><br>
     Goal Expire: <select name="goal_expire">
@@ -45,7 +44,7 @@
     </div>
 
     <div id="right">
-<h1> Add Steps</h1>    
+<h1> Add Steps</h1>
 <?php
 foreach ($db->query("select steps_pk, steps_details from steps") as $row)
 {
@@ -60,11 +59,12 @@ foreach ($db->query("select steps_pk, steps_details from steps") as $row)
 <input type="submit" value="Add Goal">
     </div>
     <div id="right">
+<h1> Add Additional Steps</h1>
 <?php
 for ($index = 0; $index < 7; $index++)
 {
-    echo '<input type="checkbox" name="newSteps[]" value="newSteps">';
-    echo '<input type="text" name="stepsDetail"><br>';
+    echo '<input type="checkbox" name="newSteps[]" value="new">';
+    echo '<input type="text" name="stepsDetail[]"><br>';
 }
 ?>
     </div>
