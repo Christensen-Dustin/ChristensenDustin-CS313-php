@@ -38,6 +38,8 @@ foreach ($db->query("select child_pk, child_display from child") as $rowChild)
 }
 ?>
 <input type="submit" value="User Details">
+<input type="button" value="Add Parent" onclick="window.location.href='familyChore_newPa.php';">
+<input type="button" value="Add Child" onclick="window.location.href='familyChore_newCH.php';">
 </select></form>
     </div>
 
