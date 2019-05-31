@@ -41,7 +41,7 @@ foreach ($db->query("SELECT chore_pk FROM chore where chore_name='$chore_name' a
 // Create New family entry for parent
 if (isset($_POST['parent_pks']))
 {
-    $_SESSION['test2'] = 'This is a test';
+    $_SESSION['test2'] = 'This is a new test';
     
     $count = 0;
     
@@ -51,11 +51,11 @@ if (isset($_POST['parent_pks']))
     
     foreach ($parent_pks as $parent_pk)
     {
-        $stmtFamily = $db->prepare('INSERT INTO family(family_chore_fk, family_parent_fk, family_account_fk) VALUES (:family_chore_fk, :family_parent_fk, :familiy_account_fk);');
+        //$stmtFamily = $db->prepare('INSERT INTO family(family_chore_fk, family_parent_fk, family_account_fk) VALUES (:family_chore_fk, :family_parent_fk, :familiy_account_fk);');
         $stmtFamily->bindValue(':family_chore_fk',   $chore_pk, PDO::PARAM_INT);
         $stmtFamily->bindValue(':family_parent_fk',  $parent_pk, PDO::PARAM_INT);
         $stmtFamily->bindValue(':family_account_fk', $account_pk, PDO::PARAM_INT);
-        //$stmtFamily->execute();
+        $stmtFamily->execute();
         
         $count++;
         $_SESSION['test2'] .= $count;
