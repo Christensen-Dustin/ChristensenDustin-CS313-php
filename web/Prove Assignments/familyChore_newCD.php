@@ -6,14 +6,14 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Family Chore Tracker - Add a Parent</title>
+	<title>Family Chore Tracker - Add a Child</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
 	<script type="text/javascript" src="familyChore.js"></script>
 	<style></style>
 </head>  
 <body>
 <header>
-<h1>Add a NEW Parent</h1>
+<h1>Add a NEW Child</h1>
 </header>
 <br>
     <div class="navBar">
@@ -24,17 +24,17 @@
     </div>
 <br>
 <br>
-    <form method="post" action="familyChore_insertPa.php">
+    <form method="post" action="familyChore_insertCD.php">
 <div id="adjust">
     <div id="left">
-<h1>Input all NEW Parent information</h1>
-    <input type="hidden" name="accountPa" value="1">
-    Parent First Name: <input type="text" name="fname"><br>
-    Parent Last Name: <input type="text" name="lname"><br>
+<h1>Input all NEW Child information</h1>
+    <input type="hidden" name="accountCD" value="1">
+    Child First Name: <input type="text" name="fname"><br>
+    Child Last Name: <input type="text" name="lname"><br>
     Birth Date: 
-    <input placeholder="1977-06-25" type="date" id="date" name="bday"/><br>
-    Parent Display Name: <input type="text" name="display"><br>
-    Parent Password: <input type="text" name="password"><br>
+    <input placeholder="2004-20-07" type="date" id="date" name="bday"/><br>
+    Child Display Name: <input type="text" name="display"><br>
+    Child Password: <input type="text" name="password"><br>
     </div>
 
     <div id="right">
