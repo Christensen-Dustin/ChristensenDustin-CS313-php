@@ -43,10 +43,10 @@ if(isset($_POST['accountPa']))
     {
         foreach ($chore_pks as $chore_pk)
         {
-            $stmtChore = $db->prepare('INSERT INTO family(family_chore_fk,     family_parent_fk, family_account_fk)
+            $stmtFamily = $db->prepare('INSERT INTO family(family_chore_fk,     family_parent_fk, family_account_fk)
                 VALUES (:family_chore_fk, :family_parent_fk, :family_account_fk);');
-            $stmtFamily->bindValue(':family_chore_fk',  $chore_pk, PDO::PARAM_INT);
-            $stmtFamily->bindValue(':family_parent_fk',  $parent_pk, PDO::PARAM_INT);
+            $stmtFamily->bindValue(':family_chore_fk', $chore_pk, PDO::PARAM_INT);
+            $stmtFamily->bindValue(':family_parent_fk', $parent_pk, PDO::PARAM_INT);
             $stmtFamily->bindValue(':family_account_fk', $account_pk, PDO::PARAM_INT);
             $stmtFamily->execute();
         }
@@ -114,7 +114,7 @@ if(isset($_POST['accountCD']))
     {
         foreach ($chore_pks as $chore_pk)
         {
-            $stmtChore = $db->prepare('INSERT INTO family(family_chore_fk,     family_child_fk, family_account_fk)
+            $stmtfamily = $db->prepare('INSERT INTO family(family_chore_fk,     family_child_fk, family_account_fk)
                 VALUES (:family_chore_fk, :family_child_fk, :family_account_fk);');
             $stmtFamily->bindValue(':family_chore_fk',  $chore_pk, PDO::PARAM_INT);
             $stmtFamily->bindValue(':family_child_fk',  $child_pk, PDO::PARAM_INT);
