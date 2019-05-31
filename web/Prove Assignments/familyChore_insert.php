@@ -41,7 +41,8 @@ foreach ($db->query("SELECT chore_pk FROM chore where chore_name='$chore_name' a
 // Create New family entry for parent
 if (isset($_POST['parent_pks']))
 {
-    $_SESSION['test2'] = '$parent_pks = ' . $parent_pks;
+    $_SESSION['test2'] = '$parent_pks = ' . $parent_pks[0] . '<br>chore_pk= ' . $chore_pk . '<br>account_pk= ' . $account_pk;
+    
     foreach ($parent_pks as $parent_pk)
     {
         $stmtFamily = $db->prepare('INSERT INTO family(family_chore_fk,     family_parent_fk, family_account_fk)
