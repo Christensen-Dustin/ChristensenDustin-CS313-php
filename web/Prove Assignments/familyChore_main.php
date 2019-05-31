@@ -84,17 +84,5 @@ foreach ($db->query("select goal_pk, goal_name from goal") as $rowGoal)
 </select></form>
     </div>
 </div>
-<?php
-    if (isset($_SESSION['test1']))
-    {
-        echo $_SESSION['test1'];
-    }
-    echo '<br>';
-    if (isset($_SESSION['test2']))
-    {
-        print_r($_SESSION['test2']);
-    }
-    
-?>
 </body>
 </html>
