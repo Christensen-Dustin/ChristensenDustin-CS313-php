@@ -44,7 +44,7 @@ if (isset($_POST['parent_pks']))
     foreach ($parent_pks as $parent_pk)
     {
         $stmtFamily = $db->prepare('INSERT INTO family(family_reward_fk,     family_parent_fk, family_account_fk)
-            VALUES (:family_reward_fk, :family_parent_fk, :familiy_account_fk);');
+            VALUES (:family_reward_fk, :family_parent_fk, :family_account_fk);');
         $stmtFamily->bindValue(':family_reward_fk',  $reward_pk, PDO::PARAM_INT);
         $stmtFamily->bindValue(':family_parent_fk',  $parent_pk, PDO::PARAM_INT);
         $stmtFamily->bindValue(':family_account_fk', $account_pk, PDO::PARAM_INT);
