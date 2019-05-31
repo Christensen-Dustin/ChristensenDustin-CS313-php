@@ -92,7 +92,7 @@ foreach ($db->query("select goal_pk, goal_name from goal") as $rowGoal)
     echo '<br>';
     if (isset($_SESSION['test2']))
     {
-        echo $_SESSION['test2'];
+        print_r($_SESSION['test2']);
     }
     
 ?>

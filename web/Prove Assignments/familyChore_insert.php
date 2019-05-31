@@ -38,10 +38,11 @@ foreach ($db->query("SELECT chore_pk FROM chore where chore_name='$chore_name' a
     $chore_pk = $rowChore['chore_pk'];
 }
     $_SESSION['test1'] = '$chore_pk = ' . $chore_pk;
+
 // Create New family entry for parent
 if (isset($_POST['parent_pks']))
 {
-    $_SESSION['test2'] = '$parent_pk = ' . $parent_pks;
+    $_SESSION['test2'] = '$parent_pks = ' . $parent_pks;
     foreach ($parent_pks as $parent_pk)
     {
         $stmtFamily = $db->prepare('INSERT INTO family(family_chore_fk,     family_parent_fk, family_account_fk)
