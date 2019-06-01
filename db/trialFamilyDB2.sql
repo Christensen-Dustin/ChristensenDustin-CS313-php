@@ -10,3 +10,33 @@ create table family (
 );
 
 select parent_pk, parent_display, family_pk, chore_name, family_chore_fk, family_parent_fk from parent inner join family on family_parent_fk = parent_pk inner join chore on family_chore_fk = chore_pk where parent_pk=1;
+
+-- goalSteps connection
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (3, 1);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (3, 2);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (3, 3);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (3, 4);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (3, 5);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (2, 1);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (2, 6);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (2, 7);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (2, 8);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (2, 9);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (1, 10);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (1, 11);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (1, 1);
+insert into goalSteps (goalSteps_goal_fk, goalSteps_steps_fk)
+    values (1, 12);
