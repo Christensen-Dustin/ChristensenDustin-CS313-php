@@ -40,7 +40,7 @@ if(isset($_POST['newSteps']))
     
     foreach($stepsDetails as $stepsDetail)
     {
-        $stmt = $db->prepare('INSERT INTO steps(steps_details, steps_done) VALUES(:steps_details, :steps_done, :steps_goal_fk);');
+        $stmt = $db->prepare('INSERT INTO steps(steps_details, steps_done) VALUES(:steps_details, :steps_done);');
         $stmt->bindValue(':steps_details', $stepsDetail, PDO::PARAM_STR);
         $stmt->bindValue(':steps_done', $steps_done, PDO::PARAM_BOOL);
         $stmt->execute();        
