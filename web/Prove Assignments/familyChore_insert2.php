@@ -13,6 +13,7 @@ $goal_date    = htmlspecialchars($_POST['goal_date']);
     
 // Old Steps variable
 $steps_pks = $_POST['steps_pks'];
+$newSteps = $_POST['newSteps'];
 
 // New Steps variable
 $stepsDetails = $_POST['stepsDetails'];
@@ -39,17 +40,26 @@ foreach ($db->query("SELECT goal_pk FROM goal where goal_name='$goal_name'") as 
 if(isset($_POST['newSteps']))
 {
     $steps_done = 0;
+    $index = 0;
     
-    foreach($stepsDetails as $stepsDetail)
+    foreach($newSteps as $newStep)
     {
+        $stepsDetail = $stepsDetails[$index];
+        
         $stmt = $db->prepare('INSERT INTO steps(steps_details, steps_done) VALUES(:steps_details, :steps_done);');
         $stmt->bindValue(':steps_details', $stepsDetail, PDO::PARAM_STR);
         $stmt->bindValue(':steps_done', $steps_done, PDO::PARAM_BOOL);
-        $stmt->execute();        
+        $stmt->execute();
+        
+        $index++;
     }
     
-    foreach($stepsDetails as $stepsDetail)
+    $index2 = 0;
+    
+    foreach($newSteps as $newStep)
     {
+        $stepsDetail = $stepsDetails[$index2];
+        
         $stmt = $db->prepare("SELECT steps_pk from steps where steps_details = :steps_details;");
         $stmt->bindValue(':steps_details', $stepsDetail, PDO::PARAM_STR);
         $stmt->execute();
@@ -61,6 +71,8 @@ if(isset($_POST['newSteps']))
         } else {
             $steps_pks=array($result['steps_pk']);
         }
+        
+        $index2++;
     }
 }
 
