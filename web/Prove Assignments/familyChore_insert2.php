@@ -33,7 +33,7 @@ foreach ($db->query("SELECT goal_pk FROM goal where goal_name='$goal_name'") as 
 }
 
 // New Steps variable
-if(isset($_POST['newSteps']))
+if(isset($_POST['stepsDetails']))
 {
     $stepsDetails = htmlspecialchars($_POST['stepsDetails']);
     $steps_done = 0;
