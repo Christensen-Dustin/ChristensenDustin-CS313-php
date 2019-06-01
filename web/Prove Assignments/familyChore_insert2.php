@@ -10,9 +10,6 @@ $goal_expire  = htmlspecialchars($_POST['goal_expire']);
 $goal_repeat  = htmlspecialchars($_POST['goal_repeat']);
 $goal_done    = htmlspecialchars($_POST['goal_done']);
 $goal_date    = htmlspecialchars($_POST['goal_date']);
-
-// Account variable
-$account_pk = htmlspecialchars($_POST['goal_account']);
     
 // Old Steps variable
 $steps_pks = $_POST['steps_pks'];
