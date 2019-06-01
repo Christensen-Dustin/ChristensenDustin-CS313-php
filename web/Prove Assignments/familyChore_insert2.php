@@ -27,7 +27,7 @@ $stmtGoal->execute();
     
 // Find New goal_pk
 $goal_pk = null;
-foreach ($db->query("SELECT goal_pk FROM goal where goal_name='$goal_name' and goal_details='$goal_details' and goal_date='$goal_date'") as $rowGoal )
+foreach ($db->query("SELECT goal_pk FROM goal where goal_name='$goal_name'") as $rowGoal )
 {
     $goal_pk = $rowGoal['goal_pk'];
 }
