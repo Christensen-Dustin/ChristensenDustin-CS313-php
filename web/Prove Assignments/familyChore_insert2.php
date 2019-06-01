@@ -53,7 +53,7 @@ if(isset($_POST['newSteps']))
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        if(isset($_POST['stepsDetails']))
+        if(isset($_POST['steps_pks']))
         {
             array_push($steps_pks, $result['steps_pk']);
         } else {
