@@ -43,11 +43,24 @@ if(isset($_POST['newSteps']))
     
     foreach($stepsDetails as $stepsDetail)
     {
-        $stmt = $db->prepare('INSERT INTO steps(steps_details, steps_done, steps_goal_fk) VALUES(:steps_details, :steps_done, :steps_goal_fk);');
+        $stmt = $db->prepare('INSERT INTO steps(steps_details, steps_done) VALUES(:steps_details, :steps_done, :steps_goal_fk);');
         $stmt->bindValue(':steps_details', $stepsDetail, PDO::PARAM_STR);
         $stmt->bindValue(':steps_done', $steps_done, PDO::PARAM_BOOL);
-        $stmt->bindValue(';steps_goal_fk', $goal_pk, PDO::PARAM_INT);
         $stmt->execute();        
+    }
+    
+    foreach($stepsDetails as $stepsDetail)
+    {
+        $stmt = $db->prepare("SELECT steps_pk from steps where steps_details = :stepsDetail;");
+        $stmt->bindValue(':steps_details', $stepsDetail, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if(isset($_POST['stepsDetails']))
+        {
+            array_push($steps_pks, $result['steps_pk']);
+        } else {
+            $steps_pks=array($result['steps_pk']);
+        }
     }
 }
 
@@ -58,11 +71,9 @@ if(isset($_POST['steps_pks']))
     
     foreach($steps_pks as $steps_pk)
     {
-        $stmt = $db->prepare('INSERT INTO steps(steps_pk, steps_details, steps_done, steps_goal_fk) VALUES(:steps_details, :steps_done, :steps_goal_fk);');
-        $stmt->bindValue(';steps_pk', $steps_pk, PDO::PARAM_INT);
-        $stmt->bindValue(':steps_details', $steps_Detail, PDO::PARAM_STR);
-        $stmt->bindValue(':steps_done', $steps_done, PDO::PARAM_BOOL);
-        $stmt->bindValue(';steps_goal_fk', $goal_pk, PDO::PARAM_INT);
+        $stmt = $db->prepare('INSERT INTO goalSteps(goalSteps_goal_fk, goalSteps_steps_fk) VALUES(:goalSteps_goal_fk, :goalSteps_steps_fk);');
+        $stmt->bindValue(':goalSteps_goal_fk', $goal_pk, PDO::PARAM_INT);
+        $stmt->bindValue(':goalSteps_steps_fk', $steps_pk, PDO::PARAM_INT);
         $stmt->execute();        
     }
 }
