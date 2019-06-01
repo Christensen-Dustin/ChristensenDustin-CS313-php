@@ -15,7 +15,7 @@ $goal_date    = htmlspecialchars($_POST['goal_date']);
 $steps_pks = $_POST['steps_pks'];
 
 // New Steps variable
-$stepsDetails = htmlspecialchars($_POST['stepsDetails']);
+$stepsDetails = $_POST['stepsDetails'];
     
 // Create NEW goal entry
 $stmtGoal = $db->prepare('INSERT INTO goal(goal_name, goal_details, goal_expire, goal_repeat, goal_done, goal_date)
