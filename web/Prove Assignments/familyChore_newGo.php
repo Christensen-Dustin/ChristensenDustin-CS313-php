@@ -64,7 +64,7 @@ foreach ($db->query("select steps_pk, steps_details from steps") as $row)
 for ($index = 0; $index < 7; $index++)
 {
     echo '<input type="checkbox" name="newSteps[]" value="new">';
-    echo '<input type="text" name="stepsDetail[]"><br>';
+    echo '<input type="text" name="stepsDetails[]"><br>';
 }
 ?>
     </div>

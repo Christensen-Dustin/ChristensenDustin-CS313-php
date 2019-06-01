@@ -55,6 +55,7 @@ if(isset($_POST['newSteps']))
         $stmt->bindValue(':steps_details', $stepsDetail, PDO::PARAM_INT);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
         if(isset($_POST['stepsDetails']))
         {
             array_push($steps_pks, $result['steps_pk']);
