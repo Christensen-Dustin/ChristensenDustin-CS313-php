@@ -49,7 +49,7 @@ if(isset($_POST['newSteps']))
     foreach($stepsDetails as $stepsDetail)
     {
         $stmt = $db->prepare("SELECT steps_pk from steps where steps_details = :steps_details;");
-        $stmt->bindValue(':steps_details', $stepsDetail, PDO::PARAM_INT);
+        $stmt->bindValue(':steps_details', $stepsDetail, PDO::PARAM_STR);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         
