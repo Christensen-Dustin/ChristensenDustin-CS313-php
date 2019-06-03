@@ -1,6 +1,5 @@
 <?php
     session_start();
-    include 'teach07_pass.php';
     
     // remove all session variables
     session_unset();
