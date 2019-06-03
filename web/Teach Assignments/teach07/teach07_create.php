@@ -16,7 +16,7 @@
     $userLogin_Hpass = password_hash($userLogin_pass, PASSWORD_DEFAULT);
 
     $stmt=$db->$prepare('INSERT INTO userLogin(userLogin_name, userLogin_pass)
-            VALUES(:userLogin_name, :userLogin_pass)');
+            VALUES(:userLogin_name, :userLogin_pass);');
     $stmt->bindValue(':userLogin_name', $userLogin_name, PDO::PARAM_STR);
     $stmt->bindValue(':userLogin_pass', $userLogin_Hpass);
     $stmt->execute();
