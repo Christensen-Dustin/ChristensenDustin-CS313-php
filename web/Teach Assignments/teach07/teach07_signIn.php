@@ -2,15 +2,14 @@
     session_start();
     include 'connectDB.php';
 
+    $userLogin_name=htmlspecialchars($_POST['userLogin_name']);
+    $userLogin_pass=htmlspecialchars($_POST['userLogin_pass']);
     $invalidLogin = false;
 
     if (isset($_POST['userLogin_name']) && isset($_POST['userLogin_pass']))
-    {
-        $userLogin_name= htmlspecialchars($_POST['userLogin_name']);
-        $userLogin_pass=htmlspecialchars($_POST['userLogin_pass']);
-        
+    {        
         $stmt=$db->prepare('SELECT userLogin_pass FROM userLogin WHERE userLogin_name=:userLogin_name;');
-        $stmt->bindValue(':userLogin_name', $userLogin_name, PDO::PARAM_STR);
+        $stmt->bindValue(':userLogin_name', $userLogin_name);
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         
@@ -18,6 +17,7 @@
         {
             $rowPass=$stmt->fetch();
             $hashedPassDB = $rowPass['userLogin_pass'];
+            $_SESSION['hashedPassDB'] = $hashedPassDB;
             
             if(password_verify($userLogin_pass, $hashedPassDB))
             {
@@ -61,6 +61,8 @@
     if($invalidLogin)
     {
         echo '<h2 style="color:red;">Invalid User Name or Password</h2>';
+        echo 'entered password: ' . $userLogin_pass . '<br>';
+        echo 'hashed password: ' . $_SESSION['hashedPassDB'] . '<br>';
     }
 ?>
 
@@ -70,7 +72,7 @@
     <br>
     <br>
     Enter User Passwork:<br>
-    <input type="password" name="userLogin_pass" placeholder="Your Passwork">
+    <input type="password" name="userLogin_pass" placeholder="Your Password">
     <br>
     <br>
     <input type="submit" value="Click to Sign In"/>
