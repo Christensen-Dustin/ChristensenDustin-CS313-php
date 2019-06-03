@@ -131,6 +131,14 @@ insert into family (family_chore_fk, family_parent_fk, family_account_fk)
     values (6, 1, 1);
 insert into family (family_chore_fk, family_child_fk, family_account_fk)
     values (6, 2, 1);
+insert into family (family_chore_fk, family_parent_fk, family_account_fk)
+    values (7, 1, 1);
+insert into family (family_chore_fk, family_child_fk, family_account_fk)
+    values (7, 2, 1);
+insert into family (family_chore_fk, family_parent_fk, family_account_fk)
+    values (8, 1, 1);
+insert into family (family_chore_fk, family_child_fk, family_account_fk)
+    values (8, 3, 1);
 
 -- Rewards
 insert into family (family_reward_fk, family_parent_fk, family_account_fk)
@@ -149,6 +157,12 @@ insert into family (family_reward_fk, family_child_fk, family_account_fk)
     values (5, 1, 1);
 insert into family (family_reward_fk, family_child_fk, family_account_fk)
     values (6, 2, 1);
+insert into family (family_reward_fk, family_parent_fk, family_account_fk)
+    values (7, 2, 1);
+insert into family (family_reward_fk, family_child_fk, family_account_fk)
+    values (7, 3, 1);
+insert into family (family_reward_fk, family_parent_fk, family_account_fk)
+    values (8, 1, 1);
 
 -- Goal
 -- Add to another file, if it is needed.

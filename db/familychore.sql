@@ -12,7 +12,7 @@ create table parent (
     parent_lname        varchar(20) not null,           -- last name
     parent_bday         date not null,                  -- birthdate
     parent_display      varchar(20) not null,           -- display name
-    parent_password     varchar(120) not null           -- hashed password
+    parent_password     varchar(255) not null           -- hashed password
 );
 
 -- Child Table
@@ -22,7 +22,7 @@ create table child (
     child_lname         varchar(20) not null,           -- last name
     child_bday          date not null,                  -- birthday
     child_display       varchar(20) not null,           -- display name
-    child_password      varchar(120) not null           -- hashed password
+    child_password      varchar(255) not null           -- hashed password
 );
 
 -- Chore Table
