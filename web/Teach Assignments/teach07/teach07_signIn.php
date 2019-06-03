@@ -21,7 +21,7 @@
             
             if(password_verify($userLogin_pass, $hashedPassDB))
             {
-                $_SESSION['userLogin_namd']=$userLogin_name;
+                $_SESSION['userLogin_name']=$userLogin_name;
                 $main_page = 'teach07_main.php';
                 header("Location: $main_page");
                 die();
