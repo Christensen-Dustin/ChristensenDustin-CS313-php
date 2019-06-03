@@ -13,7 +13,7 @@
 
     $userLogin_name = htmlspecialchars($_POST['userLogin_name']);
     $userLogin_pass = $_POST['userLogin_pass'];
-    $userLogin_Hpass = password_hash($userLogin_pass, PASSWORD_DEFAULT);
+    $userLogin_Hpass = password_hash($userLogin_pass, PASSWORD_BCRYPT);
 
     $stmt=$db->$prepare('INSERT INTO userLogin(userLogin_name, userLogin_pass)
             VALUES(:userLogin_name, :userLogin_pass);');
