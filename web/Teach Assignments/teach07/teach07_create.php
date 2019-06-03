@@ -6,7 +6,8 @@
         !isset($_POST['userLogin_pass']) || $_POST['userLogin_pass'] == "")
     {
         // Re-direct back to this page to enter in the required data
-        header("teach07_create.php");
+        $create_page = "teach07_create.php";
+        header("Location: $create_page");
         die();
     }
 
@@ -23,7 +24,8 @@
     $stmt->execute();
 
     // Re-direct to the sign-in page and kill this page
-    header("location: teach07_signIn.php");
+    $signIn_page = "teach07_signIn.php";
+    header("location: $signIn_page");
     die();
 ?>
 <!DOCTYPE html> 
