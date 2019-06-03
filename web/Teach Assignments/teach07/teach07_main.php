@@ -6,7 +6,8 @@
     }
     else
     {
-        header("teach07_signIn.php");
+        $signIn_page = "teach07_signIn.php";
+        header("Location: $signIn_page");
         die();
     }
     include 'connectDB.php';
