@@ -18,7 +18,7 @@
         if($result)
         {
             $rowPass=$stmt->fetch();
-            $hashedPassDB = $rowPass['userLogin_pass'];
+            $hashedPassDB = $result['userLogin_pass'];
             $_SESSION['hashedPassDB'] = $hashedPassDB;
             
             if(password_verify($userLogin_Hpass, $hashedPassDB))
@@ -67,7 +67,8 @@
         echo 'hashed password: ' . $_SESSION['hashedPassDB'] . '<br>';
     }
 ?>
-
+    <br>
+    <br>
 <form method="post" action="teach07_signIn.php">
     Enter Username:<br>
     <input type="text" name="userLogin_name" placeholder="Your Username">
