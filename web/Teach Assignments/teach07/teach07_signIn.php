@@ -12,13 +12,12 @@
         
         $stmt=$db->prepare('SELECT userLogin_pass FROM userLogin WHERE userlogin_name=:userlogin_name;');
         $stmt->bindValue(':userlogin_name', $userlogin_name);
-        $stmt->execute();
-        $result=$stmt->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['result'] = $result[0];
+        $result=$stmt->execute();
+        $_SESSION['result'] = $result;
         
         if($result)
         {
-            $rowPass=$stmt->fetch(PDO::FETCH_ASSOC);
+            $rowPass=$stmt->fetch();
             $hashedPassDB = $rowPass['userlogin_pass'];
             $_SESSION['hashedPassDB'] = $hashedPassDB;
             
