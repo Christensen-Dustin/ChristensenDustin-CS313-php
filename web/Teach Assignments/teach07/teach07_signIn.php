@@ -17,7 +17,7 @@
         
         if($result)
         {
-            $rowPass=$stmt->fetch();
+            $rowPass=$stmt->fetch(PDO::FETCH_ASSOC);
             $hashedPassDB = $rowPass['userLogin_pass'];
             $_SESSION['hashedPassDB'] = $hashedPassDB;
             
