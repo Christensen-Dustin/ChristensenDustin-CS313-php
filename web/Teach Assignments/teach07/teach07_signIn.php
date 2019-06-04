@@ -18,10 +18,10 @@
         if($result)
         {
             $rowPass=$stmt->fetch();
-            $hashedPassDB = $result['userLogin_pass'];
+            $hashedPassDB = $rowPass['userLogin_pass'];
             $_SESSION['hashedPassDB'] = $hashedPassDB;
             
-            if(password_verify($userLogin_Hpass, $hashedPassDB))
+            if(password_verify($userLogin_pass, $hashedPassDB))
             {
                 $_SESSION['userLogin_name']=$userLogin_name;
                 $main_page = 'teach07_main.php';
