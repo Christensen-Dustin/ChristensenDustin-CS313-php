@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if (isset($_SESSION['userLogin_name']))
+    if (isset($_SESSION['userlogin_name']))
     {
-        $userLogin_name=$_SESSION['userLogin_name'];
+        $userLogin_name=$_SESSION['userlogin_name'];
     }
     else
     {
@@ -30,8 +30,8 @@
     <br>
     <br>
 <?php
-    echo '<h1>Welcome ' . $userLogin_name . ' to the Teach 07 Homepage</h1>';
-    echo 'Your username is : ' . $userLogin_name . '<br><br><br><br>';
+    echo '<h1>Welcome ' . $userlogin_name . ' to the Teach 07 Homepage</h1>';
+    echo 'Your username is : ' . $userlogin_name . '<br><br><br><br>';
     
     echo '<a href="teach07_signOut.php">Click here to Sign Out</a>';  
 ?>    

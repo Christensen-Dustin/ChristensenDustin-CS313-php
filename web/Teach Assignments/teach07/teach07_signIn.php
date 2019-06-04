@@ -2,28 +2,28 @@
     session_start();
     include 'connectDB.php';
 
-    $userLogin_name=htmlspecialchars($_POST['userLogin_name']);
-    $userLogin_pass= $_POST['userLogin_pass'];
+    $userlogin_name=htmlspecialchars($_POST['userlogin_name']);
+    $userlogin_pass= $_POST['userlogin_pass'];
     $invalidLogin = false;
 
-    if (isset($_POST['userLogin_name']) && isset($_POST['userLogin_pass']))
+    if (isset($_POST['userlogin_name']) && isset($_POST['userlogin_pass']))
     {
-        $userLogin_Hpass = password_hash($userLogin_pass, PASSWORD_DEFAULT);
+        $userlogin_Hpass = password_hash($userlogin_pass, PASSWORD_BCRYPT);
         
-        $stmt=$db->prepare('SELECT userLogin_pass FROM userLogin WHERE userLogin_name=:userLogin_name;');
-        $stmt->bindValue(':userLogin_name', $userLogin_name);
+        $stmt=$db->prepare('SELECT userLogin_pass FROM userLogin WHERE userlogin_name=:userlogin_name;');
+        $stmt->bindValue(':userlogin_name', $userlogin_name);
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         
         if($result)
         {
             $rowPass=$stmt->fetch(PDO::FETCH_ASSOC);
-            $hashedPassDB = $rowPass['userLogin_pass'];
+            $hashedPassDB = $rowPass['userlogin_pass'];
             $_SESSION['hashedPassDB'] = $hashedPassDB;
             
-            if(password_verify($userLogin_pass, $hashedPassDB))
+            if(hash_equals($hashedPassDB, $userlogin_Hpass))
             {
-                $_SESSION['userLogin_name']=$userLogin_name;
+                $_SESSION['userlogin_name']=$userlogin_name;
                 $main_page = 'teach07_main.php';
                 header("Location: $main_page");
                 die();
@@ -63,8 +63,8 @@
     if($invalidLogin)
     {
         echo '<h2 style="color:red;">Invalid User Name or Password</h2>';
-        echo 'entered password: ' . $userLogin_pass . '<br>';
-        echo 'entered Hash pass: ' . $userLogin_Hpass . '<br>';
+        echo 'entered password: ' . $userlogin_pass . '<br>';
+        echo 'entered Hash pass: ' . $userlogin_Hpass . '<br>';
         echo 'hashed password: ' . $_SESSION['hashedPassDB'] . '<br>';
     }
 ?>
@@ -72,11 +72,11 @@
     <br>
 <form method="post" action="teach07_signIn.php">
     Enter Username:<br>
-    <input type="text" name="userLogin_name" placeholder="Your Username">
+    <input type="text" name="userlogin_name" placeholder="Your Username">
     <br>
     <br>
     Enter User Passwork:<br>
-    <input type="password" name="userLogin_pass" placeholder="Your Password">
+    <input type="password" name="userlogin_pass" placeholder="Your Password">
     <br>
     <br>
     <input type="submit" value="Click to Sign In"/>
