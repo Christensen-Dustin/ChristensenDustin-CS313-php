@@ -14,6 +14,7 @@
         $stmt->bindValue(':userlogin_name', $userlogin_name);
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
+        $_SESSION['result'] = $result;
         
         if($result)
         {
@@ -21,7 +22,7 @@
             $hashedPassDB = $rowPass['userlogin_pass'];
             $_SESSION['hashedPassDB'] = $hashedPassDB;
             
-            if(hash_equals($hashedPassDB, $userlogin_Hpass))
+            if(password_verify($userlogin_pass, $hashedPassDB))
             {
                 $_SESSION['userlogin_name']=$userlogin_name;
                 $main_page = 'teach07_main.php';
@@ -65,6 +66,7 @@
         echo '<h2 style="color:red;">Invalid User Name or Password</h2>';
         echo 'entered password: ' . $userlogin_pass . '<br>';
         echo 'entered Hash pass: ' . $userlogin_Hpass . '<br>';
+        echo 'result Hash pass: ' . $_SESSION['result'] . '<br>';
         echo 'hashed password: ' . $_SESSION['hashedPassDB'] . '<br>';
     }
 ?>
