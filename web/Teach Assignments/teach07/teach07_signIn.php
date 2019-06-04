@@ -7,7 +7,9 @@
     $invalidLogin = false;
 
     if (isset($_POST['userLogin_name']) && isset($_POST['userLogin_pass']))
-    {        
+    {
+        $userLogin_Hpass = password_hash($userLogin_pass, PASSWORD_DEFAULT);
+        
         $stmt=$db->prepare('SELECT userLogin_pass FROM userLogin WHERE userLogin_name=:userLogin_name;');
         $stmt->bindValue(':userLogin_name', $userLogin_name);
         $stmt->execute();
@@ -19,7 +21,7 @@
             $hashedPassDB = $rowPass['userLogin_pass'];
             $_SESSION['hashedPassDB'] = $hashedPassDB;
             
-            if(password_verify($userLogin_pass, $hashedPassDB))
+            if(password_verify($userLogin_Hpass, $hashedPassDB))
             {
                 $_SESSION['userLogin_name']=$userLogin_name;
                 $main_page = 'teach07_main.php';
@@ -61,7 +63,7 @@
     if($invalidLogin)
     {
         echo '<h2 style="color:red;">Invalid User Name or Password</h2>';
-        echo 'entered password: ' . $userLogin_pass . '<br>';
+        echo 'entered password: ' . $userLogin_Hpass . '<br>';
         echo 'hashed password: ' . $_SESSION['hashedPassDB'] . '<br>';
     }
 ?>
