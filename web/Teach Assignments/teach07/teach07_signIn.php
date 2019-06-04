@@ -13,13 +13,11 @@
         $stmt=$db->prepare('SELECT userLogin_pass FROM userLogin WHERE userlogin_name=:userlogin_name;');
         $stmt->bindValue(':userlogin_name', $userlogin_name);
         $result=$stmt->execute();
-        $_SESSION['result'] = $result;
         
         if($result)
         {
             $rowPass=$stmt->fetch();
             $hashedPassDB = $rowPass['userlogin_pass'];
-            $_SESSION['hashedPassDB'] = $hashedPassDB;
             
             if(password_verify($userlogin_pass, $hashedPassDB))
             {
@@ -63,10 +61,6 @@
     if($invalidLogin)
     {
         echo '<h2 style="color:red;">Invalid User Name or Password</h2>';
-        echo 'entered password: ' . $userlogin_pass . '<br>';
-        echo 'entered Hash pass: ' . $userlogin_Hpass . '<br>';
-        echo 'result Hash pass: ' . $_SESSION['result'] . '<br>';
-        echo 'hashed password: ' . $_SESSION['hashedPassDB'] . '<br>';
     }
 ?>
     <br>
