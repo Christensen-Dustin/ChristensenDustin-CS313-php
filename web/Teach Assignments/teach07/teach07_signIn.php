@@ -63,7 +63,8 @@
     if($invalidLogin)
     {
         echo '<h2 style="color:red;">Invalid User Name or Password</h2>';
-        echo 'entered password: ' . $userLogin_Hpass . '<br>';
+        echo 'entered password: ' . $userLogin_pass . '<br>';
+        echo 'entered Hash pass: ' . $userLogin_Hpass . '<br>';
         echo 'hashed password: ' . $_SESSION['hashedPassDB'] . '<br>';
     }
 ?>
