@@ -3,7 +3,7 @@
     include 'connectDB.php';
 
     $userLogin_name=htmlspecialchars($_POST['userLogin_name']);
-    $userLogin_pass=htmlspecialchars($_POST['userLogin_pass']);
+    $userLogin_pass= $_POST['userLogin_pass'];
     $invalidLogin = false;
 
     if (isset($_POST['userLogin_name']) && isset($_POST['userLogin_pass']))
