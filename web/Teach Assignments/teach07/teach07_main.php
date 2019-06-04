@@ -2,7 +2,7 @@
     session_start();
     if (isset($_SESSION['userlogin_name']))
     {
-        $userLogin_name=$_SESSION['userlogin_name'];
+        $userlogin_name=$_SESSION['userlogin_name'];
     }
     else
     {
