@@ -14,7 +14,7 @@
         $stmt->bindValue(':userlogin_name', $userlogin_name);
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['result'] = $result;
+        $_SESSION['result'] = $result[0];
         
         if($result)
         {
