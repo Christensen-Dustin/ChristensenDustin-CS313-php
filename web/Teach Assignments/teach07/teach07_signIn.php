@@ -70,7 +70,7 @@
     <input type="text" name="userlogin_name" placeholder="Your Username">
     <br>
     <br>
-    Enter User Passwork:<br>
+    Enter User Password:<br>
     <input type="password" name="userlogin_pass" placeholder="Your Password">
     <br>
     <br>

@@ -1,7 +1,7 @@
 <?php
 
 $pages = scandir('.');
-$notWanted = array('.', '..', 'connectDB.php', 'navigationBar.php', 'teach07_create.php');
+$notWanted = array('.', '..', 'connectDB.php', 'navigationBar.php', 'teach07_create.php', 'teach07.js');
 
 echo '<div class="menu">';
     foreach($pages as $page) {
