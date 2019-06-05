@@ -16,15 +16,19 @@
         $_POST['userlogin_pass'] != $_POST['userlogin_pass2'])
     {
         $_SESSION['passMatch'] = false;
+        
         // Re-direct back to this page to enter in the required data
         header("Location: $signUp_page");
         die();
     }
-
+    
+    error_log("login = " . preg_match('/\d/', $_SESSION['userlogin_pass']));
+    
     if(sizeof($_SESSION['userlogin_pass']) < 7 ||
        !preg_match('/\d/', $_SESSION['userlogin_pass']))
     {
         $_SESSION['passValid'] = false;
+        
         // Re-direct back to this page to enter in the required data
         header("Location: $signUp_page");
         die();
