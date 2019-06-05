@@ -43,9 +43,9 @@
         echo '<span style="color:red">*</span>';
     }
 ?>
+</span>
     <input type="password" name="userlogin_pass2" placeholder="User's Password"/>
     <br>
-</span>
 <span id='message' style="color:red">
 <?php
      if(isset($_SESSION['passMatch']) && $_SESSION['passMatch'] == false)
