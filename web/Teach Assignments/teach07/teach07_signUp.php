@@ -24,13 +24,13 @@
     <input type="text" name="userlogin_name" placeholder="User's Name"/>
     <br>
     <br>
+    Enter a desired password:<br>
 <?php
     if(isset($_SESSION['passMatch']) && $_SESSION['passMatch'] == false)
     {
         echo '<span style="color:red">*</span>';
     }
 ?>
-    Enter a desired password:<br>
     <input type="password" name="userlogin_pass" placeholder="User's Password"/>
     <br>
     <br>
@@ -45,7 +45,7 @@
 <?php
     if(isset($_SESSION['passMatch']) && $_SESSION['passMatch'] == false)
     {
-        echo '<span style="color:red">Passwords must MATCH</span>';
+        echo '<br><span style="color:red">Passwords must MATCH</span><br>';
     }
 ?>
     <br>
