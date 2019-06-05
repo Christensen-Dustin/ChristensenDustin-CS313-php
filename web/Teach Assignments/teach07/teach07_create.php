@@ -11,11 +11,11 @@
     }
     include 'connectDB.php';
 
-    $userLogin_name = htmlspecialchars($_POST['userlogin_name']);
-    $userLogin_pass = $_POST['userlogin_pass'];
-    $userLogin_Hpass = password_hash($userlogin_pass, PASSWORD_DEFAULT);
+    $userlogin_name = htmlspecialchars($_POST['userlogin_name']);
+    $userlogin_pass = $_POST['userlogin_pass'];
+    $userlogin_Hpass = password_hash($userlogin_pass, PASSWORD_DEFAULT);
 
-    error_log("login = " . $userLogin_name . ', ' . $userLogin_pass;)
+    error_log("login = " . $userlogin_name . ', ' . $userlogin_pass;)
 
     $stmt=$db->prepare('INSERT INTO userlogin(userlogin_name, userLogin_pass)
             VALUES(:userlogin_name, :userlogin_pass);');
