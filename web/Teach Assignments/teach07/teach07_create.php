@@ -24,7 +24,7 @@
     
     error_log("login = " . preg_match('/\d/', $_SESSION['userlogin_pass']));
     
-    if(sizeof($_POST['userlogin_pass']) < 7 ||
+    if(strlen($_POST['userlogin_pass']) < 7 ||
        !preg_match('/\d/', $_POST['userlogin_pass']))
     {
         $_SESSION['passValid'] = false;
