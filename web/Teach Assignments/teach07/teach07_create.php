@@ -1,14 +1,25 @@
 <?php
     session_start();
+    $_SESSION['passMatch'] = true;
+    $signUp_page = "teach07_signUp.php";
         
     if (!isset($_POST['userlogin_name']) || $_POST['userlogin_name'] == "" ||
         !isset($_POST['userlogin_pass']) || $_POST['userlogin_pass'] == "")
     {
         // Re-direct back to this page to enter in the required data
-        $signUp_page = "teach07_signUp.php";
         header("Location: $signUp_page");
         die();
     }
+
+    if (!isset($_POST['userlogin_pass2']) ||
+        $_POST['userlogin_pass'] != $_POST['userlogin_pass2'])
+    {
+        $_SESSION['passMatch'] = false;
+        // Re-direct back to this page to enter in the required data
+        header("Location: $signUp_page");
+        die();
+    }
+
     include 'connectDB.php';
 
     $userlogin_name = htmlspecialchars($_POST['userlogin_name']);

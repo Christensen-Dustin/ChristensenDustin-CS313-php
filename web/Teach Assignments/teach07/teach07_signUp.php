@@ -24,9 +24,30 @@
     <input type="text" name="userlogin_name" placeholder="User's Name"/>
     <br>
     <br>
+<?php
+    if(isset($_SESSION['passMatch']) && $_SESSION['passMatch'] == false)
+    {
+        echo '<span style="color:red">*</span>';
+    }
+?>
     Enter a desired password:<br>
     <input type="password" name="userlogin_pass" placeholder="User's Password"/>
     <br>
+    <br>
+<?php
+    if(isset($_SESSION['passMatch']) && $_SESSION['passMatch'] == false)
+    {
+        echo '<span style="color:red">*</span>';
+    }
+?>
+    <input type="password" name="userlogin_pass2" placeholder="User's Password"/>
+    <br>
+<?php
+    if(isset($_SESSION['passMatch']) && $_SESSION['passMatch'] == false)
+    {
+        echo '<span style="color:red">Passwords must MATCH</span>';
+    }
+?>
     <br>
     <input type="submit" value="Click to Create an Account"/>
 </form>    
