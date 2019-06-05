@@ -46,16 +46,12 @@
     <input type="password" name="userlogin_pass2" placeholder="User's Password"/>
     <br>
 </span>
-<span class='asterisk' style="color:red">
+<span id='message' style="color:red">
 <?php
-    if(isset($_SESSION['passMatch']) && $_SESSION['passMatch'] == false)
+     if(isset($_SESSION['passMatch']) && $_SESSION['passMatch'] == false)
     {
         echo '<br>Passwords must MATCH</span><br>';
     }
-?>
-</span>
-<span id='message' style="color:red">
-<?php
     if(isset($_SESSION['passValid']) && $_SESSION['passValid'] == false)
     {
         echo '<br>Password must contain at least 7 characters and a number<br>';
