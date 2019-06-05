@@ -1,6 +1,7 @@
 <?php
     session_start();
     $_SESSION['passMatch'] = true;
+    $_SESSION['passValid'] = true;
     $signUp_page = "teach07_signUp.php";
         
     if (!isset($_POST['userlogin_name']) || $_POST['userlogin_name'] == "" ||
@@ -19,6 +20,16 @@
         header("Location: $signUp_page");
         die();
     }
+
+    if(sizeof($_SESSION['userlogin_pass']) < 7 ||
+       !preg_match('/\d/', $_SESSION['userlogin_pass']))
+    {
+        $_SESSION['passValid'] = false;
+        // Re-direct back to this page to enter in the required data
+        header("Location: $signUp_page");
+        die();
+    }
+        
 
     include 'connectDB.php';
 
