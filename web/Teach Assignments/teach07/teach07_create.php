@@ -15,7 +15,7 @@
     $userlogin_pass = $_POST['userlogin_pass'];
     $userlogin_Hpass = password_hash($userlogin_pass, PASSWORD_DEFAULT);
 
-    error_log("login = " . $userlogin_name . ', ' . $userlogin_pass;)
+    error_log("login = " . $userlogin_name . ', ' . $userlogin_pass);
 
     $stmt=$db->prepare('INSERT INTO userlogin(userlogin_name, userLogin_pass)
             VALUES(:userlogin_name, :userlogin_pass);');
