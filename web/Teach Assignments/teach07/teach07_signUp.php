@@ -48,6 +48,12 @@
         echo '<br><span style="color:red">Passwords must MATCH</span><br>';
     }
 ?>
+<?php
+    if(isset($_SESSION['passValid']) && $_SESSION['passValid'] == false)
+    {
+        echo '<br><span style="color:red">Password must contain at least 7 characters and a number</span><br>';
+    }
+?>
     <br>
     <input type="submit" value="Click to Create an Account"/>
 </form>    
