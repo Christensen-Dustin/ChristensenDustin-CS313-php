@@ -11,7 +11,7 @@ function validateDetails() {
         return false;
     }
     
-    if(password.value.length < 7 || /\d/.test(password.value))
+    if(password.value.length < 7 || !/\d/.test(password.value))
     {
         document.getElementById('message').innerHTML='Password must contain at least 7 characters and a number';
         
