@@ -60,10 +60,8 @@ foreach ($db->query("select steps_details from goal inner join goalSteps on goal
         {
             echo '<input type="checkbox" name="updateSteps[]" checked/>' . $rowChecked['steps_details'] . '</br>';
         }
-        else
-        {
-            echo '<input type="checkbox" name="updateSteps[]" />' . $rowUnchecked['steps_details'] . '</br>';
-        }
+        
+        echo '<input type="checkbox" name="updateSteps[]" />' . $rowUnchecked['steps_details'] . '</br>';
     }
 }
 ?>
