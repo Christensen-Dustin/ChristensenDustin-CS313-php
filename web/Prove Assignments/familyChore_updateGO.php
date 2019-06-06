@@ -7,14 +7,14 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Title of Project/Site</title>
+	<title>Family Chore Tracker - Goal Update</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
 	<script type="text/javascript" src="familyChore.js"></script>
 	<style></style>
 </head>  
 <body>
 <header>
-<h1>Here are the details regarding - 
+<h1>What information do you want to update regarding - 
     <?php
     foreach ($db->query("select goal_name from goal where goal_pk='$goals'") as $rowHeader)
     {
@@ -35,7 +35,7 @@
 
 <div id="adjust">
     <div id="left">
-<h1>Goal Details</h1>
+<h1>Update Goal</h1>
 <?php
 foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goal where goal_pk='$goals'") as $rowGoal)
 {

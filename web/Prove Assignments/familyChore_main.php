@@ -17,9 +17,10 @@
 </header>
 <br>
     <div class="navBar">
-      <a class="active" href="index.html">Home - Little about myself</a>
-      <a href="interest.php"> Other Interest</a>
-      <a href="assignment.html">Assignments Page</a>
+        <a class="active" href="index.html">Home - Little about myself</a>
+        <a href="interest.php"> Other Interest</a>
+        <a href="assignment.html">Assignments Page</a>
+        <a href="familyChore_update.php">Update Family Tracker Items</a>
     </div>
 <br>
 <br>
@@ -38,7 +39,6 @@ foreach ($db->query("select child_pk, child_display from child") as $rowChild)
 }
 ?>
 <input type="submit" value="User Details"><br>
-    <input type="button" value="Edit User" onclick="window.location.href='familyChore_update.php';">
 <input type="button" value="Add Parent" onclick="window.location.href='familyChore_newPa.php';">
 <input type="button" value="Add Child" onclick="window.location.href='familyChore_newCD.php';">
 </select></form>
@@ -54,7 +54,6 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
 }
 ?>
 <input type="submit" value="Chore Details"><br>
-    <input type="button" value="Edit Chore" onclick="window.location.href='familyChore_update.php';">
 <input type="button" value="Add Chore" onclick="window.location.href='familyChore_newCh.php';">
 </select></form>
     </div>
@@ -71,7 +70,6 @@ foreach ($db->query("select reward_pk, reward_name from reward") as $rowReward)
 }
 ?>
 <input type="submit" value="Reward Details"><br>
-    <input type="submit" value="Reward Edit" onclick="window.location.href='familyChore_update.php';">
 <input type="button" value="Add Reward" onclick="window.location.href='familyChore_newRe.php';">
 </select></form>
     </div>
@@ -86,7 +84,6 @@ foreach ($db->query("select goal_pk, goal_name from goal") as $rowGoal)
 }
 ?>
 <input type="submit"  value="Goal Details"><br>
-    <input type="button" value="Goal Edit" onclick="window.location.href='familyChore_update.php';">
 <input type="button" value="Add Goal" onclick="window.location.href='familyChore_newGo.php';">
 </select></form>
     </div>
