@@ -46,18 +46,20 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goa
 ?>
     </div>   
     <div id="right">
-<?php    
+<?php
+$checked = [];
 echo '<h1> Steps </h1>';
 foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
 {
     echo '<input type="checkbox" name="updateSteps1[]" checked/>' . $rowChecked['steps_details'] . '</br>';
+    array_push($checked, $rowChecked['steps_details']);
 }
 echo '<br>';
 foreach ($db->query("select steps_details from steps") as $row)
 {
-    foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
+    for($index = 0; $index < sizeof($checked); $index++)
     {
-        if($row['steps_details'] != $rowChecked['steps_details'])
+        if($row['steps_details'] != $checked[$index])
         {
             echo '<input type="checkbox" name="updateSteps[]" />' . $row['steps_details'] . '</br>';
         }
