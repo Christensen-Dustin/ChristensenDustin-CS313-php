@@ -6,7 +6,7 @@
 <html lang="eng-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Family Chore Tracker - Main Page</title>
+	<title>Family Chore Tracker - Item Update</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
 	<script type="text/javascript" src="familyChore.js"></script>
 	<style></style>
@@ -17,9 +17,10 @@
 </header>
 <br>
     <div class="navBar">
-      <a class="active" href="index.html">Home - Little about myself</a>
-      <a href="interest.php"> Other Interest</a>
-      <a href="assignment.html">Assignments Page</a>
+        <a class="active" href="index.html">Home - Little about myself</a>
+        <a href="interest.php"> Other Interest</a>
+        <a href="assignment.html">Assignments Page</a>
+        <a href="familyChore_main.php">Home Page</a>
     </div>
 <br>
 <br>
