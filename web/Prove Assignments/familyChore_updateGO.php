@@ -50,11 +50,21 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goa
 echo '<h1> Steps </h1>';
 foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
 {
-    echo '<input type="checkbox" name="updateSteps1" checked/>' . $rowChecked['steps_details'] . '</br>';
+    echo '<input type="checkbox" name="updateSteps1[]" checked/>' . $rowChecked['steps_details'] . '</br>';
 }
 foreach ($db->query("select steps_details from steps") as $rowUnchecked)
 {
-    echo '<input type="checkbox" name="updateSteps2" />' . $rowUnchecked['steps_details'] . '</br>';
+    foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
+    {
+        if($rowUnchecked['steps_details'] == $rowChecked['steps_details'])
+        {
+            echo '<input type="checkbox" name="updateSteps[]" checked/>' . $rowChecked['steps_details'] . '</br>';
+        }
+        else
+        {
+            echo '<input type="checkbox" name="updateSteps[]" />' . $rowUnchecked['steps_details'] . '</br>';
+        }
+    }
 }
 ?>
     </div>
