@@ -50,7 +50,7 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goa
 echo '<h1> Steps </h1>';
 foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowSteps)
 {
-    echo '<input type="checkbox" name="updateSteps1" select>' . $rowSteps['steps_details'] . '</br>';
+    echo '<input type="checkbox" name="updateSteps1"' . print 'checked' . '/>' . $rowSteps['steps_details'] . '</br>';
 }
 
 ?>
