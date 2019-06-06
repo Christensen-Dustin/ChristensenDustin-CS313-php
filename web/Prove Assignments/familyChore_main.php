@@ -37,8 +37,8 @@ foreach ($db->query("select child_pk, child_display from child") as $rowChild)
     echo '<option value=' . $rowChild['child_pk'] . '-' . $rowChild['child_display'] . '>' . $rowChild['child_display'] . '</option>';
 }
 ?>
-<input type="submit" name="submitUser" value="User Details"><br>
-    <input type="submit" name="editUser" value="Edit User"><br>
+<input type="submit" value="User Details"><br>
+    <input type="button" value="Edit User" onclick="window.location.href='familyChore_update.php';">
 <input type="button" value="Add Parent" onclick="window.location.href='familyChore_newPa.php';">
 <input type="button" value="Add Child" onclick="window.location.href='familyChore_newCD.php';">
 </select></form>
@@ -53,8 +53,8 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
     echo '<option value=' . $rowChore['chore_pk'] . '>' . $rowChore['chore_name'] . '</option>';
 }
 ?>
-<input type="submit" name="submitChore" value="Chore Details"><br>
-    <input type="submit" name="editChore" value="Edit Chore"><br>
+<input type="submit" value="Chore Details"><br>
+    <input type="button" value="Edit Chore" onclick="window.location.href='familyChore_update.php';">
 <input type="button" value="Add Chore" onclick="window.location.href='familyChore_newCh.php';">
 </select></form>
     </div>
@@ -70,8 +70,8 @@ foreach ($db->query("select reward_pk, reward_name from reward") as $rowReward)
     echo '<option value=' . $rowReward['reward_pk'] . '>' . $rowReward['reward_name'] . '</option>';
 }
 ?>
-<input type="submit" name="submitReward" value="Reward Details"><br>
-    <input type="submit" name="editReward" value="Reward Edit"><br>
+<input type="submit" value="Reward Details"><br>
+    <input type="submit" value="Reward Edit" onclick="window.location.href='familyChore_update.php';">
 <input type="button" value="Add Reward" onclick="window.location.href='familyChore_newRe.php';">
 </select></form>
     </div>
@@ -85,8 +85,8 @@ foreach ($db->query("select goal_pk, goal_name from goal") as $rowGoal)
     echo '<option value=' . $rowGoal['goal_pk'] . '>' . $rowGoal['goal_name'] . '</option>';
 }
 ?>
-<input type="submit" name="submitGoal" value="Goal Details"><br>
-    <input type="submit" name="editGoal" value="Goal Edit"><br>
+<input type="submit"  value="Goal Details"><br>
+    <input type="button" value="Goal Edit" onclick="window.location.href='familyChore_update.php';">
 <input type="button" value="Add Goal" onclick="window.location.href='familyChore_newGo.php';">
 </select></form>
     </div>
