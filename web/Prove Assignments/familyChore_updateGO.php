@@ -57,11 +57,7 @@ foreach ($db->query("select steps_details from steps") as $row)
 {
     foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
     {
-        if($row['steps_details'] == $rowChecked['steps_details'])
-        {
-            echo '<input type="checkbox" name="updateSteps[]" checked/>' . $row['steps_details'] . '</br>';
-        }
-        else
+        if($row['steps_details'] != $rowChecked['steps_details'])
         {
             echo '<input type="checkbox" name="updateSteps[]" />' . $row['steps_details'] . '</br>';
         }
