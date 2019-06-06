@@ -39,9 +39,9 @@
 <?php
 foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goal where goal_pk='$goals'") as $rowGoal)
 {
-    echo 'Goal Name: <input type="text" name="updatename" value="' . $rowGoal['goal_name'] . '"/><br>';
-    echo 'Due Date :' . $rowGoal['goal_date'] . '<br>';
-    echo 'Goal Details: ' . $rowGoal['goal_details'] . '<br>';
+    echo 'Goal Name: <input type="text" name="updateName" value="' . $rowGoal['goal_name'] . '"/><br>';
+    echo 'Due Date : <input type="text" name="updateDate value="' . $rowGoal['goal_date'] . '"/><br>';
+    echo 'Goal Details: <input type="text" name="updateDetail" value="' . $rowGoal['goal_details'] . '"/><br>';
 }
 ?>
     </div>   
@@ -50,7 +50,7 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goa
 echo '<h1> Steps </h1>';
 foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowSteps)
 {
-    echo $rowSteps['steps_details'] . '</br>';
+    echo '<input type="checkbox" name="updateSteps1" select>' . $rowSteps['steps_details'] . '</br>';
 }
 
 ?>
