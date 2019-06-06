@@ -52,7 +52,7 @@ foreach ($db->query("select steps_details from goal inner join goalSteps on goal
 {
     echo '<input type="checkbox" name="updateSteps1" checked/>' . $rowChecked['steps_details'] . '</br>';
 }
-foreach ($db->query("select steps_details from goal") as $rowUnchecked)
+foreach ($db->query("select steps_details from steps") as $rowUnchecked)
 {
     foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
     {
