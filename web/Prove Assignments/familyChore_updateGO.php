@@ -32,7 +32,7 @@
 </div>
 <br>
 <br>
-
+<form method="post" action="familyChore_goalUpdate.php">
 <div id="adjust">
     <div id="left">
 <h1>Update Goal</h1>
@@ -40,7 +40,7 @@
 foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goal where goal_pk='$goals'") as $rowGoal)
 {
     echo 'Goal Name: <input type="text" name="updateName" value="' . $rowGoal['goal_name'] . '"/><br>';
-    echo 'Due Date : <input type="date" name="updateDate placeholder="' . $rowGoal['goal_date'] . '"/><br>';
+    echo 'Due Date : <input type="date" name="updateDate value="' . $rowGoal['goal_date'] . '"/><br>';
     echo 'Goal Details: <textarea name="updateDetail" >' . stripcslashes($rowGoal['goal_details']) . '</textarea><br>';
 }
 ?>
@@ -48,13 +48,38 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goa
     <div id="right">
 <?php    
 echo '<h1> Steps </h1>';
-foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowSteps)
+foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
 {
-    echo '<input type="checkbox" name="updateSteps1" checked/>' . $rowSteps['steps_details'] . '</br>';
+    echo '<input type="checkbox" name="updateSteps1" checked/>' . $rowChecked['steps_details'] . '</br>';
 }
-
+foreach ($db->query("select steps_details from goal") as $rowUnchecked)
+{
+    foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
+    {
+        if($rowUnchecked['step_details'] != $rowChecked['step_details'])
+        {
+            echo '<input type="checkbox" name="updateSteps2" />' . $rowUnchecked['steps_details'] . '</br>';
+        }
+}
 ?>
     </div>
 </div>
+<div id="adjust">
+    <div id="left">
+<input type="submit" value="update Goal">
+    </div>
+    <div id="right">
+<h1> Add Additional Steps</h1>
+<?php
+for ($index = 0; $index < 7; $index++)
+{
+    echo '<input type="checkbox" name="newSteps[]" value="newSteps">';
+    echo '<input type="text" name="stepsDetails[]"><br>';
+}
+?>
+    </div>
+</div>
+
+</form>
 </body>
 </html>
