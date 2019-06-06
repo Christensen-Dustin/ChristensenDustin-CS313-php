@@ -41,7 +41,7 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goa
 {
     echo 'Goal Name: <input type="text" name="updateName" value="' . $rowGoal['goal_name'] . '"/><br>';
     echo 'Due Date : <input type="text" name="updateDate value="' . $rowGoal['goal_date'] . '"/><br>';
-    echo 'Goal Details: <textarea name="updateDetail" value="' . $rowGoal['goal_details'] . '"/><br>';
+    echo 'Goal Details: <textarea name="updateDetail" value="' . $rowGoal['goal_details'] . '"></textarea><br>';
 }
 ?>
     </div>   
