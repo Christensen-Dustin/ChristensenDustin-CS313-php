@@ -41,21 +41,20 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date from goa
 {
     echo 'Goal Name: <input type="text" name="updateName" value="' . $rowGoal['goal_name'] . '"/><br>';
     echo 'Due Date : <input type="date" name="updateDate value="' . $rowGoal['goal_date'] . '"/><br>';
-    echo 'Goal Details: <textarea name="updateDetail" >' . stripcslashes($rowGoal['goal_details']) . '</textarea><br>';
+    echo 'Goal Details: <textarea name="updateDetail" style="height: 30px";>' . stripcslashes($rowGoal['goal_details']) . '</textarea><br>';
 }
 ?>
     </div>   
     <div id="right">
 <?php
 $checked = [];
-$unchecked = [];
 
 echo '<h1> Steps </h1>';
 foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
 {
     array_push($checked, $rowChecked['steps_details']);
 }
-echo '<br>';
+
 foreach ($db->query("select steps_details from steps") as $row)
 {
     if(in_array($row['steps_details'], $checked))
