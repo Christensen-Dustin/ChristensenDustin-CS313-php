@@ -13,7 +13,7 @@
 </head>  
 <body>
 <header>
-<h1>Welcome to the Family Chore Tracker</h1>
+<h1>Please select an item to update</h1>
 </header>
 <br>
     <div class="navBar">

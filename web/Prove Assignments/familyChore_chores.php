@@ -10,6 +10,7 @@
 	<title>Title of Project/Site</title>
 	<link rel="stylesheet" type="text/css" href="familyChore.css">
 	<script type="text/javascript" src="familyChore.js"></script>
+    
 	<style></style>
 </head>
 <body>
@@ -29,6 +30,7 @@
     <a href="interest.php"> Other Interest</a>
     <a href="assignment.html">Assignments Page</a>
     <a href="familyChore_main.php">Home Page</a>
+    <a href="familyChore_update.php">Update Family Tracker Items</a>
 </div>
 <br>
 <br>
