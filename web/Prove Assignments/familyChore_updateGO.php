@@ -60,6 +60,7 @@ foreach ($db->query("select steps_details from goal") as $rowUnchecked)
         {
             echo '<input type="checkbox" name="updateSteps2" />' . $rowUnchecked['steps_details'] . '</br>';
         }
+    }
 }
 ?>
     </div>
@@ -79,7 +80,6 @@ for ($index = 0; $index < 7; $index++)
 ?>
     </div>
 </div>
-
 </form>
 </body>
 </html>
