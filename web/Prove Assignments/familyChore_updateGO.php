@@ -52,16 +52,16 @@ foreach ($db->query("select steps_details from goal inner join goalSteps on goal
 {
     echo '<input type="checkbox" name="updateSteps1[]" checked/>' . $rowChecked['steps_details'] . '</br>';
 }
-foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
+foreach ($db->query("select steps_details from steps") as $row)
 {
-    foreach ($db->query("select steps_details from steps") as $rowUnchecked)
+    foreach ($db->query("select steps_details from goal inner join goalSteps on goal_pk = goalSteps_goal_fk inner join steps on goalSteps_steps_fk = steps_pk where goal_pk = '$goals'") as $rowChecked)
     {
-        if($rowUnchecked['steps_details'] == $rowChecked['steps_details'])
+        if($row['steps_details'] == $rowChecked['steps_details'])
         {
-            echo '<input type="checkbox" name="updateSteps[]" checked/>' . $rowChecked['steps_details'] . '</br>';
+            echo '<input type="checkbox" name="updateSteps[]" checked/>' . $row['steps_details'] . '</br>';
         }
         
-        echo '<input type="checkbox" name="updateSteps[]" />' . $rowUnchecked['steps_details'] . '</br>';
+        echo '<input type="checkbox" name="updateSteps[]" />' . $row['steps_details'] . '</br>';
     }
 }
 ?>
