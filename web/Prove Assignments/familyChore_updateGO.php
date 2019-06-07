@@ -39,7 +39,7 @@
 <?php
 foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date, goal_repeat, goal_done, goal_expire from goal where goal_pk='$goals'") as $rowGoal)
 {
-    echo '<input type="hidden" value="' . $rowGoal['goal_pk'] . '"/>';
+    echo '<input type="hidden" name="updatePk" value="' . $rowGoal['goal_pk'] . '"/>';
     echo 'Goal Name: <input type="text" name="updateName" value="' . $rowGoal['goal_name'] . '"/><br>';
     
     echo 'Due Date : ' . $rowGoal['goal_date'] . 
@@ -57,20 +57,20 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date, goal_re
     
     if($rowGoal['goal_expire'] == true)
     {
-        echo 'Does the Goal Expire: <input type="checkbox" name="updateRepeat" checked/> Yes <br>';
+        echo 'Does the Goal Expire: <input type="checkbox" name="updateExpire" checked/> Yes <br>';
     }
     else
     {
-        echo 'Does the Goal Expire: <input type="checkbox" name="updateRepeat" /> Yes <br>';
+        echo 'Does the Goal Expire: <input type="checkbox" name="updateExpire" /> Yes <br>';
     }
     
     if($rowGoal['goal_done'] == true)
     {
-        echo 'Is the Goal Done: <input type="checkbox" name="updateRepeat" checked/> Yes <br>';
+        echo 'Is the Goal Done: <input type="checkbox" name="updateDone" checked/> Yes <br>';
     }
     else
     {
-        echo 'Is the Goal Done: <input type="checkbox" name="updateRepeat" /> Yes <br>';
+        echo 'Is the Goal Done: <input type="checkbox" name="updateDone" /> Yes <br>';
     }
     
     echo 'Goal Details: <textarea name="updateDetail" style="height: 60px; width: 180px;">' . stripcslashes($rowGoal['goal_details']) . '</textarea><br>';

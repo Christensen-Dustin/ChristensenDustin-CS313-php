@@ -4,20 +4,20 @@ session_start();
 
 // Adding a New GOAL
 // Reward Variables
-$goal_pk      = htmlspecialchars($_POST['goal_pk']);
-$goal_name    = htmlspecialchars($_POST['goal_name']);
-$goal_details = htmlspecialchars($_POST['goal_details']);
-$goal_expire  = htmlspecialchars($_POST['goal_expire']);
-$goal_repeat  = htmlspecialchars($_POST['goal_repeat']);
-$goal_done    = htmlspecialchars($_POST['goal_done']);
-$goal_date    = htmlspecialchars($_POST['goal_date']);
+$goal_pk      = htmlspecialchars($_POST['updatePk']);
+$goal_name    = htmlspecialchars($_POST['updateName']);
+$goal_details = htmlspecialchars($_POST['updateDetails']);
+$goal_expire  = htmlspecialchars($_POST['updateExpire']);
+$goal_repeat  = htmlspecialchars($_POST['updateRepeat']);
+$goal_done    = htmlspecialchars($_POST['updateDone']);
+$goal_date    = htmlspecialchars($_POST['updateDate']);
     
 // Old Steps variable
-$steps_pks = $_POST['steps_pks'];
+$steps_pks = $_POST['updateSteps'];
 $newSteps = $_POST['newSteps'];
 
 // New Steps variable
-$stepsDetails = $_POST['stepsDetails'];
+$stepsDetails = $_POST['newDetails'];
     
 // Create NEW goal entry
 $stmtGoal = $db->prepare("UPDATE goal SET goal_name=:goal_name, goal_details=:goal_details, goal_expire=:goal_expire, goal_repeat=:goal_repeat, goal_done=:goal_done, goal_date=:goal_date WHERE goal_pk='$goal_pk';");
