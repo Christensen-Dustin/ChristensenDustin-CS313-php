@@ -42,7 +42,7 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date, goal_re
     echo 'Goal Name: <input type="text" name="updateName" value="' . $rowGoal['goal_name'] . '"/><br>';
     
     echo 'Due Date : ' . $rowGoal['goal_date'] . 
-    '<br>Please set date to existing or a new date<br>
+    '<br><b>Please set date to existing or a new date<b><br>
     <input type="date" name="updateDate value="' . $rowGoal['goal_date'] . '"/><br>';
     
     if($rowGoal['goal_repeat'] == true)
