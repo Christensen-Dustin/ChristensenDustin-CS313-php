@@ -27,7 +27,7 @@
 <div id="adjust">
     <div id="left">
 <h1 >Users - Display Name</h1>
-    <form method="get" action="familyChore_updateUS.php"><select name="userName"><option selected="selected">Select a user by there Display Name</option>
+    <form method="get" action="familyChore_update.php"><select name="userName"><option selected="selected">Select a user by there Display Name</option>
 <?php
 foreach ($db->query("select parent_pk, parent_display from parent") as $rowParent)
 {
@@ -44,7 +44,7 @@ foreach ($db->query("select child_pk, child_display from child") as $rowChild)
 
     <div id="right">
 <h1> Chores </h1>
-    <form method="get" action="familyChore_updateCH.php"><select name="chores"><option selected="selected">Select a chore</option>
+    <form method="get" action="familyChore_update.php"><select name="chores"><option selected="selected">Select a chore</option>
 <?php
 foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
 {
@@ -59,7 +59,7 @@ foreach ($db->query("select chore_pk, chore_name from chore") as $rowChore)
 <div id="adjust">
     <div id="left">
 <h1> Rewards </h1>
-    <form method="get" action="familyChore_updateRE.php"><select name="rewards"><option selected="selected">Select a reward</option>
+    <form method="get" action="familyChore_update.php"><select name="rewards"><option selected="selected">Select a reward</option>
 <?php
 foreach ($db->query("select reward_pk, reward_name from reward") as $rowReward)
 {

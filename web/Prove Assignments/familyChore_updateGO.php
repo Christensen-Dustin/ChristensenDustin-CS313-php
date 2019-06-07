@@ -39,10 +39,11 @@
 <?php
 foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date, goal_repeat, goal_done, goal_expire from goal where goal_pk='$goals'") as $rowGoal)
 {
+    echo '<input type="hidden" value="' . $rowGoal['goal_pk'] . '"/>';
     echo 'Goal Name: <input type="text" name="updateName" value="' . $rowGoal['goal_name'] . '"/><br>';
     
     echo 'Due Date : ' . $rowGoal['goal_date'] . 
-    '<br><b>Please set date to existing or a new date<b><br>
+    '<br><b>Please set date to existing or a new date</b><br>
     <input type="date" name="updateDate value="' . $rowGoal['goal_date'] . '"/><br>';
     
     if($rowGoal['goal_repeat'] == true)
