@@ -44,7 +44,7 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date, goal_re
     
     echo 'Due Date : ' . $rowGoal['goal_date'] . 
     '<br><b>Please set date to existing or a new date</b><br>
-    <input type="date" name="updateDate value="' . $rowGoal['goal_date'] . '"/><br>';
+    <input type="date" name="updateDate" value="' . $rowGoal['goal_date'] . '"/><br>';
     
     if($rowGoal['goal_repeat'] == true)
     {
@@ -73,7 +73,7 @@ foreach ($db->query("select goal_pk, goal_name, goal_details, goal_date, goal_re
         echo 'Is the Goal Done: <input type="checkbox" name="updateDone" /> Yes <br>';
     }
     
-    echo 'Goal Details: <textarea name="updateDetail" style="height: 60px; width: 180px;">' . stripcslashes($rowGoal['goal_details']) . '</textarea><br>';
+    echo 'Goal Details: <textarea name="updateDetails" style="height: 60px; width: 180px;">' . stripcslashes($rowGoal['goal_details']) . '</textarea><br>';
 }
 ?>
     </div>   
