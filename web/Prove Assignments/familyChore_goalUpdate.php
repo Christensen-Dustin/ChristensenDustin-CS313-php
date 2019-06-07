@@ -2,16 +2,38 @@
 include 'connectDB.php';
 session_start();
 
-// Adding a New GOAL
-// Reward Variables
+// Updating a GOAL
+// Goal Variables
 $goal_pk      = htmlspecialchars($_POST['updatePk']);
 $goal_name    = htmlspecialchars($_POST['updateName']);
 $goal_details = htmlspecialchars($_POST['updateDetails']);
-$goal_expire  = htmlspecialchars($_POST['updateExpire']);
-$goal_repeat  = htmlspecialchars($_POST['updateRepeat']);
-$goal_done    = htmlspecialchars($_POST['updateDone']);
 $goal_date    = htmlspecialchars($_POST['updateDate']);
-    
+
+if (isset($_POST['updateExpire']))
+{
+    $goal_expire  = 1;
+}
+else
+{
+    $goal_expire = 0;
+}
+if (isset($_POST['updateRepeat']))
+{
+    $goal_repeat  = 1;
+}
+else
+{
+    $goal_repeat  = 0;
+}
+if (isset($_POST['updateDone']))
+{
+    $goal_done    = 1;
+}
+else
+{
+    $goal_done    = 0;
+}
+
 // Old Steps variable
 $steps_pks = $_POST['updateSteps'];
 $newSteps = $_POST['newSteps'];
